@@ -646,7 +646,7 @@
 
 <script>
   // ── Form submission ──
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const firstName = document.getElementById('firstName').value.trim();
@@ -655,7 +655,6 @@
     const emailErr = document.getElementById('email-error');
     let valid = true;
 
-    // Validate
     if (!firstName) {
       nameErr.classList.remove('hidden');
       valid = false;
@@ -673,17 +672,35 @@
 
     if (!valid) return;
 
-    // Store in localStorage
-    const submission = { firstName, email, timestamp: new Date().toISOString() };
-    const existing = JSON.parse(localStorage.getItem('sos_signups') || '[]');
-    existing.push(submission);
-    localStorage.setItem('sos_signups', JSON.stringify(existing));
+    const btn = e.target.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
 
-    console.log('[Seasons of Surrender] New signup:', submission);
+    try {
+      const res = await fetch('https://formspree.io/f/xjgjwlrk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ firstName, email })
+      });
 
-    // Show thank-you
-    document.getElementById('form-container').classList.add('hidden');
-    document.getElementById('thank-you').classList.remove('hidden');
+      if (res.ok) {
+        document.getElementById('form-container').classList.add('hidden');
+        document.getElementById('thank-you').classList.remove('hidden');
+      } else {
+        const data = await res.json();
+        const msg = data.errors?.[0]?.message || 'Something went wrong. Please try again.';
+        emailErr.textContent = msg;
+        emailErr.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    } catch {
+      emailErr.textContent = 'Network error. Please try again.';
+      emailErr.classList.remove('hidden');
+      btn.disabled = false;
+      btn.textContent = originalText;
+    }
   }
 
   // ── Intersection Observer for fade-ins ──
