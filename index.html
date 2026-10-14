@@ -1,720 +1,534 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seasons of Surrender — Coming Early 2027</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cream: '#F5F0E8',
-            'cream-dark': '#EDE8DC',
-            navy: '#1C2B3A',
-            gold: '#C9922A',
-            'gold-dark': '#A67820',
-            slate: '#2C3E50',
-            'slate-light': '#3D5166',
-          },
-          fontFamily: {
-            serif: ['Playfair Display', 'Georgia', 'serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-  <style>
-    body {
-      background-color: #F5F0E8;
-      color: #1C2B3A;
-      font-family: 'Inter', system-ui, sans-serif;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seasons of Surrender — Mark &amp; Paula Batory</title>
+<meta name="description" content="Seasons of Surrender is the true story of a young couple who answered God’s call, only to learn that surrender is not a single moment, but a lifetime of yielding. Launching mid-November 2026.">
+<meta name="theme-color" content="#0B151B">
+<meta property="og:type" content="book">
+<meta property="og:title" content="Seasons of Surrender — Mark &amp; Paula Batory">
+<meta property="og:description" content="A fifty-year journey of trust, trial &amp; release. Launching mid-November 2026.">
+<meta property="og:image" content="https://seasonsofsurrender.org/assets/cover-front.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600&family=Barlow+Condensed:wght@500;600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#0B151B;
+    --deep:#0F1E27;
+    --slate:#213F4F;
+    --steel-dk:#2E5870;
+    --steel-md:#3F728C;
+    --steel:#6F9CB2;
+    --mist:#A8C5D4;
+    --paper:#F2F5F7;
+    --ink:#121D24;
+    --body:#232F36;
+    --muted:#3A4950;
+    --rule:#C4CFD6;
+    --white:#FFFFFF;
+    --display:'Antonio',sans-serif;
+    --label:'Barlow Condensed',sans-serif;
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --text:'Source Serif 4',Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .label{font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.32em;text-transform:uppercase}
+  .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.2;min-height:52px;padding:12px 28px;border:0;cursor:pointer;font-family:var(--label);font-weight:600;font-size:17px;letter-spacing:.2em;text-transform:uppercase;background:var(--steel);color:var(--night);transition:background .2s,color .2s}
+  .btn:hover,.btn:focus-visible{background:var(--white)}
+  .link{display:inline-flex;align-items:center;min-height:44px;font-family:var(--label);font-weight:500;font-size:17px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--steel);color:var(--white)}
+  :focus-visible{outline:2px solid var(--steel);outline-offset:3px}
 
-    /* ── 3D Book Cover ── */
-    .book-scene {
-      perspective: 1200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  /* ── Hero ── */
+  .hero{position:relative;overflow:hidden;background:var(--night);color:var(--white)}
+  .hero::before{content:"";position:absolute;inset:-40px;background:url(assets/cover-front.jpg) center 35%/cover;filter:blur(24px) saturate(.5) hue-rotate(35deg);opacity:.5}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,var(--night) 18%,rgba(11,21,27,.82) 55%,rgba(15,30,39,.55) 100%),linear-gradient(180deg,rgba(11,21,27,0) 80%,var(--night))}
+  .hero .wrap{position:relative;z-index:1}
+  nav.top{display:flex;flex-wrap:wrap;gap:16px 36px;align-items:center;justify-content:space-between;padding:30px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .brand{font-family:var(--serif);font-style:italic;font-weight:500;font-size:34px;line-height:1}
+  nav.top ul{display:flex;flex-wrap:wrap;gap:8px 34px;align-items:center;margin:0;padding:0;list-style:none;font-family:var(--label);font-weight:500;font-size:16px;letter-spacing:.2em;text-transform:uppercase}
+  nav.top a.navlink{display:inline-flex;min-height:44px;align-items:center}
+  nav.top .btn{min-height:44px;padding:0 24px;font-size:16px}
+  .hero-body{display:flex;flex-wrap:wrap;gap:56px 72px;align-items:center;justify-content:space-between;padding:80px 0 110px}
+  .hero-copy{flex:1 1 500px;min-width:0;display:flex;flex-direction:column;gap:28px}
+  .eyebrow{display:flex;align-items:center;gap:16px;color:var(--mist);font-family:var(--label);font-weight:500;font-size:17px;letter-spacing:.32em;text-transform:uppercase}
+  .eyebrow::before{content:"";width:48px;height:1px;background:var(--steel)}
+  h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(46px,6vw,86px);line-height:1.04;color:var(--white)}
+  .lede{margin:0;max-width:540px;font-size:21px;line-height:1.7;color:#E3ECF1}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin-top:4px}
+  .launch{font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;color:var(--mist)}
 
-    .book {
-      width: 220px;
-      height: 310px;
-      position: relative;
-      transform-style: preserve-3d;
-      transform: rotateY(-28deg) rotateX(3deg);
-      filter: drop-shadow(-20px 30px 50px rgba(0,0,0,0.6));
-      transition: transform 0.4s ease;
-    }
+  /* ── 3D book ── */
+  .book-col{flex:0 1 420px;min-width:300px;display:flex;flex-direction:column;align-items:center;gap:22px}
+  .stage{--w:300px;--h:443px;--d:24px;position:relative;width:100%;max-width:420px;height:560px;perspective:1500px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline-offset:6px}
+  .stage.dragging{cursor:grabbing}
+  .shadow{position:absolute;left:50%;bottom:34px;width:300px;height:34px;margin-left:-150px;background:radial-gradient(ellipse at center,rgba(0,0,0,.55),rgba(0,0,0,0) 70%);filter:blur(6px)}
+  .book{position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:rotateX(-8deg) rotateY(-28deg);will-change:transform}
+  .face{position:absolute;backface-visibility:hidden;-webkit-backface-visibility:hidden;background-size:100% 100%;background-repeat:no-repeat}
+  .f-front{inset:0;background-image:url(assets/cover-front.jpg);transform:translateZ(calc(var(--d)/2))}
+  .f-back{inset:0;background-image:url(assets/cover-back.jpg);transform:rotateY(180deg) translateZ(calc(var(--d)/2))}
+  .f-spine{top:0;height:var(--h);width:var(--d);left:calc((var(--w) - var(--d))/2);background-image:url(assets/cover-spine.jpg);transform:rotateY(-90deg) translateZ(calc(var(--w)/2))}
+  .f-pages{top:3px;height:calc(var(--h) - 6px);width:calc(var(--d) - 2px);left:calc((var(--w) - var(--d) + 2px)/2);transform:rotateY(90deg) translateZ(calc(var(--w)/2 - 3px));background:repeating-linear-gradient(90deg,#E9EDEE 0 1px,#CBD3D6 1px 2px)}
+  .f-top,.f-bottom{left:0;width:calc(var(--w) - 3px);height:calc(var(--d) - 2px);top:calc((var(--h) - var(--d) + 2px)/2);background:repeating-linear-gradient(0deg,#E9EDEE 0 1px,#CBD3D6 1px 2px)}
+  .f-top{transform:rotateX(90deg) translateZ(calc(var(--h)/2 - 3px))}
+  .f-bottom{transform:rotateX(-90deg) translateZ(calc(var(--h)/2 - 3px))}
+  .f-front::after,.f-back::after{content:"";position:absolute;inset:0;pointer-events:none}
+  .f-front::after{background:linear-gradient(90deg,rgba(0,0,0,.35) 0,rgba(255,255,255,.12) 2.5%,rgba(0,0,0,.14) 4.5%,rgba(0,0,0,0) 8%),linear-gradient(115deg,rgba(255,255,255,.14),rgba(255,255,255,0) 40%)}
+  .f-back::after{background:linear-gradient(270deg,rgba(0,0,0,.35) 0,rgba(0,0,0,0) 8%)}
+  .views{display:flex;gap:10px}
+  .views button{min-height:44px;padding:0 20px;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.35);font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+  .views button:hover,.views button:focus-visible{background:var(--steel);color:var(--night);border-color:var(--steel)}
+  .hint{margin:0;font-family:var(--label);font-weight:500;font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--mist)}
 
-    .book:hover {
-      transform: rotateY(-18deg) rotateX(3deg);
-    }
+  /* ── Strip ── */
+  .strip{background:var(--paper);border-bottom:1px solid #D3DCE1}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:center;padding-top:42px;padding-bottom:42px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:30px;color:var(--slate);text-align:center}
+  .strip span.dot{color:var(--steel-md);font-style:normal}
 
-    /* Front cover */
-    .book-front {
-      position: absolute;
-      width: 220px;
-      height: 310px;
-      border-radius: 2px 4px 4px 2px;
-      overflow: hidden;
-      background: linear-gradient(
-        170deg,
-        #2C1810 0%,
-        #1a0f08 30%,
-        #0d0806 60%,
-        #1C2B3A 100%
-      );
-    }
+  /* ── Sections ── */
+  section{padding:104px 0}
+  .kicker{color:var(--steel-dk);margin:0 0 20px}
+  h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(42px,5.2vw,72px);line-height:1.03;color:#0F1E27}
+  h2 em{color:var(--steel-dk)}
+  .two{display:flex;flex-wrap:wrap;gap:40px 80px;align-items:flex-start}
+  .two > .l{flex:1 1 400px;min-width:0}
+  .two > .r{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:22px;font-size:20px;line-height:1.75;color:var(--body);padding-top:8px}
+  .two p,.prose p{margin:0}
+  .seasons-head{max-width:760px;margin-bottom:64px}
+  .seasons-head p{margin:24px 0 0;font-size:20px;color:var(--body)}
+  .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:48px 40px}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px 48px}
+  .item{border-top:2px solid var(--ink);padding-top:22px;display:flex;flex-direction:column;gap:12px}
+  .item .num{font-family:var(--serif);font-style:italic;font-weight:500;font-size:44px;line-height:1;color:var(--steel-md)}
+  .item h3{margin:0;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.12;color:#0F1E27}
+  .item p{margin:0;font-size:17px;line-height:1.65;color:var(--muted)}
+  .item .tag{font-family:var(--label);font-weight:600;font-size:14px;letter-spacing:.26em;text-transform:uppercase;color:var(--steel-dk)}
 
-    /* Sky/nature gradient on cover */
-    .book-front::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 55%;
-      background: linear-gradient(
-        180deg,
-        #8B6914 0%,
-        #C9922A 20%,
-        #E8A83A 40%,
-        #D4874A 60%,
-        #7A5C3A 80%,
-        #4A3825 100%
-      );
-      opacity: 0.85;
-    }
+  .dark{background:var(--deep);color:var(--white);position:relative;overflow:hidden}
+  .dark.photo::before{content:"";position:absolute;inset:-40px;background:url(assets/cover-front.jpg) center 35%/cover;filter:blur(26px) saturate(.45) hue-rotate(35deg);opacity:.28}
+  .dark .wrap{position:relative}
+  .quote{max-width:980px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:30px}
+  .quote .bar{width:56px;height:2px;background:var(--steel)}
+  .quote blockquote{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(28px,3.6vw,46px);line-height:1.22;color:var(--white)}
+  .quote cite{font-style:normal;color:var(--mist)}
+  .for-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:24px;font-size:20px;color:var(--body)}
+  .for-list p{margin:0;padding-top:24px;border-top:1px solid var(--rule)}
+  .for-list p:first-child{border-top:0;padding-top:0}
+  .for-list em{color:#0F1E27}
+  .center{text-align:center}
+  .excerpt{max-width:720px;margin:0 auto}
+  .excerpt .eyebrow{justify-content:center}
+  .excerpt .eyebrow::before{display:none}
+  .excerpt h2{color:var(--white);text-align:center;margin:18px 0 20px}
+  .excerpt .intro{text-align:center;color:var(--mist);font-size:17px;margin:0 0 44px}
+  .excerpt blockquote{margin:0;padding-left:28px;border-left:2px solid var(--steel);font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(23px,2.6vw,29px);line-height:1.5;color:#E3ECF1;display:flex;flex-direction:column;gap:20px}
+  .excerpt blockquote p{margin:0}
+  .excerpt .after{text-align:center;color:var(--mist);font-size:16px;margin:44px 0 28px}
 
-    /* Horizon silhouette */
-    .book-front::after {
-      content: '';
-      position: absolute;
-      bottom: 42%;
-      left: 0; right: 0;
-      height: 60px;
-      background: linear-gradient(
-        180deg,
-        transparent 0%,
-        #2A1F0E 60%,
-        #1C1409 100%
-      );
-      clip-path: polygon(
-        0% 100%,
-        0% 60%,
-        5% 50%,
-        12% 45%,
-        20% 52%,
-        30% 35%,
-        38% 28%,
-        45% 35%,
-        52% 40%,
-        60% 30%,
-        68% 22%,
-        75% 32%,
-        82% 38%,
-        90% 28%,
-        95% 35%,
-        100% 42%,
-        100% 100%
-      );
-    }
+  /* authors */
+  .bio{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px 48px;margin-top:56px}
+  .bio .item{border-top-color:var(--steel)}
+  .authors-lede{max-width:700px;margin:26px 0 0;font-size:20px;color:var(--body)}
+  .note{margin:48px 0 0;font-size:15px;font-style:italic;color:var(--muted)}
 
-    .book-cover-content {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 18px 16px 22px;
-      z-index: 2;
-    }
+  /* signup */
+  .signup{background:var(--slate);color:var(--white)}
+  .signup .box{max-width:560px;margin:0 auto}
+  .signup h2{color:var(--white);text-align:center;margin:0 0 20px}
+  .signup .kicker{color:var(--mist);text-align:center}
+  .signup .sub{text-align:center;margin:0 0 40px;font-size:18px;color:#E3ECF1}
+  .field{margin-bottom:22px}
+  .field label{display:block;margin-bottom:6px;font-family:var(--label);font-weight:600;font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--mist)}
+  .field input{width:100%;min-height:56px;padding:0 4px;background:transparent;border:0;border-bottom:1px solid var(--mist);color:var(--white);font-family:var(--text);font-size:19px;border-radius:0}
+  .field input::placeholder{color:#8DA9B8}
+  .field input:focus{outline:none;border-bottom-color:var(--white);box-shadow:0 1px 0 var(--white)}
+  .err{display:none;margin:6px 0 0;font-size:15px;color:#FFB4A8}
+  .err.show{display:block}
+  .signup .btn{width:100%;margin-top:10px}
+  .signup .btn[disabled]{opacity:.7;cursor:default}
+  .fine{margin:22px 0 0;text-align:center;font-size:15px;color:var(--mist)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  #thanks{display:none;text-align:center;padding:24px 0}
+  #thanks h3{margin:0 0 14px;font-family:var(--serif);font-weight:500;font-size:48px;color:var(--white)}
+  #thanks p{margin:0;font-size:19px;color:#E3ECF1}
 
-    .book-cover-top-line {
-      position: absolute;
-      top: 14px;
-      left: 0; right: 0;
-      text-align: center;
-    }
+  footer{background:var(--night);color:var(--white)}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;padding-top:48px;padding-bottom:48px}
+  footer .brand{font-size:34px}
+  footer small{font-family:var(--label);font-weight:500;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--mist)}
 
-    .book-cover-divider {
-      width: 60%;
-      height: 1px;
-      background: rgba(201, 146, 42, 0.5);
-      margin: 8px auto;
-    }
+  /* reveal */
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .js .reveal.in{opacity:1;transform:none}
 
-    /* Spine */
-    .book-spine {
-      position: absolute;
-      top: 0;
-      left: -28px;
-      width: 28px;
-      height: 310px;
-      border-radius: 2px 0 0 2px;
-      background: linear-gradient(
-        90deg,
-        #1a0f08 0%,
-        #2C1810 40%,
-        #3D2218 70%,
-        #2C1810 100%
-      );
-      transform-origin: right center;
-      transform: rotateY(-90deg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .book-spine::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        90deg,
-        rgba(0,0,0,0.4) 0%,
-        transparent 40%,
-        transparent 60%,
-        rgba(0,0,0,0.2) 100%
-      );
-    }
-
-    .book-spine-text {
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-      transform: rotate(180deg);
-      font-family: 'Playfair Display', serif;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      color: rgba(201, 146, 42, 0.8);
-      text-transform: uppercase;
-      white-space: nowrap;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Back cover shadow */
-    .book-back {
-      position: absolute;
-      width: 220px;
-      height: 310px;
-      border-radius: 2px 4px 4px 2px;
-      background: #0d0806;
-      transform: translateZ(-6px);
-    }
-
-    /* Pages edge */
-    .book-pages {
-      position: absolute;
-      top: 4px;
-      right: -10px;
-      width: 10px;
-      height: 302px;
-      background: repeating-linear-gradient(
-        180deg,
-        #F0EAD6 0px,
-        #F0EAD6 1px,
-        #E8E0C8 2px,
-        #E8E0C8 2px
-      );
-      transform-origin: left center;
-      transform: rotateY(90deg);
-    }
-
-    /* ── Decorative rule ── */
-    .ornament {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #C9922A;
-    }
-    .ornament::before,
-    .ornament::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: currentColor;
-      opacity: 0.4;
-    }
-
-    /* ── Smooth scroll ── */
-    html { scroll-behavior: smooth; }
-
-    /* ── Section fade-in ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── Form ── */
-    input[type="text"],
-    input[type="email"] {
-      background: white;
-      border: 1.5px solid #D4C9B0;
-      border-radius: 6px;
-      padding: 12px 16px;
-      width: 100%;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      color: #1C2B3A;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    input:focus {
-      border-color: #C9922A;
-    }
-  </style>
+  @media (max-width:720px){
+    body{font-size:17px}
+    .wrap{padding:0 24px}
+    section{padding:72px 0}
+    .hero-body{padding:56px 0 80px}
+    nav.top ul li.hide-sm{display:none}
+    .stage{height:500px;--w:260px;--h:384px;--d:21px}
+    .shadow{width:260px;margin-left:-130px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .js .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js')</script>
 
-<!-- ════════════════════════════════════════
-     HERO
-════════════════════════════════════════ -->
-<section class="relative min-h-screen flex items-center overflow-hidden"
-         style="background: linear-gradient(135deg, #0d1b2a 0%, #1C2B3A 40%, #2C3E50 70%, #1a2635 100%);">
-
-  <!-- Subtle texture overlay -->
-  <div class="absolute inset-0 opacity-10"
-       style="background-image: radial-gradient(circle at 20% 80%, #C9922A 0%, transparent 50%), radial-gradient(circle at 80% 20%, #8B6914 0%, transparent 50%);"></div>
-
-  <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-28 w-full">
-    <div class="flex flex-col md:flex-row items-center gap-14 md:gap-20">
-
-      <!-- Book mockup -->
-      <div class="book-scene flex-shrink-0 w-full md:w-auto">
-        <div class="book">
-          <div class="book-back"></div>
-          <div class="book-pages"></div>
-          <div class="book-spine">
-            <span class="book-spine-text">Seasons of Surrender</span>
-          </div>
-          <div class="book-front">
-            <!-- Cover top label -->
-            <div class="book-cover-top-line">
-              <p style="font-family:'Playfair Display',serif; font-size:7px; letter-spacing:2px; color:rgba(201,146,42,0.75); text-transform:uppercase;">Mark &amp; Paula Batory</p>
-            </div>
-
-            <!-- Cover content overlay -->
-            <div class="book-cover-content">
-              <div class="book-cover-divider"></div>
-              <h1 style="font-family:'Playfair Display',serif; font-size:19px; font-weight:700; color:#F5F0E8; line-height:1.2; letter-spacing:0.3px; margin-bottom:6px;">
-                Seasons of<br/>Surrender
-              </h1>
-              <p style="font-size:7px; color:rgba(201,146,42,0.85); letter-spacing:1.2px; text-transform:uppercase; line-height:1.5;">
-                A Life of Purpose,<br/>Faith, and Letting Go
-              </p>
-              <div class="book-cover-divider" style="margin-top:10px; margin-bottom:0;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero copy -->
-      <div class="text-center md:text-left max-w-lg">
-        <p class="text-xs tracking-widest uppercase mb-5"
-           style="color: rgba(201,146,42,0.7); letter-spacing:3px;">Coming Early 2027</p>
-
-        <h2 class="font-serif text-4xl md:text-5xl font-semibold leading-tight mb-6"
-            style="color: #F5F0E8;">
-          What if surrender wasn't the end—<br class="hidden md:block"/>
-          <em>but the beginning?</em>
-        </h2>
-
-        <div class="ornament my-6">
-          <span class="font-serif text-xs tracking-widest" style="color: rgba(201,146,42,0.6);">✦</span>
-        </div>
-
-        <p class="text-base leading-relaxed mb-10"
-           style="color: rgba(245,240,232,0.75); font-weight:300;">
-          On August 9, 1978, two twenty-somethings drove south out of Michigan in a travel trailer with no fallback plan. <em style="color:rgba(245,240,232,0.9);">Seasons of Surrender</em> is the fifty-year story of what happened next — and the philosophy of marriage, missions, and surrender that came out of it.
-        </p>
-
-        <a href="#signup"
-           class="inline-block px-8 py-4 rounded text-sm font-medium tracking-wide transition-all duration-200"
-           style="background: #C9922A; color: #1C2B3A; letter-spacing:1px; text-transform:uppercase; font-weight:600;"
-           onmouseover="this.style.background='#B8860B'"
-           onmouseout="this.style.background='#C9922A'">
-          Get Notified When It Releases →
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════
-     FOUR SEASONS
-════════════════════════════════════════ -->
-<section class="py-20 md:py-28 px-6" style="background: #EDE8DC;">
-  <div class="max-w-5xl mx-auto">
-
-    <div class="text-center mb-16 fade-in">
-      <p class="text-xs tracking-widest uppercase mb-4" style="color: #C9922A; letter-spacing:3px;">The Arc of the Book</p>
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-5" style="color: #1C2B3A;">Four seasons. One surrender after another.</h2>
-      <p class="text-base leading-relaxed max-w-2xl mx-auto" style="color: #4A5568; font-weight:300;">
-        The book is structured around four seasons of giving things up — and discovering what was actually being given in return.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-      <!-- Season One -->
-      <div class="rounded-lg p-8 fade-in" style="background: #F5F0E8;">
-        <p class="text-xs tracking-widest uppercase mb-3" style="color: #C9922A; letter-spacing:2px;">Season One</p>
-        <h3 class="font-serif text-xl font-semibold mb-4" style="color: #1C2B3A;">Surrendering the Strength of Our Youth</h3>
-        <p class="text-sm leading-relaxed" style="color: #4A5568; font-weight:300;">
-          The departure. Language school in Texas. Three eggs on a patio chair after a desperate prayer. The first taste of trusting a God who provides exactly what you ask for — and not a carton more.
-        </p>
-      </div>
-
-      <!-- Season Two -->
-      <div class="rounded-lg p-8 fade-in" style="background: #F5F0E8;">
-        <p class="text-xs tracking-widest uppercase mb-3" style="color: #C9922A; letter-spacing:2px;">Season Two</p>
-        <h3 class="font-serif text-xl font-semibold mb-4" style="color: #1C2B3A;">Surrendering Our Way in the Wilderness</h3>
-        <p class="text-sm leading-relaxed" style="color: #4A5568; font-weight:300;">
-          A hospital bed in Michigan. Liver enzymes off the charts. A high-paying job offer from a worried father — and the quiet "no" from a man who knew the difference between cars on a transport truck and souls being made new.
-        </p>
-      </div>
-
-      <!-- Season Three -->
-      <div class="rounded-lg p-8 fade-in" style="background: #F5F0E8;">
-        <p class="text-xs tracking-widest uppercase mb-3" style="color: #C9922A; letter-spacing:2px;">Season Three</p>
-        <h3 class="font-serif text-xl font-semibold mb-4" style="color: #1C2B3A;">Surrendering to an Unchosen Path</h3>
-        <p class="text-sm leading-relaxed" style="color: #4A5568; font-weight:300;">
-          The ministry they built when they couldn't return to the one they'd planned. Migrant camps under bedsheet movie screens. Men who came illegally, met Christ, and went home to plant churches in their own villages.
-        </p>
-      </div>
-
-      <!-- Season Four -->
-      <div class="rounded-lg p-8 fade-in" style="background: #F5F0E8;">
-        <p class="text-xs tracking-widest uppercase mb-3" style="color: #C9922A; letter-spacing:2px;">Season Four</p>
-        <h3 class="font-serif text-xl font-semibold mb-4" style="color: #1C2B3A;">Surrendering What We Cannot Keep</h3>
-        <p class="text-sm leading-relaxed" style="color: #4A5568; font-weight:300;">
-          Aging. Illness. A grandson born with Down Syndrome whose NICU crib was wrapped like a Christmas present. A leadership transition prepared so carefully it felt like obedience instead of an ending. And a porch swing in the woods where the real work of the final season began.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════
-     THREE PHILOSOPHIES
-════════════════════════════════════════ -->
-<section class="py-20 md:py-28 px-6" style="background: #F5F0E8;">
-  <div class="max-w-5xl mx-auto">
-
-    <div class="text-center mb-12 fade-in">
-      <p class="text-xs tracking-widest uppercase mb-4" style="color: #C9922A; letter-spacing:3px;">Inside the Book</p>
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-6" style="color: #1C2B3A;">Part memoir. Part manifesto. All substance.</h2>
-      <p class="text-base leading-relaxed max-w-2xl mx-auto" style="color: #4A5568; font-weight:300;">
-        <em>Seasons of Surrender</em> isn't a how-to. It's the philosophy of a life — pulled out of fifty years of marriage and ministry and offered to the next generation deciding whether to give Christ their first and strongest years.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      <!-- Card 1 -->
-      <div class="rounded-lg p-8 fade-in" style="background: #EDE8DC; border-top: 3px solid #C9922A;">
-        <div class="text-3xl mb-5">🌍</div>
-        <h3 class="font-serif text-xl font-semibold mb-3" style="color: #1C2B3A;">A Philosophy of Missions</h3>
-        <p class="text-sm leading-relaxed" style="color: #4A5568; font-weight:300;">
-          Why we went, why we stayed, and what we learned about building churches that don't need us — self-supporting, self-governing, and self-propagating from the start.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="rounded-lg p-8 fade-in" style="background: #EDE8DC; border-top: 3px solid #C9922A;">
-        <div class="text-3xl mb-5">🤝</div>
-        <h3 class="font-serif text-xl font-semibold mb-3" style="color: #1C2B3A;">A Philosophy of Marriage</h3>
-        <p class="text-sm leading-relaxed" style="color: #4A5568; font-weight:300;">
-          How two strong-willed people built something that lasted across borders, languages, illness, and decades. Including Mark's honest reflection on what it takes to steward a strong wife well.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="rounded-lg p-8 fade-in" style="background: #EDE8DC; border-top: 3px solid #C9922A;">
-        <div class="text-3xl mb-5">🕊️</div>
-        <h3 class="font-serif text-xl font-semibold mb-3" style="color: #1C2B3A;">A Philosophy of Surrender</h3>
-        <p class="text-sm leading-relaxed" style="color: #4A5568; font-weight:300;">
-          What it actually looks like to follow without seeing. Why Plan B is often the thing that keeps Plan A from ever happening. And how surrender, lived all the way through, turns out to be the most generous life available.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════
-     PULL QUOTE
-════════════════════════════════════════ -->
-<section class="py-20 md:py-28 px-6" style="background: #2C3E50;">
-  <div class="max-w-3xl mx-auto text-center fade-in">
-    <div class="text-gold text-3xl font-serif mb-6 opacity-40">"</div>
-    <blockquote class="font-serif text-xl md:text-2xl italic leading-relaxed mb-8"
-                style="color: #F5F0E8; font-weight:400;">
-      We hear young people say they are studying for ministry, yet they choose to minor in something else <em>just in case</em> the ministry does not work out. Sadly, for many, it does not work out, because a Plan B had already been formulated for when the road grew hard. Abraham never had a Plan B, and neither did we.
-    </blockquote>
-    <div class="ornament" style="color: rgba(201,146,42,0.5);">
-      <span class="font-serif text-sm tracking-widest" style="color: rgba(201,146,42,0.8);">— from <em>Seasons of Surrender</em></span>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════
-     WHO THIS BOOK IS FOR
-════════════════════════════════════════ -->
-<section class="py-20 md:py-28 px-6" style="background: #F5F0E8;">
-  <div class="max-w-2xl mx-auto fade-in">
-
-    <p class="text-xs tracking-widest uppercase mb-5 text-center" style="color: #C9922A; letter-spacing:3px;">Who It's For</p>
-    <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-10 text-center" style="color: #1C2B3A;">
-      This book is for you if —
-    </h2>
-
-    <div class="space-y-6">
-      <p class="text-base leading-relaxed" style="color: #4A5568; font-weight:300;">
-        You're a college student wrestling with the call, and everyone in your life is gently suggesting you keep your options open.
-      </p>
-      <p class="text-base leading-relaxed" style="color: #4A5568; font-weight:300;">
-        You're a young couple wondering if ministry, or marriage, or both, will survive what's coming.
-      </p>
-      <p class="text-base leading-relaxed" style="color: #4A5568; font-weight:300;">
-        You're mid-career and asking, quietly, whether it's too late to give your life to something that actually matters.
-      </p>
-      <p class="text-base leading-relaxed" style="color: #4A5568; font-weight:300;">
-        You're a veteran of the work who just needs to remember why you started.
-      </p>
-      <p class="text-base leading-relaxed" style="color: #4A5568; font-weight:300;">
-        Or you're a parent, pastor, or mentor who wants to put something in the hands of someone you love that says: <em style="color: #1C2B3A;">here's what a life like this actually looks like, from the inside, with nothing edited out.</em>
-      </p>
-    </div>
-
-    <div class="mt-12 pt-10 border-t" style="border-color: #D4C9B0;">
-      <div class="flex flex-wrap justify-center gap-6 text-sm" style="color: #7A8A96; font-weight:300;">
-        <span>📖 &nbsp;Part memoir</span>
-        <span>✍️ &nbsp;Part manifesto</span>
-        <span>🌱 &nbsp;All substance</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════
-     A TASTE — THREE EGGS
-════════════════════════════════════════ -->
-<section class="py-20 md:py-28 px-6" style="background: #2C3E50;">
-  <div class="max-w-2xl mx-auto fade-in">
-
-    <div class="text-center mb-12">
-      <p class="text-xs tracking-widest uppercase mb-4" style="color: rgba(201,146,42,0.7); letter-spacing:3px;">From the Manuscript</p>
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-5" style="color: #F5F0E8;">Three eggs.</h2>
-      <p class="text-sm leading-relaxed" style="color: rgba(245,240,232,0.5); font-weight:300;">
-        A short excerpt from Season One — the day Paula and Mark learned that God answers prayer in measured kindness, not abundance.
-      </p>
-    </div>
-
-    <div class="relative">
-      <div class="font-serif opacity-20 select-none" style="color: #C9922A; font-size:5rem; line-height:1; margin-bottom:-2rem;">"</div>
-      <blockquote class="font-serif text-lg md:text-xl italic leading-relaxed px-2 md:px-6" style="color: rgba(245,240,232,0.85); font-weight:400;">
-        <p class="mb-5">Our last meal carries vivid memories. There was nothing left. Paula prayed: "You know our need and that we have nothing left to eat now for the next two weeks. We want to trust You now to supply for our breakfast tomorrow. We would be grateful if You would please provide three eggs for us to eat in the morning. In Jesus' name, Amen."</p>
-        <p>The next morning, sitting on our patio chair, was an egg carton. Inside she found three eggs. Yes, three eggs — exactly what she had prayed for, not more, not less.</p>
-      </blockquote>
-    </div>
-
-    <p class="text-sm mt-10 text-center" style="color: rgba(245,240,232,0.4); font-weight:300;">
-      This is one of dozens of stories woven through the book. Get the rest when it releases.
-    </p>
-
-    <div class="text-center mt-7">
-      <a href="#signup"
-         class="inline-block px-8 py-4 rounded text-sm font-medium tracking-wide transition-all duration-200"
-         style="background: #C9922A; color: #1C2B3A; letter-spacing:1px; text-transform:uppercase; font-weight:600;"
-         onmouseover="this.style.background='#B8860B'"
-         onmouseout="this.style.background='#C9922A'">
-        Get Notified →
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════
-     EMAIL SIGNUP
-════════════════════════════════════════ -->
-<section id="signup" class="py-20 md:py-28 px-6" style="background: #EDE8DC;">
-  <div class="max-w-lg mx-auto fade-in">
-
-    <div class="text-center mb-10">
-      <p class="text-xs tracking-widest uppercase mb-4" style="color: #C9922A; letter-spacing:3px;">Stay in the Loop</p>
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-4" style="color: #1C2B3A;">
-        Be the first to read it.
-      </h2>
-      <p class="text-sm leading-relaxed" style="color: #6B7280; font-weight:300;">
-        Sign up to get notified when <em>Seasons of Surrender</em> releases — plus early excerpts, behind-the-scenes stories from the field, and a free companion study guide drawn from the book's appendix.
-      </p>
-    </div>
-
-    <!-- Form -->
-    <div id="form-container">
-      <form id="signup-form" onsubmit="handleSubmit(event)" novalidate>
-        <div class="flex flex-col gap-4">
-          <div>
-            <label for="firstName" class="block text-xs font-medium mb-2 tracking-wide uppercase"
-                   style="color: #4A5568; letter-spacing:1px;">First Name</label>
-            <input type="text" id="firstName" name="firstName"
-                   placeholder="Your first name"
-                   required autocomplete="given-name" />
-            <p id="name-error" class="hidden text-xs mt-1.5" style="color:#C0392B;">Please enter your first name.</p>
-          </div>
-
-          <div>
-            <label for="email" class="block text-xs font-medium mb-2 tracking-wide uppercase"
-                   style="color: #4A5568; letter-spacing:1px;">Email Address</label>
-            <input type="email" id="email" name="email"
-                   placeholder="you@example.com"
-                   required autocomplete="email" />
-            <p id="email-error" class="hidden text-xs mt-1.5" style="color:#C0392B;">Please enter a valid email address.</p>
-          </div>
-
-          <button type="submit"
-                  class="mt-2 w-full py-4 rounded font-medium tracking-wide transition-all duration-200 text-sm"
-                  style="background: #1C2B3A; color: #F5F0E8; letter-spacing:1px; text-transform:uppercase; font-weight:600;"
-                  onmouseover="this.style.background='#C9922A'; this.style.color='#1C2B3A';"
-                  onmouseout="this.style.background='#1C2B3A'; this.style.color='#F5F0E8';">
-            Count Me In
-          </button>
-        </div>
-      </form>
-
-      <p class="text-center text-xs mt-5" style="color: #9CA3AF; font-weight:300;">
-        No spam. Just the book. Unsubscribe anytime.
-      </p>
-    </div>
-
-    <!-- Thank you state -->
-    <div id="thank-you" class="hidden text-center py-8">
-      <div class="text-4xl mb-5">✨</div>
-      <h3 class="font-serif text-2xl font-semibold mb-3" style="color: #1C2B3A;">Thank you.</h3>
-      <p class="text-base leading-relaxed" style="color: #4A5568; font-weight:300;">
-        You're on the list. We'll be in touch as the book takes shape — and you'll be among the first to see early chapters when they're ready.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════ -->
-<footer class="py-8 px-6" style="background: #1C2B3A;">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-xs" style="color: rgba(245,240,232,0.4); font-weight:300;">
-      © 2026 Seasons of Surrender. All rights reserved.
-    </p>
-    <nav class="flex gap-6">
-      <a href="#" class="text-xs transition-colors duration-200"
-         style="color: rgba(245,240,232,0.4); font-weight:300;"
-         onmouseover="this.style.color='rgba(201,146,42,0.8)'"
-         onmouseout="this.style.color='rgba(245,240,232,0.4)'">Contact</a>
-      <a href="#" class="text-xs transition-colors duration-200"
-         style="color: rgba(245,240,232,0.4); font-weight:300;"
-         onmouseover="this.style.color='rgba(201,146,42,0.8)'"
-         onmouseout="this.style.color='rgba(245,240,232,0.4)'">Privacy</a>
+<header class="hero">
+  <div class="wrap">
+    <nav class="top" aria-label="Main">
+      <a class="brand" href="#top" id="top">Seasons of Surrender</a>
+      <ul>
+        <li class="hide-sm"><a class="navlink" href="#book">The Book</a></li>
+        <li class="hide-sm"><a class="navlink" href="#seasons">Four Seasons</a></li>
+        <li class="hide-sm"><a class="navlink" href="#excerpt">Excerpt</a></li>
+        <li class="hide-sm"><a class="navlink" href="#authors">The Authors</a></li>
+        <li><a class="btn" href="#signup">Get Notified</a></li>
+      </ul>
     </nav>
+
+    <div class="hero-body">
+      <div class="hero-copy">
+        <div class="eyebrow">A memoir by Mark &amp; Paula Batory</div>
+        <h1>We all say we trust God until He asks us to surrender.</h1>
+        <p class="lede">The true story of a young couple who answered God’s call, only to learn that surrender is not a single moment, but a lifetime of yielding.</p>
+        <div class="cta-row">
+          <a class="btn" href="#signup">Get Notified at Launch</a>
+          <a class="link" href="#excerpt">Read an excerpt</a>
+        </div>
+        <div class="launch">Launching mid-November 2026</div>
+      </div>
+
+      <div class="book-col">
+        <div class="stage" id="stage" tabindex="0" role="group" aria-label="3D view of the Seasons of Surrender paperback. Drag to turn it, or use the left and right arrow keys.">
+          <div class="shadow" aria-hidden="true"></div>
+          <div class="book" id="book3d">
+            <div class="face f-front"></div>
+            <div class="face f-back"></div>
+            <div class="face f-spine"></div>
+            <div class="face f-pages"></div>
+            <div class="face f-top"></div>
+            <div class="face f-bottom"></div>
+          </div>
+        </div>
+        <div class="views" role="group" aria-label="Book views">
+          <button type="button" data-view="front">Front</button>
+          <button type="button" data-view="spine">Spine</button>
+          <button type="button" data-view="back">Back</button>
+        </div>
+        <p class="hint">Drag to turn the book</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="strip">
+    <div class="wrap">
+      <span>A fifty-year journey</span><span class="dot" aria-hidden="true">✦</span><span>Trust</span><span class="dot" aria-hidden="true">✦</span><span>Trial</span><span class="dot" aria-hidden="true">✦</span><span>Release</span>
+    </div>
+  </div>
+
+  <section id="book">
+    <div class="wrap two reveal">
+      <div class="l">
+        <p class="label kicker">The Book</p>
+        <h2>More than a <em>missionary memoir.</em></h2>
+      </div>
+      <div class="r">
+        <p>On August 9, 1978, two twenty-somethings drove south out of Michigan in a travel trailer with no fallback plan. <em>Seasons of Surrender</em> is the fifty-year story of what happened next.</p>
+        <p>From missionary service in Mexico through hardship, illness, loss, leadership, and release, Mark and Paula Batory learned to trust the One who writes every chapter, even when the next page was not what they expected.</p>
+        <p>It is a testimony of God’s faithfulness and a call to follow Christ without reserve.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="seasons" style="padding-top:0">
+    <div class="wrap reveal">
+      <div class="seasons-head">
+        <p class="label kicker">The Arc of the Book</p>
+        <h2>Four seasons. One surrender <em>after another.</em></h2>
+        <p>The book is structured around four seasons of giving things up, and discovering what was actually being given in return.</p>
+      </div>
+      <div class="grid4">
+        <div class="item">
+          <div class="num">i.</div>
+          <div class="tag">Season One</div>
+          <h3>Surrendering the Strength of Our Youth</h3>
+          <p>The departure. Language school in Texas. Three eggs on a patio chair after a desperate prayer. The first taste of trusting a God who provides exactly what you ask for, and not a carton more.</p>
+        </div>
+        <div class="item">
+          <div class="num">ii.</div>
+          <div class="tag">Season Two</div>
+          <h3>Surrendering Our Way in the Wilderness</h3>
+          <p>A hospital bed in Michigan. Liver enzymes off the charts. A high-paying job offer from a worried father, and the quiet “no” from a man who knew the difference between cars on a transport truck and souls being made new.</p>
+        </div>
+        <div class="item">
+          <div class="num">iii.</div>
+          <div class="tag">Season Three</div>
+          <h3>Surrendering to an Unchosen Path</h3>
+          <p>The ministry they built when they couldn’t return to the one they’d planned. Migrant camps under bedsheet movie screens. Men who came illegally, met Christ, and went home to plant churches in their own villages.</p>
+        </div>
+        <div class="item">
+          <div class="num">iv.</div>
+          <div class="tag">Season Four</div>
+          <h3>Surrendering What We Cannot Keep</h3>
+          <p>Aging. Illness. A grandson born with Down syndrome whose NICU crib was wrapped like a Christmas present. A leadership transition prepared so carefully it felt like obedience instead of an ending. And a porch swing in the woods where the real work of the final season began.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark photo">
+    <div class="wrap reveal">
+      <div class="quote">
+        <div class="bar"></div>
+        <blockquote>We hear young people say they are studying for ministry, yet they choose to minor in something else <em>just in case</em> the ministry does not work out. … Abraham never had a Plan B, and neither did we.</blockquote>
+        <cite class="label">From <em>Seasons of Surrender</em></cite>
+      </div>
+    </div>
+  </section>
+
+  <section id="inside">
+    <div class="wrap reveal">
+      <div class="seasons-head">
+        <p class="label kicker">Inside the Book</p>
+        <h2>Part memoir. Part manifesto. <em>All substance.</em></h2>
+        <p><em>Seasons of Surrender</em> isn’t a how-to. It’s the philosophy of a life, pulled out of fifty years of marriage and ministry and offered to the next generation deciding whether to give Christ their first and strongest years.</p>
+      </div>
+      <div class="grid3">
+        <div class="item">
+          <div class="num">i.</div>
+          <h3>A Philosophy of Missions</h3>
+          <p>Why we went, why we stayed, and what we learned about building churches that don’t need us: self-supporting, self-governing, and self-propagating from the start.</p>
+        </div>
+        <div class="item">
+          <div class="num">ii.</div>
+          <h3>A Philosophy of Marriage</h3>
+          <p>How two strong-willed people built something that lasted across borders, languages, illness, and decades. Including Mark’s honest reflection on what it takes to steward a strong wife well.</p>
+        </div>
+        <div class="item">
+          <div class="num">iii.</div>
+          <h3>A Philosophy of Surrender</h3>
+          <p>What it actually looks like to follow without seeing. Why Plan B is often the thing that keeps Plan A from ever happening. And how surrender, lived all the way through, turns out to be the most generous life available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#E6ECEF">
+    <div class="wrap reveal">
+      <div class="center" style="margin-bottom:56px">
+        <p class="label kicker">Who It’s For</p>
+        <h2>This book is for you <em>if&nbsp;—</em></h2>
+      </div>
+      <div class="for-list">
+        <p>You’re a college student wrestling with the call, and everyone in your life is gently suggesting you keep your options open.</p>
+        <p>You’re a young couple wondering if ministry, or marriage, or both, will survive what’s coming.</p>
+        <p>You’re mid-career and asking, quietly, whether it’s too late to give your life to something that actually matters.</p>
+        <p>You’re a veteran of the work who just needs to remember why you started.</p>
+        <p>Or you’re a parent, pastor, or mentor who wants to put something in the hands of someone you love that says: <em>here’s what a life like this actually looks like, from the inside, with nothing edited out.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="excerpt" class="dark">
+    <div class="wrap reveal">
+      <div class="excerpt">
+        <div class="eyebrow">From the manuscript</div>
+        <h2>Three eggs.</h2>
+        <p class="intro">A short excerpt from Season One: the day Paula and Mark learned that God answers prayer in measured kindness, not abundance.</p>
+        <blockquote>
+          <p>Our last meal carries vivid memories. There was nothing left. Paula prayed: “You know our need and that we have nothing left to eat now for the next two weeks. We want to trust You now to supply for our breakfast tomorrow. We would be grateful if You would please provide three eggs for us to eat in the morning. In Jesus’ name, Amen.”</p>
+          <p>The next morning, sitting on our patio chair, was an egg carton. Inside she found three eggs. Yes, three eggs, exactly what she had prayed for, not more, not less.</p>
+        </blockquote>
+        <p class="after">This is one of dozens of stories woven through the book.</p>
+        <div class="center"><a class="btn" href="#signup">Get the Rest at Launch</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="authors">
+    <div class="wrap reveal">
+      <p class="label kicker">The Authors</p>
+      <h2>Mark &amp; Paula <em>Batory</em></h2>
+      <p class="authors-lede">For fifty years, Mark and Paula have served the Lord together through missionary work, church planting, leadership, mentoring, and missionary care. Their lives continue to be shaped by a shared desire to follow Christ wherever He leads and to encourage others along the way.</p>
+      <div class="bio">
+        <div class="item">
+          <h3>Paula</h3>
+          <p>Writes warmly as a wife, mother, missionary, and careful witness to God’s faithfulness.</p>
+        </div>
+        <div class="item">
+          <h3>Mark</h3>
+          <p>Continues to minister with a burden to strengthen churches, missionaries, and men for faithful service to Christ.</p>
+        </div>
+      </div>
+      <p class="note">The cover image depicts the Mexican mountains where they lived and served.</p>
+    </div>
+  </section>
+
+  <section id="signup" class="signup">
+    <div class="wrap">
+      <div class="box">
+        <p class="label kicker">Stay in the Loop</p>
+        <h2>Be the first to read it.</h2>
+        <p class="sub">Sign up to get notified when <em>Seasons of Surrender</em> releases in mid-November, plus early excerpts, behind-the-scenes stories from the field, and a free companion study guide drawn from the book’s appendix.</p>
+
+        <div id="form-container">
+          <form id="signup-form" novalidate>
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Your first name" required autocomplete="given-name">
+              <p class="err" id="name-error" role="alert">Please enter your first name.</p>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              <p class="err" id="email-error" role="alert">Please enter a valid email address.</p>
+            </div>
+            <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn" type="submit">Count Me In</button>
+          </form>
+          <p class="fine">No spam. Just the book.</p>
+        </div>
+
+        <div id="thanks" role="status">
+          <h3>Thank you.</h3>
+          <p>You’re on the list. We’ll be in touch as launch day approaches, and you’ll be among the first to see early chapters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">Quellsicht</div>
+    <small>© 2026 Mark &amp; Paula Batory · Published by Quellsicht</small>
   </div>
 </footer>
 
-
 <script>
-  // ── Form submission ──
-  async function handleSubmit(e) {
-    e.preventDefault();
-
-    const firstName = document.getElementById('firstName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const nameErr = document.getElementById('name-error');
-    const emailErr = document.getElementById('email-error');
-    let valid = true;
-
-    if (!firstName) {
-      nameErr.classList.remove('hidden');
-      valid = false;
-    } else {
-      nameErr.classList.add('hidden');
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      emailErr.classList.remove('hidden');
-      valid = false;
-    } else {
-      emailErr.classList.add('hidden');
-    }
-
-    if (!valid) return;
-
-    const btn = e.target.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    try {
-      const res = await fetch('https://formspree.io/f/xjgjwlrk', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ firstName, email })
-      });
-
-      if (res.ok) {
-        document.getElementById('form-container').classList.add('hidden');
-        document.getElementById('thank-you').classList.remove('hidden');
-      } else {
-        const data = await res.json();
-        const msg = data.errors?.[0]?.message || 'Something went wrong. Please try again.';
-        emailErr.textContent = msg;
-        emailErr.classList.remove('hidden');
-        btn.disabled = false;
-        btn.textContent = originalText;
-      }
-    } catch {
-      emailErr.textContent = 'Network error. Please try again.';
-      emailErr.classList.remove('hidden');
-      btn.disabled = false;
-      btn.textContent = originalText;
-    }
-  }
-
-  // ── Intersection Observer for fade-ins ──
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+  /* ── Signup form (Formspree xjgjwlrk, unchanged endpoint) ── */
+  (function(){
+    var form=document.getElementById('signup-form');
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var firstName=document.getElementById('firstName').value.trim();
+      var email=document.getElementById('email').value.trim();
+      var nameErr=document.getElementById('name-error');
+      var emailErr=document.getElementById('email-error');
+      var valid=true;
+      if(!firstName){nameErr.classList.add('show');valid=false}else{nameErr.classList.remove('show')}
+      if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        emailErr.textContent='Please enter a valid email address.';
+        emailErr.classList.add('show');valid=false
+      }else{emailErr.classList.remove('show')}
+      if(!valid)return;
+      var btn=form.querySelector('button[type="submit"]');
+      var original=btn.textContent;
+      btn.disabled=true;btn.textContent='Sending...';
+      try{
+        var res=await fetch('https://formspree.io/f/xjgjwlrk',{
+          method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify({firstName:firstName,email:email,_gotcha:document.getElementById('gotcha').value})
+        });
+        if(res.ok){
+          document.getElementById('form-container').style.display='none';
+          document.getElementById('thanks').style.display='block';
+        }else{
+          var data=await res.json().catch(function(){return {}});
+          emailErr.textContent=(data.errors&&data.errors[0]&&data.errors[0].message)||'Something went wrong. Please try again.';
+          emailErr.classList.add('show');
+          btn.disabled=false;btn.textContent=original;
+        }
+      }catch(err){
+        emailErr.textContent='Network error. Please try again.';
+        emailErr.classList.add('show');
+        btn.disabled=false;btn.textContent=original;
       }
     });
-  }, { threshold: 0.12 });
+  })();
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  /* ── 3D book: drag, keys, view buttons, gentle intro spin ── */
+  (function(){
+    var stage=document.getElementById('stage'),book=document.getElementById('book3d');
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var ry=-28,rx=-8,spinning=!reduce,dragging=false,lx=0,ly=0,tween=null;
+    function apply(){book.style.transform='rotateX('+rx+'deg) rotateY('+ry+'deg)'}
+    function stopSpin(){spinning=false}
+    function goTo(target,tx){
+      stopSpin();
+      var from=ry,fromX=rx;
+      var to=target+360*Math.round((ry-target)/360);
+      var start=null,dur=reduce?1:900;
+      if(tween)cancelAnimationFrame(tween);
+      function step(t){
+        if(start===null)start=t;
+        var p=Math.min(1,(t-start)/dur),k=1-Math.pow(1-p,3);
+        ry=from+(to-from)*k;rx=fromX+(tx-fromX)*k;apply();
+        if(p<1)tween=requestAnimationFrame(step);
+      }
+      tween=requestAnimationFrame(step);
+    }
+    function loop(){
+      if(spinning&&!dragging){ry+=0.18;apply()}
+      requestAnimationFrame(loop);
+    }
+    stage.addEventListener('pointerdown',function(e){
+      dragging=true;stopSpin();if(tween)cancelAnimationFrame(tween);
+      lx=e.clientX;ly=e.clientY;stage.classList.add('dragging');
+      try{stage.setPointerCapture(e.pointerId)}catch(_){}
+    });
+    stage.addEventListener('pointermove',function(e){
+      if(!dragging)return;
+      ry+=(e.clientX-lx)*0.55;
+      rx=Math.max(-35,Math.min(35,rx-(e.clientY-ly)*0.3));
+      lx=e.clientX;ly=e.clientY;apply();
+    });
+    function end(){dragging=false;stage.classList.remove('dragging')}
+    stage.addEventListener('pointerup',end);
+    stage.addEventListener('pointercancel',end);
+    stage.addEventListener('keydown',function(e){
+      var k=e.key;
+      if(k==='ArrowLeft'||k==='ArrowRight'||k==='ArrowUp'||k==='ArrowDown'){
+        e.preventDefault();stopSpin();
+        if(k==='ArrowLeft')ry-=15;
+        if(k==='ArrowRight')ry+=15;
+        if(k==='ArrowUp')rx=Math.min(35,rx+8);
+        if(k==='ArrowDown')rx=Math.max(-35,rx-8);
+        apply();
+      }
+    });
+    var views={front:[0,-4],spine:[90,-4],back:[180,-4]};
+    document.querySelectorAll('.views button').forEach(function(b){
+      b.addEventListener('click',function(){var v=views[b.dataset.view];goTo(v[0],v[1])});
+    });
+    apply();
+    if(!reduce)requestAnimationFrame(loop);
+  })();
+
+  /* ── Reveal on scroll ── */
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in')});return}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:0.12});
+    els.forEach(function(el){io.observe(el)});
+  })();
 </script>
-
 </body>
 </html>
