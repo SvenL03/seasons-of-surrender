@@ -43,6 +43,7 @@ module.exports = async (req, res) => {
       body: JSON.stringify({
         secret: process.env.SIGNUP_SECRET,
         firstName,
+        lastName,
         email,
         reason,
         userAgent: String(req.headers['user-agent'] || '').slice(0, 300)
