@@ -387,10 +387,18 @@
 
         <div id="form-container">
           <form id="signup-form" novalidate>
-            <div class="field">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Your first name" required autocomplete="given-name">
-              <p class="err" id="name-error" role="alert">Please enter your first name.</p>
+            <div class="name-row">
+              <div class="field">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First name" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last name" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="field" style="margin-top:-14px">
+              <p class="err" id="name-error" role="alert">Please enter your first and last name.</p>
             </div>
             <div class="field">
               <label for="email">Email Address</label>
