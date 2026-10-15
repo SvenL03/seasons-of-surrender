@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
   const reason = trap ? 'Hidden spam-trap field was filled in' : '';
 
   // Backup copy in Vercel's logs in case the sheet is ever unreachable.
-  console.log('signup', JSON.stringify({ firstName, email, flagged: Boolean(reason) }));
+  console.log('signup', JSON.stringify({ firstName, lastName, email, flagged: Boolean(reason) }));
 
   if (!process.env.SHEET_WEBHOOK_URL || !process.env.SIGNUP_SECRET) {
     console.error('signup failed: SHEET_WEBHOOK_URL or SIGNUP_SECRET is not set');
