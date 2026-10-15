@@ -439,7 +439,7 @@
       var nameErr=document.getElementById('name-error');
       var emailErr=document.getElementById('email-error');
       var valid=true;
-      if(!firstName){nameErr.classList.add('show');valid=false}else{nameErr.classList.remove('show')}
+      if(!firstName||!lastName){nameErr.classList.add('show');valid=false}else{nameErr.classList.remove('show')}
       if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
         emailErr.textContent='Please enter a valid email address.';
         emailErr.classList.add('show');valid=false
