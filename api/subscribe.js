@@ -18,6 +18,7 @@ module.exports = async (req, res) => {
   body = body || {};
 
   const firstName = String(body.firstName || '').trim().slice(0, 100);
+  const lastName = String(body.lastName || '').trim().slice(0, 100);
   const email = String(body.email || '').trim().slice(0, 200);
   const trap = String(body._gotcha || '').trim();
 
