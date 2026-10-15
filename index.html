@@ -440,7 +440,7 @@
       var original=btn.textContent;
       btn.disabled=true;btn.textContent='Sending...';
       try{
-        var res=await fetch('https://formspree.io/f/xjgjwlrk',{
+        var res=await fetch('/api/subscribe',{
           method:'POST',
           headers:{'Content-Type':'application/json','Accept':'application/json'},
           body:JSON.stringify({firstName:firstName,email:email,_gotcha:document.getElementById('gotcha').value})
