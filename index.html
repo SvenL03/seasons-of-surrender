@@ -450,7 +450,7 @@
           document.getElementById('thanks').style.display='block';
         }else{
           var data=await res.json().catch(function(){return {}});
-          emailErr.textContent=(data.errors&&data.errors[0]&&data.errors[0].message)||'Something went wrong. Please try again.';
+          emailErr.textContent=data.error||'Something went wrong. Please try again.';
           emailErr.classList.add('show');
           btn.disabled=false;btn.textContent=original;
         }
