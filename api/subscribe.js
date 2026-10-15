@@ -22,8 +22,8 @@ module.exports = async (req, res) => {
   const email = String(body.email || '').trim().slice(0, 200);
   const trap = String(body._gotcha || '').trim();
 
-  if (!firstName || !EMAIL_RE.test(email)) {
-    return res.status(400).json({ ok: false, error: 'Please enter your first name and a valid email address.' });
+  if (!firstName || !lastName || !EMAIL_RE.test(email)) {
+    return res.status(400).json({ ok: false, error: 'Please enter your first and last name and a valid email address.' });
   }
 
   const reason = trap ? 'Hidden spam-trap field was filled in' : '';
