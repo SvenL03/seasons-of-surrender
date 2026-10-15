@@ -452,7 +452,7 @@
         var res=await fetch('/api/subscribe',{
           method:'POST',
           headers:{'Content-Type':'application/json','Accept':'application/json'},
-          body:JSON.stringify({firstName:firstName,email:email,_gotcha:document.getElementById('gotcha').value})
+          body:JSON.stringify({firstName:firstName,lastName:lastName,email:email,_gotcha:document.getElementById('gotcha').value})
         });
         if(res.ok){
           document.getElementById('form-container').style.display='none';
