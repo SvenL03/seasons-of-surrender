@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seasons of Surrender — Mark &amp; Paula Batory</title>
-<meta name="description" content="Seasons of Surrender is the true story of a young couple who answered God’s call, only to learn that surrender is not a single moment, but a lifetime of yielding. Launching mid-November 2026.">
+<title>Seasons of Surrender | Mark &amp; Paula Batory</title>
+<meta name="description" content="A personal memoir of nearly fifty years learning to trust God through missionary service, family, illness, changed plans, and the joy of surrender.">
 <meta name="theme-color" content="#0B151B">
 <meta property="og:type" content="book">
-<meta property="og:title" content="Seasons of Surrender — Mark &amp; Paula Batory">
-<meta property="og:description" content="A fifty-year journey of trust, trial &amp; release. Launching mid-November 2026.">
+<meta property="og:title" content="Seasons of Surrender | Mark &amp; Paula Batory">
+<meta property="og:description" content="A personal memoir of nearly fifty years learning to trust God through missionary service, family, illness, changed plans, and the joy of surrender.">
 <meta property="og:image" content="https://seasonsofsurrender.org/assets/cover-front.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +45,10 @@
   .link{display:inline-flex;align-items:center;min-height:44px;font-family:var(--label);font-weight:500;font-size:17px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--steel);color:var(--white)}
   :focus-visible{outline:2px solid var(--steel);outline-offset:3px}
 
+  /* desktop / mobile copy switch */
+  @media (min-width:761px){ .m-only{display:none !important} }
+  @media (max-width:760px){ .d-only{display:none !important} }
+
   /* ── Hero ── */
   .hero{position:relative;overflow:hidden;background:var(--night);color:var(--white)}
   .hero::before{content:"";position:absolute;inset:-40px;background:url(assets/cover-front.jpg) center 35%/cover;filter:blur(24px) saturate(.5) hue-rotate(35deg);opacity:.5}
@@ -52,20 +56,27 @@
   .hero .wrap{position:relative;z-index:1}
   nav.top{display:flex;flex-wrap:wrap;gap:16px 36px;align-items:center;justify-content:space-between;padding:30px 0;border-bottom:1px solid rgba(255,255,255,.18)}
   .brand{font-family:var(--serif);font-style:italic;font-weight:500;font-size:34px;line-height:1}
-  nav.top ul{display:flex;flex-wrap:wrap;gap:8px 34px;align-items:center;margin:0;padding:0;list-style:none;font-family:var(--label);font-weight:500;font-size:16px;letter-spacing:.2em;text-transform:uppercase}
+  nav.top ul{display:flex;flex-wrap:wrap;gap:8px 30px;align-items:center;margin:0;padding:0;list-style:none;font-family:var(--label);font-weight:500;font-size:16px;letter-spacing:.18em;text-transform:uppercase}
   nav.top a.navlink{display:inline-flex;min-height:44px;align-items:center}
   nav.top .btn{min-height:44px;padding:0 24px;font-size:16px}
   .hero-body{display:flex;flex-wrap:wrap;gap:56px 72px;align-items:center;justify-content:space-between;padding:80px 0 110px}
-  .hero-copy{flex:1 1 500px;min-width:0;display:flex;flex-direction:column;gap:28px}
+  .hero-copy{flex:1 1 500px;min-width:0;display:flex;flex-direction:column;gap:24px}
   .eyebrow{display:flex;align-items:center;gap:16px;color:var(--mist);font-family:var(--label);font-weight:500;font-size:17px;letter-spacing:.32em;text-transform:uppercase}
   .eyebrow::before{content:"";width:48px;height:1px;background:var(--steel)}
   h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(46px,6vw,86px);line-height:1.04;color:var(--white)}
-  .lede{margin:0;max-width:540px;font-size:21px;line-height:1.7;color:#E3ECF1}
-  .cta-row{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin-top:4px}
+  .bookline{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:25px;line-height:1.3;color:var(--mist)}
+  .bookline b{font-weight:600;color:var(--white)}
+  .lede{margin:0;max-width:560px;font-size:19px;line-height:1.7;color:#E3ECF1}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin-top:8px}
   .launch{font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;color:var(--mist)}
+  .hero-m{padding:48px 0 72px;display:flex;flex-direction:column;gap:22px}
+  .hero-m h1{font-size:54px;line-height:1.02}
+  .hero-m .sub{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;line-height:1.3;color:var(--mist)}
+  .hero-m p.lede{font-size:18px}
+  .hero-m .btn{width:100%}
 
   /* ── 3D book ── */
-  .book-col{flex:0 1 420px;min-width:300px;display:flex;flex-direction:column;align-items:center;gap:22px}
+  .book-col{flex:0 1 420px;min-width:300px;display:flex;flex-direction:column;align-items:center;gap:20px}
   .stage{--w:300px;--h:443px;--d:24px;position:relative;width:100%;max-width:420px;height:560px;perspective:1500px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline-offset:6px}
   .stage.dragging{cursor:grabbing}
   .shadow{position:absolute;left:50%;bottom:34px;width:300px;height:34px;margin-left:-150px;background:radial-gradient(ellipse at center,rgba(0,0,0,.55),rgba(0,0,0,0) 70%);filter:blur(6px)}
@@ -85,57 +96,79 @@
   .views button{min-height:44px;padding:0 20px;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.35);font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
   .views button:hover,.views button:focus-visible{background:var(--steel);color:var(--night);border-color:var(--steel)}
   .hint{margin:0;font-family:var(--label);font-weight:500;font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--mist)}
-
-  /* ── Strip ── */
-  .strip{background:var(--paper);border-bottom:1px solid #D3DCE1}
-  .strip .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:center;padding-top:42px;padding-bottom:42px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:30px;color:var(--slate);text-align:center}
-  .strip span.dot{color:var(--steel-md);font-style:normal}
+  .caption{margin:0;max-width:320px;text-align:center;font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.4;color:var(--mist)}
 
   /* ── Sections ── */
   section{padding:104px 0}
   .kicker{color:var(--steel-dk);margin:0 0 20px}
-  h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(42px,5.2vw,72px);line-height:1.03;color:#0F1E27}
+  h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(40px,5vw,68px);line-height:1.05;color:#0F1E27}
   h2 em{color:var(--steel-dk)}
   .two{display:flex;flex-wrap:wrap;gap:40px 80px;align-items:flex-start}
-  .two > .l{flex:1 1 400px;min-width:0}
-  .two > .r{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:22px;font-size:20px;line-height:1.75;color:var(--body);padding-top:8px}
+  .two > .l{flex:1 1 380px;min-width:0}
+  .two > .r{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:20px;font-size:19px;line-height:1.72;color:var(--body);padding-top:8px}
   .two p,.prose p{margin:0}
-  .seasons-head{max-width:760px;margin-bottom:64px}
-  .seasons-head p{margin:24px 0 0;font-size:20px;color:var(--body)}
+  .head{max-width:780px;margin-bottom:60px}
+  .head p{margin:24px 0 0;font-size:19px;color:var(--body)}
   .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:48px 40px}
-  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px 48px}
   .item{border-top:2px solid var(--ink);padding-top:22px;display:flex;flex-direction:column;gap:12px}
   .item .num{font-family:var(--serif);font-style:italic;font-weight:500;font-size:44px;line-height:1;color:var(--steel-md)}
-  .item h3{margin:0;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.12;color:#0F1E27}
+  .item h3{margin:0;font-family:var(--serif);font-weight:600;font-size:29px;line-height:1.12;color:#0F1E27}
   .item p{margin:0;font-size:17px;line-height:1.65;color:var(--muted)}
   .item .tag{font-family:var(--label);font-weight:600;font-size:14px;letter-spacing:.26em;text-transform:uppercase;color:var(--steel-dk)}
 
   .dark{background:var(--deep);color:var(--white);position:relative;overflow:hidden}
   .dark.photo::before{content:"";position:absolute;inset:-40px;background:url(assets/cover-front.jpg) center 35%/cover;filter:blur(26px) saturate(.45) hue-rotate(35deg);opacity:.28}
   .dark .wrap{position:relative}
-  .quote{max-width:980px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:30px}
+  .dark h2{color:var(--white)}
+  .dark .kicker{color:var(--mist)}
+  .quote{max-width:980px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:28px}
   .quote .bar{width:56px;height:2px;background:var(--steel)}
   .quote blockquote{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(28px,3.6vw,46px);line-height:1.22;color:var(--white)}
   .quote cite{font-style:normal;color:var(--mist)}
-  .for-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:24px;font-size:20px;color:var(--body)}
-  .for-list p{margin:0;padding-top:24px;border-top:1px solid var(--rule)}
-  .for-list p:first-child{border-top:0;padding-top:0}
-  .for-list em{color:#0F1E27}
   .center{text-align:center}
-  .excerpt{max-width:720px;margin:0 auto}
+
+  .invite{background:#E6ECEF}
+  .invite .inner{max-width:780px}
+  .invite .inner p{margin:0 0 20px;font-size:19px;line-height:1.72;color:var(--body)}
+  .highlight{margin:40px 0 0;padding:6px 0 6px 28px;border-left:2px solid var(--steel-md);font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(26px,3vw,36px);line-height:1.3;color:#0F1E27}
+
+  .excerpt{max-width:740px;margin:0 auto}
   .excerpt .eyebrow{justify-content:center}
   .excerpt .eyebrow::before{display:none}
-  .excerpt h2{color:var(--white);text-align:center;margin:18px 0 20px}
-  .excerpt .intro{text-align:center;color:var(--mist);font-size:17px;margin:0 0 44px}
-  .excerpt blockquote{margin:0;padding-left:28px;border-left:2px solid var(--steel);font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(23px,2.6vw,29px);line-height:1.5;color:#E3ECF1;display:flex;flex-direction:column;gap:20px}
+  .excerpt h2{text-align:center;margin:18px 0 20px}
+  .excerpt .intro{text-align:center;color:#D5E2E9;font-size:18px;margin:0 0 40px}
+  .excerpt blockquote{margin:0;padding-left:28px;border-left:2px solid var(--steel);font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(22px,2.5vw,28px);line-height:1.5;color:#E3ECF1}
   .excerpt blockquote p{margin:0}
-  .excerpt .after{text-align:center;color:var(--mist);font-size:16px;margin:44px 0 28px}
+  .excerpt cite{display:block;margin:18px 0 0 30px;font-style:normal;color:var(--mist)}
+  .excerpt .after{color:#D5E2E9;font-size:18px;margin:36px 0 32px}
 
   /* authors */
-  .bio{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px 48px;margin-top:56px}
+  .bio{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px 48px;margin-top:52px}
   .bio .item{border-top-color:var(--steel)}
-  .authors-lede{max-width:700px;margin:26px 0 0;font-size:20px;color:var(--body)}
-  .note{margin:48px 0 0;font-size:15px;font-style:italic;color:var(--muted)}
+  .authors-body{max-width:760px;margin:26px 0 0;display:flex;flex-direction:column;gap:18px;font-size:19px;line-height:1.72;color:var(--body)}
+  .authors-body p{margin:0}
+
+  /* mobile pieces */
+  .m-sec{padding:64px 0}
+  .m-sec h2{font-size:40px}
+  .m-sec .wrap > p,.m-sec details.more p{margin:0 0 16px;font-size:17px;line-height:1.65;color:var(--body)}
+  details.more summary,details.full summary{display:inline-flex;align-items:center;min-height:44px;cursor:pointer;list-style:none;font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--steel-dk);border-bottom:1px solid currentColor}
+  details.more summary::-webkit-details-marker,details.full summary::-webkit-details-marker,details.season summary::-webkit-details-marker{display:none}
+  details.more[open] summary,details.full[open] summary{display:none}
+  details.more p{margin-top:8px}
+  .dark details.full summary{color:var(--mist)}
+  details.full .full-text{margin-top:8px}
+  .excerpt:has(details.full[open]) .short{display:none}
+  details.full[open]{margin-top:0 !important}
+  .accordion{margin-top:32px;border-bottom:1px solid var(--rule)}
+  details.season{border-top:1px solid var(--rule)}
+  details.season summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 32px;gap:12px;align-items:start;padding:20px 0}
+  details.season summary .tag{display:block;font-family:var(--label);font-weight:600;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--steel-dk);margin-bottom:6px}
+  details.season summary h3{margin:0 0 6px;font-family:var(--serif);font-weight:600;font-size:25px;line-height:1.15;color:#0F1E27}
+  details.season summary .one{display:block;font-size:16px;line-height:1.55;color:var(--muted)}
+  details.season summary .plus{width:32px;height:32px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:22px;line-height:1;color:var(--steel-dk);transition:transform .2s}
+  details.season[open] summary .plus{transform:rotate(45deg)}
+  details.season .full-p{margin:0;padding:0 0 22px;font-size:16px;line-height:1.65;color:var(--body)}
 
   /* signup */
   .signup{background:var(--slate);color:var(--white)}
@@ -169,14 +202,17 @@
   .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
   .js .reveal.in{opacity:1;transform:none}
 
-  @media (max-width:720px){
+  @media (max-width:760px){
     body{font-size:17px}
     .wrap{padding:0 24px}
-    section{padding:72px 0}
-    .hero-body{padding:56px 0 80px}
+    nav.top{padding:20px 0}
     nav.top ul li.hide-sm{display:none}
-    .stage{height:500px;--w:260px;--h:384px;--d:21px}
-    .shadow{width:260px;margin-left:-130px}
+    .brand{font-size:28px}
+    .hero::before{display:none}
+    .hero::after{background:linear-gradient(180deg,var(--night),var(--deep))}
+    .signup{padding:64px 0}
+    .signup h2{font-size:40px}
+    footer .brand{font-size:28px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
@@ -193,21 +229,25 @@
       <a class="brand" href="#top" id="top">Seasons of Surrender</a>
       <ul>
         <li class="hide-sm"><a class="navlink" href="#book">The Book</a></li>
-        <li class="hide-sm"><a class="navlink" href="#seasons">Four Seasons</a></li>
-        <li class="hide-sm"><a class="navlink" href="#excerpt">Excerpt</a></li>
-        <li class="hide-sm"><a class="navlink" href="#authors">The Authors</a></li>
-        <li><a class="btn" href="#signup">Get Notified</a></li>
+        <li class="hide-sm"><a class="navlink" href="#seasons">The Four Seasons</a></li>
+        <li class="hide-sm"><a class="navlink" href="#story">A Story from the Book</a></li>
+        <li class="hide-sm"><a class="navlink" href="#authors">Meet the Authors</a></li>
+        <li><a class="btn" href="#signup">Get Updates</a></li>
       </ul>
     </nav>
 
-    <div class="hero-body">
+    <!-- Desktop hero -->
+    <div class="hero-body d-only">
       <div class="hero-copy">
         <div class="eyebrow">A memoir by Mark &amp; Paula Batory</div>
         <h1>We all say we trust God until He asks us to surrender.</h1>
-        <p class="lede">The true story of a young couple who answered God’s call, only to learn that surrender is not a single moment, but a lifetime of yielding.</p>
+        <p class="bookline"><b>Seasons of Surrender</b> · A Fifty-Year Journey of Trust, Trial, Refinement, and Release</p>
+        <p class="lede">We thought surrender meant being willing to leave home and follow the Lord wherever He led. We were young, eager, and had little idea of what lay ahead. Nearly fifty years later, we have learned that surrender is not a decision made once, but a lifetime of learning to trust Him.</p>
+        <p class="lede">Through unexpected provisions, painful disappointments, illness, changing plans, and blessings we never could have imagined, the Lord has patiently taught us that His faithfulness does not depend upon our circumstances. Along the way, He has given us a joy that circumstances alone could never provide.</p>
+        <p class="lede">This is not the story of two extraordinary people. It is the testimony of two ordinary people learning, season by season, to place their lives in the hands of an extraordinary God.</p>
         <div class="cta-row">
-          <a class="btn" href="#signup">Get Notified at Launch</a>
-          <a class="link" href="#excerpt">Read an excerpt</a>
+          <a class="btn" href="#signup">Notify Me When the Book Is Available</a>
+          <a class="link" href="#story">Read a Story from the Book</a>
         </div>
         <div class="launch">Launching mid-November 2026</div>
       </div>
@@ -230,162 +270,281 @@
           <button type="button" data-view="back">Back</button>
         </div>
         <p class="hint">Drag to turn the book</p>
+        <p class="caption">The cover image depicts the Mexican mountains where they lived and served.</p>
       </div>
+    </div>
+
+    <!-- Mobile hero -->
+    <div class="hero-m m-only">
+      <div class="eyebrow">A memoir by Mark &amp; Paula Batory</div>
+      <h1>Seasons of Surrender</h1>
+      <p class="sub">A Fifty-Year Journey of Trust, Trial, Refinement, and Release</p>
+      <p class="lede">We were young when we left home to serve the Lord, with little idea where the road would lead. Nearly fifty years later, we look back on unexpected blessings, difficult trials, changing directions, and the abiding faithfulness of God.</p>
+      <a class="btn" href="#signup">Notify Me When the Book Is Available</a>
+      <div><a class="link" href="#m-story">Read an excerpt ↓</a></div>
+      <div class="launch">Launching mid-November 2026</div>
     </div>
   </div>
 </header>
 
 <main>
-  <div class="strip">
-    <div class="wrap">
-      <span>A fifty-year journey</span><span class="dot" aria-hidden="true">✦</span><span>Trust</span><span class="dot" aria-hidden="true">✦</span><span>Trial</span><span class="dot" aria-hidden="true">✦</span><span>Release</span>
-    </div>
+  <!-- ═════════════ DESKTOP ═════════════ -->
+  <div class="d-only">
+
+    <section id="book">
+      <div class="wrap two reveal">
+        <div class="l">
+          <p class="label kicker">The Book</p>
+          <h2>We never planned to write a book.</h2>
+        </div>
+        <div class="r">
+          <p>For years, friends encouraged us to tell the story of our life and ministry, but we thought of it simply as the life God had given us. Then one evening on our back deck, Mark wondered aloud how many of the Lord’s mercies we had already forgotten. Not long afterward, Paula began discovering boxes of letters in the attic: letters and ministry reports she had written and saved throughout our years of service.</p>
+          <p>Those pages brought back the mountain roads of Mexico, the people we had grown to love, prayers answered in ways we could not explain, and seasons we would never have chosen for ourselves. What began as an effort to remember became an opportunity to bear witness to the Lord’s faithfulness.</p>
+          <p><em>Seasons of Surrender</em> is a personal account of marriage, family, missionary service, illness, redirection, leadership, and letting go. Some moments are joyful. Others are difficult to revisit. In all of them, we have been learning the same lesson: the Lord can be trusted, even when we cannot see what He is doing. Even in difficult seasons, He has given us reasons to rejoice in Him.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark photo">
+      <div class="wrap reveal">
+        <div class="quote">
+          <div class="bar"></div>
+          <blockquote>“What follows is not merely our story. It is the story of the Lord’s faithfulness through every season of surrender.”</blockquote>
+          <cite class="label">From Mark’s preface</cite>
+        </div>
+      </div>
+    </section>
+
+    <section id="seasons">
+      <div class="wrap reveal">
+        <div class="head">
+          <p class="label kicker">The Four Seasons</p>
+          <h2>Four seasons. <em>One faithful God.</em></h2>
+          <p>We have come to understand that surrender changes its shape as life unfolds. Each season asked something different of us. In every season, the Lord was teaching us to trust Him more deeply.</p>
+        </div>
+        <div class="grid4">
+          <div class="item">
+            <div class="num">01</div>
+            <div class="tag">Trust</div>
+            <h3>Surrendering the Strength of Our Youth</h3>
+            <p>We left Michigan as newly married missionaries, traveled to Texas for language school, and eventually made our home among the mountains and villages of Mexico. We began with willing hearts, but willingness had to grow into daily dependence. The Lord taught us through unfamiliar roads, empty cupboards, precious friendships, and prayers as simple as asking for breakfast.</p>
+          </div>
+          <div class="item">
+            <div class="num">02</div>
+            <div class="tag">Trial</div>
+            <h3>Surrendering Our Way in the Wilderness</h3>
+            <p>We had made plans for the work we loved. Then illness and circumstances beyond our control interrupted those plans. We struggled with questions we could not answer and waited for doors we hoped would open again. Slowly, we learned that trusting the Lord meant loving Him more than the place, the work, or the future we had imagined.</p>
+          </div>
+          <div class="item">
+            <div class="num">03</div>
+            <div class="tag">Refinement</div>
+            <h3>Surrendering to an Unchosen Path</h3>
+            <p>When we could not return to the ministry we had expected, the Lord led us along a path we never could have imagined. New doors opened for the Gospel among people and places we had not planned to reach. Yet through those unexpected redirections, we began to understand that God was doing more than changing our circumstances. He was refining our hearts, deepening our trust, and teaching us to surrender not only our plans but our expectations of how He would use us. What first appeared to be a closed door became another chapter in His faithful leading.</p>
+          </div>
+          <div class="item">
+            <div class="num">04</div>
+            <div class="tag">Release</div>
+            <h3>Surrendering What We Cannot Keep</h3>
+            <p>In later years, surrender began to look less like leaving and more like releasing. We faced loss, changing strength, concerns for those we love, and the responsibility of entrusting work to others. We are still learning that the God who led us when we were young is just as faithful in the seasons when He asks us to let go.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inside" style="padding-top:0">
+      <div class="wrap reveal">
+        <div class="head">
+          <p class="label kicker">Inside the Pages</p>
+          <h2>The stories are ours. <em>The lessons belong to every believer.</em></h2>
+          <p>We wrote about what the Lord has taught us through the ordinary and extraordinary circumstances of life. These themes run through the pages:</p>
+        </div>
+        <div class="grid4">
+          <div class="item">
+            <h3>Trust in the ordinary</h3>
+            <p>Sometimes the lesson came through a single meal, a difficult conversation, or a need no one else could see.</p>
+          </div>
+          <div class="item">
+            <h3>Grace in the unexpected</h3>
+            <p>Sometimes His answer was not the answer we wanted, and the greatest work was what He was doing in our hearts.</p>
+          </div>
+          <div class="item">
+            <h3>Love that walks together</h3>
+            <p>Marriage, family, churches, and faithful friends were not side stories. They were among God’s gifts along the road.</p>
+          </div>
+          <div class="item">
+            <h3>Peace in releasing</h3>
+            <p>Sometimes obedience meant going. At other times it meant staying, waiting, or placing something precious back into His hands.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="invitation" class="invite">
+      <div class="wrap reveal">
+        <div class="inner">
+          <p class="label kicker">An Invitation</p>
+          <h2 style="margin-bottom:28px">Your season may look nothing like ours.</h2>
+          <p>You may never live in another country or serve in full-time ministry. You may be a young person wondering what the Lord wants of your life, a parent carrying a burden for your family, a believer whose plans have unexpectedly changed, or someone entering a season you never anticipated.</p>
+          <p>Our prayer is not that you will finish these pages impressed with what we have done. It is that you will be encouraged to trust what the Lord can do in a life yielded to Him and discover the joy of walking with Him, right where He has placed you.</p>
+          <p class="highlight">The deeper question has never been, “Will God ask me to live a life like theirs?” It is, “Will I trust Him with the life He has given me?”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="dark">
+      <div class="wrap reveal">
+        <div class="excerpt">
+          <div class="eyebrow">A Story from Season One</div>
+          <h2>Three eggs.</h2>
+          <p class="intro">During language school in Texas, our food was nearly gone and the next support check was still two weeks away. Paula prayed for three eggs for the following morning. We learned something about God’s care, and about how much we still needed to learn to trust Him.</p>
+          <blockquote><p>“The next morning, Paula eagerly looked outside the door of our little travel trailer. There, sitting on our patio chair, was an egg carton. For a moment, she could hardly believe what she was seeing. She picked it up, opened it, and called for me to come. Inside were three eggs. Exactly three. Not more, not less. The Lord had answered her prayer with such tenderness and precision that there was no way to explain it away. With tears of rejoicing, we scrambled them and squeezed a little ketchup over them from a single leftover fast-food packet.”</p></blockquote>
+          <cite class="label">Excerpt from Chapter 2, “The Calling Forward”</cite>
+          <p class="after">The story did not end with those three eggs. Before the day was over, the Lord provided far more food than our little trailer could hold. But the deeper gift was the lesson He was teaching us about dependence on Him.</p>
+          <div class="center"><a class="btn" href="#signup">Get the Rest at Launch</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="authors">
+      <div class="wrap reveal">
+        <p class="label kicker">Meet the Authors</p>
+        <h2>Mark &amp; Paula Batory</h2>
+        <div class="authors-body">
+          <p>We met as teenagers who shared a desire to serve the Lord. We married in 1977 and began missionary service the following year. Over the decades, God led us through service in Mexico, church planting, ministry among Spanish-speaking people, missions leadership, and care for fellow servants of Christ.</p>
+          <p>Our lives have never been free from difficulty, but they have been rich in the kindness of God. We have shared the road as husband and wife, parents, coworkers, and, most importantly, two people still learning what it means to follow Jesus Christ.</p>
+          <p>Much of this book is told through Paula’s eyes, drawing on the letters and records she faithfully preserved. Mark’s reflections are woven through the account. Though our perspectives differ, the story is one we have lived together.</p>
+        </div>
+        <div class="bio">
+          <div class="item">
+            <h3>Paula</h3>
+            <p>Wife, mother, missionary, and storyteller. For many years Paula wrote the letters and ministry reports that would one day help us remember the Lord’s faithfulness through every season.</p>
+          </div>
+          <div class="item">
+            <h3>Mark</h3>
+            <p>Missionary, church planter, and missions leader. Mark’s reflections trace the calling, decisions, relationships, and releases through which the Lord has continued to teach him to trust.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <section id="book">
-    <div class="wrap two reveal">
-      <div class="l">
-        <p class="label kicker">The Book</p>
-        <h2>More than a <em>missionary memoir.</em></h2>
-      </div>
-      <div class="r">
-        <p>On August 9, 1978, two twenty-somethings drove south out of Michigan in a travel trailer with no fallback plan. <em>Seasons of Surrender</em> is the fifty-year story of what happened next.</p>
-        <p>From missionary service in Mexico through hardship, illness, loss, leadership, and release, Mark and Paula Batory learned to trust the One who writes every chapter, even when the next page was not what they expected.</p>
-        <p>It is a testimony of God’s faithfulness and a call to follow Christ without reserve.</p>
-      </div>
-    </div>
-  </section>
+  <!-- ═════════════ MOBILE ═════════════ -->
+  <div class="m-only">
 
-  <section id="seasons" style="padding-top:0">
-    <div class="wrap reveal">
-      <div class="seasons-head">
-        <p class="label kicker">The Arc of the Book</p>
-        <h2>Four seasons. One surrender <em>after another.</em></h2>
-        <p>The book is structured around four seasons of giving things up, and discovering what was actually being given in return.</p>
+    <section id="m-book" class="m-sec">
+      <div class="wrap">
+        <h2 style="margin-bottom:22px">We never set out to write a book.</h2>
+        <p>One evening, Mark wondered how many of the Lord’s mercies we had forgotten. Not long afterward, Paula found boxes of letters and ministry reports she had saved throughout our years of service.</p>
+        <p>Those pages brought back the people, places, joys, and sorrows of a life spent following Christ. They became the beginning of <em>Seasons of Surrender</em>.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p><em>Seasons of Surrender</em> is a personal account of marriage, family, missionary service, illness, redirection, leadership, and letting go. Some moments are joyful. Others are difficult to revisit. In all of them, we have been learning the same lesson: the Lord can be trusted, even when we cannot see what He is doing.</p>
+        </details>
       </div>
-      <div class="grid4">
-        <div class="item">
-          <div class="num">i.</div>
-          <div class="tag">Season One</div>
-          <h3>Surrendering the Strength of Our Youth</h3>
-          <p>The departure. Language school in Texas. Three eggs on a patio chair after a desperate prayer. The first taste of trusting a God who provides exactly what you ask for, and not a carton more.</p>
-        </div>
-        <div class="item">
-          <div class="num">ii.</div>
-          <div class="tag">Season Two</div>
-          <h3>Surrendering Our Way in the Wilderness</h3>
-          <p>A hospital bed in Michigan. Liver enzymes off the charts. A high-paying job offer from a worried father, and the quiet “no” from a man who knew the difference between cars on a transport truck and souls being made new.</p>
-        </div>
-        <div class="item">
-          <div class="num">iii.</div>
-          <div class="tag">Season Three</div>
-          <h3>Surrendering to an Unchosen Path</h3>
-          <p>The ministry they built when they couldn’t return to the one they’d planned. Migrant camps under bedsheet movie screens. Men who came illegally, met Christ, and went home to plant churches in their own villages.</p>
-        </div>
-        <div class="item">
-          <div class="num">iv.</div>
-          <div class="tag">Season Four</div>
-          <h3>Surrendering What We Cannot Keep</h3>
-          <p>Aging. Illness. A grandson born with Down syndrome whose NICU crib was wrapped like a Christmas present. A leadership transition prepared so carefully it felt like obedience instead of an ending. And a porch swing in the woods where the real work of the final season began.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="dark photo">
-    <div class="wrap reveal">
-      <div class="quote">
-        <div class="bar"></div>
-        <blockquote>We hear young people say they are studying for ministry, yet they choose to minor in something else <em>just in case</em> the ministry does not work out. … Abraham never had a Plan B, and neither did we.</blockquote>
-        <cite class="label">From <em>Seasons of Surrender</em></cite>
-      </div>
-    </div>
-  </section>
-
-  <section id="inside">
-    <div class="wrap reveal">
-      <div class="seasons-head">
-        <p class="label kicker">Inside the Book</p>
-        <h2>Part memoir. Part manifesto. <em>All substance.</em></h2>
-        <p><em>Seasons of Surrender</em> isn’t a how-to. It’s the philosophy of a life, pulled out of fifty years of marriage and ministry and offered to the next generation deciding whether to give Christ their first and strongest years.</p>
-      </div>
-      <div class="grid3">
-        <div class="item">
-          <div class="num">i.</div>
-          <h3>A Philosophy of Missions</h3>
-          <p>Why we went, why we stayed, and what we learned about building churches that don’t need us: self-supporting, self-governing, and self-propagating from the start.</p>
-        </div>
-        <div class="item">
-          <div class="num">ii.</div>
-          <h3>A Philosophy of Marriage</h3>
-          <p>How two strong-willed people built something that lasted across borders, languages, illness, and decades. Including Mark’s honest reflection on what it takes to steward a strong wife well.</p>
-        </div>
-        <div class="item">
-          <div class="num">iii.</div>
-          <h3>A Philosophy of Surrender</h3>
-          <p>What it actually looks like to follow without seeing. Why Plan B is often the thing that keeps Plan A from ever happening. And how surrender, lived all the way through, turns out to be the most generous life available.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="background:#E6ECEF">
-    <div class="wrap reveal">
-      <div class="center" style="margin-bottom:56px">
-        <p class="label kicker">Who It’s For</p>
-        <h2>This book is for you <em>if&nbsp;—</em></h2>
-      </div>
-      <div class="for-list">
-        <p>You’re a college student wrestling with the call, and everyone in your life is gently suggesting you keep your options open.</p>
-        <p>You’re a young couple wondering if ministry, or marriage, or both, will survive what’s coming.</p>
-        <p>You’re mid-career and asking, quietly, whether it’s too late to give your life to something that actually matters.</p>
-        <p>You’re a veteran of the work who just needs to remember why you started.</p>
-        <p>Or you’re a parent, pastor, or mentor who wants to put something in the hands of someone you love that says: <em>here’s what a life like this actually looks like, from the inside, with nothing edited out.</em></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="excerpt" class="dark">
-    <div class="wrap reveal">
-      <div class="excerpt">
-        <div class="eyebrow">From the manuscript</div>
-        <h2>Three eggs.</h2>
-        <p class="intro">A short excerpt from Season One: the day Paula and Mark learned that God answers prayer in measured kindness, not abundance.</p>
-        <blockquote>
-          <p>Our last meal carries vivid memories. There was nothing left. Paula prayed: “You know our need and that we have nothing left to eat now for the next two weeks. We want to trust You now to supply for our breakfast tomorrow. We would be grateful if You would please provide three eggs for us to eat in the morning. In Jesus’ name, Amen.”</p>
-          <p>The next morning, sitting on our patio chair, was an egg carton. Inside she found three eggs. Yes, three eggs, exactly what she had prayed for, not more, not less.</p>
-        </blockquote>
-        <p class="after">This is one of dozens of stories woven through the book.</p>
-        <div class="center"><a class="btn" href="#signup">Get the Rest at Launch</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="authors">
-    <div class="wrap reveal">
-      <p class="label kicker">The Authors</p>
-      <h2>Mark &amp; Paula <em>Batory</em></h2>
-      <p class="authors-lede">For fifty years, Mark and Paula have served the Lord together through missionary work, church planting, leadership, mentoring, and missionary care. Their lives continue to be shaped by a shared desire to follow Christ wherever He leads and to encourage others along the way.</p>
-      <div class="bio">
-        <div class="item">
-          <h3>Paula</h3>
-          <p>Writes warmly as a wife, mother, missionary, and careful witness to God’s faithfulness.</p>
-        </div>
-        <div class="item">
-          <h3>Mark</h3>
-          <p>Continues to minister with a burden to strengthen churches, missionaries, and men for faithful service to Christ.</p>
+    <section id="m-seasons" class="m-sec" style="padding-top:0">
+      <div class="wrap">
+        <h2>Trust. Trial. Refinement. Release.</h2>
+        <div class="accordion">
+          <details class="season">
+            <summary>
+              <span>
+                <span class="tag">01 · Trust</span>
+                <h3>Surrendering the Strength of Our Youth</h3>
+                <span class="one">We left the familiar behind to serve the Lord, and began learning to trust Him for the ordinary needs of each day.</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
+            </summary>
+            <p class="full-p">We left Michigan as newly married missionaries, traveled to Texas for language school, and eventually made our home among the mountains and villages of Mexico. We began with willing hearts, but willingness had to grow into daily dependence. The Lord taught us through unfamiliar roads, empty cupboards, precious friendships, and prayers as simple as asking for breakfast.</p>
+          </details>
+          <details class="season">
+            <summary>
+              <span>
+                <span class="tag">02 · Trial</span>
+                <h3>Surrendering Our Way in the Wilderness</h3>
+                <span class="one">When illness interrupted the work we loved, we faced the difficulty of trusting the Lord without knowing what came next.</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
+            </summary>
+            <p class="full-p">We had made plans for the work we loved. Then illness and circumstances beyond our control interrupted those plans. We struggled with questions we could not answer and waited for doors we hoped would open again. Slowly, we learned that trusting the Lord meant loving Him more than the place, the work, or the future we had imagined.</p>
+          </details>
+          <details class="season">
+            <summary>
+              <span>
+                <span class="tag">03 · Refinement</span>
+                <h3>Surrendering to an Unchosen Path</h3>
+                <span class="one">When the Lord closed the door to the ministry we had expected, He opened doors we had never anticipated, refining our hearts as He redirected our steps.</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
+            </summary>
+            <p class="full-p">When we could not return to the ministry we had expected, the Lord led us along a path we never could have imagined. New doors opened for the Gospel among people and places we had not planned to reach. Yet through those unexpected redirections, we began to understand that God was doing more than changing our circumstances. He was refining our hearts, deepening our trust, and teaching us to surrender not only our plans but our expectations of how He would use us. What first appeared to be a closed door became another chapter in His faithful leading.</p>
+          </details>
+          <details class="season">
+            <summary>
+              <span>
+                <span class="tag">04 · Release</span>
+                <h3>Surrendering What We Cannot Keep</h3>
+                <span class="one">As the years passed, we learned to entrust the people, responsibilities, and seasons we could not hold forever to the Lord.</span>
+              </span>
+              <span class="plus" aria-hidden="true">+</span>
+            </summary>
+            <p class="full-p">In later years, surrender began to look less like leaving and more like releasing. We faced loss, changing strength, concerns for those we love, and the responsibility of entrusting work to others. We are still learning that the God who led us when we were young is just as faithful in the seasons when He asks us to let go.</p>
+          </details>
         </div>
       </div>
-      <p class="note">The cover image depicts the Mexican mountains where they lived and served.</p>
-    </div>
-  </section>
+    </section>
 
+    <section id="m-story" class="dark m-sec">
+      <div class="wrap">
+        <div class="excerpt">
+          <div class="eyebrow">From Season One</div>
+          <h2>Three eggs.</h2>
+          <p class="intro">While we were attending language school in Texas, our food had run out. Paula asked the Lord to provide three eggs for breakfast the next morning.</p>
+          <div class="short">
+            <blockquote><p>“There, sitting on our patio chair, was an egg carton. For a moment, she could hardly believe what she was seeing. She picked it up, opened it, and called for me to come. Inside were three eggs. Exactly three. Not more, not less.”</p></blockquote>
+          </div>
+          <details class="full" style="margin-top:24px">
+            <summary>Read the full story</summary>
+            <div class="full-text">
+              <blockquote><p>“The next morning, Paula eagerly looked outside the door of our little travel trailer. There, sitting on our patio chair, was an egg carton. For a moment, she could hardly believe what she was seeing. She picked it up, opened it, and called for me to come. Inside were three eggs. Exactly three. Not more, not less. The Lord had answered her prayer with such tenderness and precision that there was no way to explain it away. With tears of rejoicing, we scrambled them and squeezed a little ketchup over them from a single leftover fast-food packet.”</p></blockquote>
+              <p class="after" style="margin-bottom:0">The story did not end with those three eggs. Before the day was over, the Lord provided far more food than our little trailer could hold. But the deeper gift was the lesson He was teaching us about dependence on Him.</p>
+            </div>
+          </details>
+          <cite class="label" style="margin-top:20px">From Chapter 2 · The Calling Forward</cite>
+          <div class="center" style="margin-top:32px"><a class="btn" href="#signup" style="width:100%">Get the Rest at Launch</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="m-authors" class="m-sec">
+      <div class="wrap">
+        <h2 style="margin-bottom:22px">Mark &amp; Paula Batory</h2>
+        <p>We met as teenagers who shared a desire to serve the Lord. We married in 1977 and began missionary service soon afterward. Through ministry in Mexico, family life, illness, unexpected changes, and later years of service, we have been learning to trust Him together.</p>
+        <p>Much of the book is told through Paula’s memories and preserved letters, with Mark’s reflections woven throughout.</p>
+      </div>
+    </section>
+
+    <section class="dark m-sec">
+      <div class="wrap">
+        <div class="quote">
+          <div class="bar"></div>
+          <blockquote style="font-size:28px">“We do not get to choose every chapter, but we do get to decide whether we will trust the Author.”</blockquote>
+          <cite class="label">From the epilogue of <em>Seasons of Surrender</em></cite>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═════════════ SIGNUP (shared) ═════════════ -->
   <section id="signup" class="signup">
     <div class="wrap">
       <div class="box">
-        <p class="label kicker">Stay in the Loop</p>
-        <h2>Be the first to read it.</h2>
-        <p class="sub">Sign up to get notified when <em>Seasons of Surrender</em> releases in mid-November, plus early excerpts and behind-the-scenes stories from the field.</p>
+        <p class="label kicker d-only">Stay in Touch</p>
+        <h2 class="d-only">We would love to share the book with you.</h2>
+        <h2 class="m-only">Stay in touch.</h2>
+        <p class="sub d-only"><em>Seasons of Surrender</em> is planned for release in mid-November 2026. Leave your name and email to receive an announcement when it is available and occasional updates as we prepare for publication.</p>
+        <p class="sub m-only"><em>Seasons of Surrender</em> is planned for release in mid-November 2026. Leave your name and email to receive an announcement when it is available.</p>
 
         <div id="form-container">
           <form id="signup-form" novalidate>
@@ -406,15 +565,30 @@
               <p class="err" id="email-error" role="alert">Please enter a valid email address.</p>
             </div>
             <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
-            <button class="btn" type="submit">Count Me In</button>
+            <button class="btn" type="submit">Please Keep Me Updated</button>
           </form>
-          <p class="fine">No spam. Just the book.</p>
+          <p class="fine">We will use your information only for updates about the book.</p>
         </div>
 
         <div id="thanks" role="status">
           <h3>Thank you.</h3>
           <p>Your email has been submitted. We’ll let you know when we announce the publishing date and when you can pre-order on Amazon.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Desktop closing -->
+  <section id="final" class="dark photo d-only">
+    <div class="wrap reveal">
+      <div class="quote">
+        <p class="label kicker" style="margin:0">A Final Thought</p>
+        <h2>The story was never ours to write alone.</h2>
+        <p style="margin:0;max-width:640px;font-size:19px;line-height:1.7;color:#D5E2E9">The Lord has been faithful through every season behind us. We trust Him with whatever pages remain. Our hope is that as you read our story, you will be encouraged to leave the pen in His hand as well.</p>
+        <div class="bar"></div>
+        <blockquote>“May we never take the pen from His hand but simply yield the page and let Him keep writing.”</blockquote>
+        <cite class="label">From the epilogue</cite>
+        <a class="btn" href="#signup">Notify Me When the Book Is Available</a>
       </div>
     </div>
   </section>
@@ -471,7 +645,7 @@
     });
   })();
 
-  /* ── 3D book: drag, keys, view buttons, gentle intro spin ── */
+  /* ── 3D book (desktop): drag, keys, view buttons, gentle intro spin ── */
   (function(){
     var stage=document.getElementById('stage'),book=document.getElementById('book3d');
     var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -493,7 +667,7 @@
       tween=requestAnimationFrame(step);
     }
     function loop(){
-      if(spinning&&!dragging){ry+=0.18;apply()}
+      if(spinning&&!dragging&&stage.offsetParent!==null){ry+=0.18;apply()}
       requestAnimationFrame(loop);
     }
     stage.addEventListener('pointerdown',function(e){
