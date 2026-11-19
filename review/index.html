@@ -28,9 +28,13 @@
   /* ── Amazon listing ─────────────────────────────────────────────
      The ONLY place the book's Amazon ID lives. If the listing ever
      changes, update AMAZON_ASIN and the review button follows.
-     Review form URL pattern: https://www.amazon.com/review/create-review?asin=<ASIN>  */
-  var AMAZON_ASIN = 'B0HHBTQ4SP';
-  var AMAZON_REVIEW_URL = 'https://www.amazon.com/review/create-review?asin=' + encodeURIComponent(AMAZON_ASIN);
+     Review form URL pattern: https://www.amazon.com/review/create-review?asin=<ASIN>
+     Empty until the Nov 2026 paperback (ISBN 979-8-9973749-1-4) shows its ASIN;
+     until then the button opens an Amazon search for the book.  */
+  var AMAZON_ASIN = '';
+  var AMAZON_REVIEW_URL = AMAZON_ASIN
+    ? 'https://www.amazon.com/review/create-review?asin=' + encodeURIComponent(AMAZON_ASIN)
+    : 'https://www.amazon.com/s?k=Seasons+of+Surrender+Batory&i=stripbooks';
 </script>
 <style>
   /* Self-hosted fonts (SIL Open Font License, see /assets/fonts/LICENSES.txt) */
