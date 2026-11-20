@@ -170,6 +170,12 @@
   .bio .item{border-top-color:var(--steel)}
   .authors-body{max-width:760px;margin:26px 0 0;display:flex;flex-direction:column;gap:18px;font-size:19px;line-height:1.72;color:var(--body)}
   .authors-body p{margin:0}
+  .authors-top{display:flex;gap:56px;align-items:flex-start}
+  .authors-top .authors-body{flex:1 1 auto}
+  .authors-photo{flex:0 0 300px;margin:30px 0 0;box-shadow:0 30px 60px -24px rgba(0,0,0,.45)}
+  .authors-photo img,.m-authors-photo img{display:block;width:100%;height:auto}
+  .m-authors-photo{margin:0 auto 26px;max-width:340px}
+  @media (max-width:960px){.authors-top{flex-direction:column;gap:0}.authors-photo{flex:none;width:100%;max-width:320px}}
 
   /* mobile pieces */
   .m-sec{padding:64px 0}
@@ -529,10 +535,13 @@
       <div class="wrap reveal">
         <p class="label kicker">Meet the Authors</p>
         <h2>Mark &amp; Paula Batory</h2>
+        <div class="authors-top">
         <div class="authors-body">
           <p>We met as teenagers who shared a desire to serve the Lord. We married in 1977 and began missionary service the following year. Over the decades, God led us through service in Mexico, church planting, ministry among Spanish-speaking people, missions leadership, and care for fellow servants of Christ.</p>
           <p>Our lives have never been free from difficulty, but they have been rich in the kindness of God. We have shared the road as husband and wife, parents, coworkers, and, most importantly, two people still learning what it means to follow Jesus Christ.</p>
           <p>Much of this book is told through Paula’s eyes, drawing on the letters and records she faithfully preserved. Mark’s reflections are woven through the account. Though our perspectives differ, the story is one we have lived together.</p>
+        </div>
+        <figure class="authors-photo"><img src="/assets/authors.jpg" width="660" height="740" alt="Mark and Paula Batory" loading="lazy"></figure>
         </div>
         <div class="bio">
           <div class="item">
@@ -640,6 +649,7 @@
     <section id="m-authors" class="m-sec">
       <div class="wrap">
         <h2 style="margin-bottom:22px">Mark &amp; Paula Batory</h2>
+        <figure class="m-authors-photo"><img src="/assets/authors.jpg" width="660" height="740" alt="Mark and Paula Batory" loading="lazy"></figure>
         <p>We met as teenagers who shared a desire to serve the Lord. We married in 1977 and began missionary service soon afterward. Through ministry in Mexico, family life, illness, unexpected changes, and later years of service, we have been learning to trust Him together.</p>
         <p>Much of the book is told through Paula’s memories and preserved letters, with Mark’s reflections woven throughout.</p>
       </div>
