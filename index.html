@@ -99,7 +99,7 @@
 
   /* ── 3D book ── */
   .book-col{flex:0 1 420px;min-width:300px;display:flex;flex-direction:column;align-items:center;gap:20px}
-  .stage{--w:300px;--h:443px;--d:24px;position:relative;width:100%;max-width:420px;height:560px;perspective:1500px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline-offset:6px}
+  .stage{--w:300px;--h:450px;--d:44.5px;position:relative;width:100%;max-width:420px;height:560px;perspective:1500px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline-offset:6px}
   .stage.dragging{cursor:grabbing}
   .shadow{position:absolute;left:50%;bottom:34px;width:300px;height:34px;margin-left:-150px;background:radial-gradient(ellipse at center,rgba(0,0,0,.55),rgba(0,0,0,0) 70%);filter:blur(6px)}
   .book{position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:rotateX(-8deg) rotateY(-28deg);will-change:transform}
@@ -386,7 +386,7 @@
         <div class="stage" id="stage" tabindex="0" role="group" aria-label="3D view of the Seasons of Surrender paperback. Drag to turn it, or use the left and right arrow keys.">
           <div class="shadow" aria-hidden="true"></div>
           <div class="book" id="book3d">
-            <div class="face f-front"><img src="/assets/cover-front.jpg" width="448" height="661" alt="Front cover of Seasons of Surrender by Mark and Paula Batory, showing the Mexican mountains where they lived and served" loading="lazy" draggable="false"></div>
+            <div class="face f-front"><img src="/assets/cover-front.jpg" width="600" height="900" alt="Front cover of Seasons of Surrender by Mark and Paula Batory, showing the Mexican mountains where they lived and served" loading="lazy" draggable="false"></div>
             <div class="face f-back"></div>
             <div class="face f-spine"></div>
             <div class="face f-pages"></div>
