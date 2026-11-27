@@ -29,9 +29,9 @@
      The ONLY place the book's Amazon ID lives. If the listing ever
      changes, update AMAZON_ASIN and the review button follows.
      Review form URL pattern: https://www.amazon.com/review/create-review?asin=<ASIN>
-     Empty until the Nov 2026 paperback (ISBN 979-8-9973749-1-4) shows its ASIN;
-     until then the button opens an Amazon search for the book.  */
-  var AMAZON_ASIN = '';
+     Set to the Nov 2026 paperback. If left empty, the button falls back
+     to an Amazon search for the book.  */
+  var AMAZON_ASIN = 'B0HSK3S2JS'; // paperback, ISBN 979-8-9973749-1-4 (Kindle is B0HS9W7QSD)
   var AMAZON_REVIEW_URL = AMAZON_ASIN
     ? 'https://www.amazon.com/review/create-review?asin=' + encodeURIComponent(AMAZON_ASIN)
     : 'https://www.amazon.com/s?k=Seasons+of+Surrender+Batory&i=stripbooks';
@@ -204,7 +204,7 @@
         <p class="lede m-only">If the book encouraged you, would you consider leaving an honest review? A few sentences can help another reader find it.</p>
         <div class="cta-stack">
           <!-- href is set from AMAZON_REVIEW_URL (top of this file). The fallback only matters if JavaScript is off. -->
-          <a class="btn big" id="amazon-review" href="https://www.amazon.com/s?k=Seasons+of+Surrender+Batory">Leave a Review on Amazon</a>
+          <a class="btn big" id="amazon-review" href="https://www.amazon.com/review/create-review?asin=B0HSK3S2JS">Leave a Review on Amazon</a>
           <script>document.getElementById('amazon-review').href = AMAZON_REVIEW_URL;</script>
           <p class="fine">Opens Amazon’s review form. You may be asked to sign in first.</p>
         </div>
