@@ -263,6 +263,10 @@
     .hero-copy{gap:22px}
     .titleline h1{display:block;font-family:var(--display);font-style:normal;font-weight:400;font-size:54px;line-height:1.02}
     .hero-copy .lede{font-size:18px}
+    .headline{font-size:38px;line-height:1.1}
+    .titleline h1{font-family:var(--serif);font-style:italic;font-weight:600;font-size:32px;line-height:1.15}
+    .hero-copy .sub{font-size:20px}
+    .hero-copy{gap:16px}
     .hero-copy .m-btn{width:100%}
     .hero::after{background:linear-gradient(180deg,var(--night),var(--deep))}
     .signup{padding:64px 0}
@@ -360,6 +364,16 @@
     },
     {
       "@type": "Question",
+      "name": "Where can I buy Seasons of Surrender?",
+      "acceptedAnswer": { "@type": "Answer", "text": "On Amazon: the paperback is $14.99 (https://www.amazon.com/dp/B0HSK3S2JS) and the Kindle edition is $5.50 (https://www.amazon.com/dp/B0HS9W7QSD)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a church or group order copies?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Churches, mission boards, schools and Bible colleges can order 10 or more copies at $10 each by emailing sven@svenhq.com." }
+    },
+    {
+      "@type": "Question",
       "name": "Who publishes the book?",
       "acceptedAnswer": { "@type": "Answer", "text": "Seasons of Surrender is published by Quellsicht (quellsicht.com)." }
     }
@@ -386,13 +400,10 @@
     <div class="hero-body">
       <div class="hero-copy">
         <div class="eyebrow">A memoir by Mark &amp; Paula Batory</div>
-        <p class="headline d-only">We all say we trust God until He asks us to surrender.</p>
+        <p class="headline">We all say we trust God until He asks us to surrender.</p>
         <div class="titleline"><h1>Seasons of Surrender</h1><span class="d-only"> · A Fifty-Year Journey of Trust, Trial, Refinement, and Release</span></div>
         <p class="sub m-only">A Fifty-Year Journey of Trust, Trial, Refinement, and Release</p>
-        <p class="lede d-only">We thought surrender meant being willing to leave home and follow the Lord wherever He led. We were young, eager, and had little idea of what lay ahead. Nearly fifty years later, we have learned that surrender is not a decision made once, but a lifetime of learning to trust Him.</p>
-        <p class="lede d-only">Through unexpected provisions, painful disappointments, illness, changing plans, and blessings we never could have imagined, the Lord has patiently taught us that His faithfulness does not depend upon our circumstances. Along the way, He has given us a joy that circumstances alone could never provide.</p>
-        <p class="lede d-only">This is not the story of two extraordinary people. It is the testimony of two ordinary people learning, season by season, to place their lives in the hands of an extraordinary God.</p>
-        <p class="lede m-only">We were young when we left home to serve the Lord, with little idea where the road would lead. Nearly fifty years later, we look back on unexpected blessings, difficult trials, changing directions, and the abiding faithfulness of God.</p>
+        <p class="lede">Mark and I have spent nearly fifty years learning to trust the Lord, through Mexico, illness, changed plans, and letting go. This book is our story. We wrote it for anyone whose life has not gone the way they planned.</p>
         <div class="cta-row d-only">
           <a class="btn" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order the Paperback · $14.99</a>
           <a class="link" href="https://www.amazon.com/dp/B0HS9W7QSD" target="_blank" rel="noopener">Kindle Edition · $5.50</a>
@@ -428,257 +439,161 @@
 </header>
 
 <main>
-  <!-- ═════════════ DESKTOP ═════════════ -->
-  <div class="d-only">
+  <!-- Home copy v2 (Nov 27, 2026): one version for desktop and mobile, in Paula's voice ("I", "Mark and I"),
+       ordered StoryBrand-style: the reader's season, why we wrote it, what's inside, how to use it, a story,
+       our hope for you, who we are. Needs Paula's OK before it goes live. -->
 
-    <section id="book">
-      <div class="wrap two reveal">
-        <div class="l">
-          <p class="label kicker">The Book</p>
-          <h2>We never planned to write a book.</h2>
+  <!-- 1. The reader's season (the problem) -->
+  <section id="your-season" class="invite">
+    <div class="wrap reveal">
+      <div class="inner">
+        <p class="label kicker">Your Season</p>
+        <h2 style="margin-bottom:28px">When life doesn’t go the way you planned.</h2>
+        <p>Maybe you are young and wondering what the Lord wants you to do with your life. Maybe you are a parent carrying a burden for your family. Maybe your plans fell apart, or you are being asked to let go of something you love.</p>
+        <p>Mark and I have been in each of those places. Every time, we had to decide again whether we would trust Him.</p>
+        <p class="highlight">The real question is not, “Will God ask me to live a life like theirs?” It is, “Will I trust Him with the life He has given me?”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Why we wrote it (the guide) -->
+  <section id="book">
+    <div class="wrap two reveal">
+      <div class="l">
+        <p class="label kicker">The Book</p>
+        <h2>We never planned to write a book.</h2>
+      </div>
+      <div class="r">
+        <p>For years, friends told us to write our story down. Then one evening on our back deck, Mark wondered out loud how many of the Lord’s mercies we had already forgotten. Not long after, I found boxes of letters in the attic: the letters and ministry reports I had written and saved through all our years of service.</p>
+        <p>Those letters became this book. It is told mostly through my eyes, with Mark’s thoughts woven in. Some of it is joyful. Some of it was hard to write. All of it points to the same thing: the Lord can be trusted, even when you cannot see what He is doing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark photo">
+    <div class="wrap reveal">
+      <div class="quote">
+        <div class="bar"></div>
+        <blockquote>“What follows is not merely our story. It is the story of the Lord’s faithfulness through every season of surrender.”</blockquote>
+        <cite class="label">From Mark’s preface</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. What's inside -->
+  <section id="seasons">
+    <div class="wrap reveal">
+      <div class="head">
+        <p class="label kicker">The Four Seasons</p>
+        <h2>Four seasons. <em>One faithful God.</em></h2>
+        <p>The book follows our life through four seasons. Each one asked something different of us.</p>
+      </div>
+      <div class="grid4">
+        <div class="item">
+          <div class="num">01</div>
+          <div class="tag">Trust</div>
+          <h3>Surrendering the Strength of Our Youth</h3>
+          <p>We left Michigan as newlyweds, went to language school in Texas, and made our home in the mountains of Mexico. We learned to trust the Lord for the simplest things, even breakfast.</p>
         </div>
-        <div class="r">
-          <p>For years, friends encouraged us to tell the story of our life and ministry, but we thought of it simply as the life God had given us. Then one evening on our back deck, Mark wondered aloud how many of the Lord’s mercies we had already forgotten. Not long afterward, Paula began discovering boxes of letters in the attic: letters and ministry reports she had written and saved throughout our years of service.</p>
-          <p>Those pages brought back the mountain roads of Mexico, the people we had grown to love, prayers answered in ways we could not explain, and seasons we would never have chosen for ourselves. What began as an effort to remember became an opportunity to bear witness to the Lord’s faithfulness.</p>
-          <p><em>Seasons of Surrender</em> is a personal account of marriage, family, missionary service, illness, redirection, leadership, and letting go. Some moments are joyful. Others are difficult to revisit. In all of them, we have been learning the same lesson: the Lord can be trusted, even when we cannot see what He is doing. Even in difficult seasons, He has given us reasons to rejoice in Him.</p>
+        <div class="item">
+          <div class="num">02</div>
+          <div class="tag">Trial</div>
+          <h3>Surrendering Our Way in the Wilderness</h3>
+          <p>Illness and things beyond our control took us away from the work we loved. We learned to love the Lord more than the place, the work, or the future we had pictured.</p>
+        </div>
+        <div class="item">
+          <div class="num">03</div>
+          <div class="tag">Refinement</div>
+          <h3>Surrendering to an Unchosen Path</h3>
+          <p>When we could not go back, the Lord opened doors we never expected. He was changing more than our plans. He was changing our hearts.</p>
+        </div>
+        <div class="item">
+          <div class="num">04</div>
+          <div class="tag">Release</div>
+          <h3>Surrendering What We Cannot Keep</h3>
+          <p>In later years, surrender looked less like leaving and more like letting go: of our strength, of people we love, and of work we handed on to others.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="dark photo">
-      <div class="wrap reveal">
-        <div class="quote">
-          <div class="bar"></div>
-          <blockquote>“What follows is not merely our story. It is the story of the Lord’s faithfulness through every season of surrender.”</blockquote>
-          <cite class="label">From Mark’s preface</cite>
+  <!-- 4. How to use it (the plan) -->
+  <section id="how" style="padding-top:0">
+    <div class="wrap reveal">
+      <div class="head">
+        <p class="label kicker">How to Read It</p>
+        <h2>On your own, <em>or with your church.</em></h2>
+      </div>
+      <div class="grid4">
+        <div class="item">
+          <div class="num">1</div>
+          <h3>Get your copy</h3>
+          <p>The paperback is $14.99 and the Kindle edition is $5.50, both on Amazon.</p>
+        </div>
+        <div class="item">
+          <div class="num">2</div>
+          <h3>Read a season at a time</h3>
+          <p>Each chapter is carried by a line from a beloved hymn. There is no hurry.</p>
+        </div>
+        <div class="item">
+          <div class="num">3</div>
+          <h3>Take it further</h3>
+          <p>At the back, <em>Truths to Carry Forward</em> gathers the Bible lessons from every chapter with Scripture, for your own quiet time or a small group.</p>
+        </div>
+        <div class="item">
+          <div class="num">4</div>
+          <h3>Share it</h3>
+          <p>Churches, mission boards, schools and Bible colleges can order 10 or more copies at $10 each. <a href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies" style="color:var(--steel-dk);border-bottom:1px solid currentColor">Email us</a> and we’ll set it up.</p>
         </div>
       </div>
-    </section>
-
-    <section id="seasons">
-      <div class="wrap reveal">
-        <div class="head">
-          <p class="label kicker">The Four Seasons</p>
-          <h2>Four seasons. <em>One faithful God.</em></h2>
-          <p>We have come to understand that surrender changes its shape as life unfolds. Each season asked something different of us. In every season, the Lord was teaching us to trust Him more deeply.</p>
-        </div>
-        <div class="grid4">
-          <div class="item">
-            <div class="num">01</div>
-            <div class="tag">Trust</div>
-            <h3>Surrendering the Strength of Our Youth</h3>
-            <p>We left Michigan as newly married missionaries, traveled to Texas for language school, and eventually made our home among the mountains and villages of Mexico. We began with willing hearts, but willingness had to grow into daily dependence. The Lord taught us through unfamiliar roads, empty cupboards, precious friendships, and prayers as simple as asking for breakfast.</p>
-          </div>
-          <div class="item">
-            <div class="num">02</div>
-            <div class="tag">Trial</div>
-            <h3>Surrendering Our Way in the Wilderness</h3>
-            <p>We had made plans for the work we loved. Then illness and circumstances beyond our control interrupted those plans. We struggled with questions we could not answer and waited for doors we hoped would open again. Slowly, we learned that trusting the Lord meant loving Him more than the place, the work, or the future we had imagined.</p>
-          </div>
-          <div class="item">
-            <div class="num">03</div>
-            <div class="tag">Refinement</div>
-            <h3>Surrendering to an Unchosen Path</h3>
-            <p>When we could not return to the ministry we had expected, the Lord led us along a path we never could have imagined. New doors opened for the Gospel among people and places we had not planned to reach. Yet through those unexpected redirections, we began to understand that God was doing more than changing our circumstances. He was refining our hearts, deepening our trust, and teaching us to surrender not only our plans but our expectations of how He would use us. What first appeared to be a closed door became another chapter in His faithful leading.</p>
-          </div>
-          <div class="item">
-            <div class="num">04</div>
-            <div class="tag">Release</div>
-            <h3>Surrendering What We Cannot Keep</h3>
-            <p>In later years, surrender began to look less like leaving and more like releasing. We faced loss, changing strength, concerns for those we love, and the responsibility of entrusting work to others. We are still learning that the God who led us when we were young is just as faithful in the seasons when He asks us to let go.</p>
-          </div>
-        </div>
+      <div class="cta-row" style="margin-top:44px">
+        <a class="btn" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order the Paperback · $14.99</a>
+        <a class="link" href="https://www.amazon.com/dp/B0HS9W7QSD" target="_blank" rel="noopener" style="color:var(--steel-dk)">Kindle Edition · $5.50</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="inside" style="padding-top:0">
-      <div class="wrap reveal">
-        <div class="head">
-          <p class="label kicker">Inside the Pages</p>
-          <h2>The stories are ours. <em>The lessons belong to every believer.</em></h2>
-          <p>We wrote about what the Lord has taught us through the ordinary and extraordinary circumstances of life. These themes run through the pages:</p>
-        </div>
-        <div class="grid4">
-          <div class="item">
-            <h3>Trust in the ordinary</h3>
-            <p>Sometimes the lesson came through a single meal, a difficult conversation, or a need no one else could see.</p>
-          </div>
-          <div class="item">
-            <h3>Grace in the unexpected</h3>
-            <p>Sometimes His answer was not the answer we wanted, and the greatest work was what He was doing in our hearts.</p>
-          </div>
-          <div class="item">
-            <h3>Love that walks together</h3>
-            <p>Marriage, family, churches, and faithful friends were not side stories. They were among God’s gifts along the road.</p>
-          </div>
-          <div class="item">
-            <h3>Peace in releasing</h3>
-            <p>Sometimes obedience meant going. At other times it meant staying, waiting, or placing something precious back into His hands.</p>
-          </div>
-        </div>
+  <!-- 5. A story from the book -->
+  <section id="story" class="dark">
+    <div class="wrap reveal">
+      <div class="excerpt">
+        <div class="eyebrow">A Story from Season One</div>
+        <h2>Three eggs.</h2>
+        <p class="intro">At language school in Texas, our food was almost gone and the next support check was two weeks away. I asked the Lord for three eggs for breakfast the next morning.</p>
+        <blockquote><p>“The next morning, Paula eagerly looked outside the door of our little travel trailer. There, sitting on our patio chair, was an egg carton. For a moment, she could hardly believe what she was seeing. She picked it up, opened it, and called for me to come. Inside were three eggs. Exactly three. Not more, not less. The Lord had answered her prayer with such tenderness and precision that there was no way to explain it away. With tears of rejoicing, we scrambled them and squeezed a little ketchup over them from a single leftover fast-food packet.”</p></blockquote>
+        <cite class="label">From Chapter 2, “The Calling Forward”</cite>
+        <p class="after">That was not the end of it. Before the day was over, the Lord had given us more food than our little trailer could hold. But the bigger gift was what He was teaching us about depending on Him.</p>
+        <div class="center"><a class="btn" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Read the Whole Story</a></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="invitation" class="invite">
-      <div class="wrap reveal">
-        <div class="inner">
-          <p class="label kicker">An Invitation</p>
-          <h2 style="margin-bottom:28px">Your season may look nothing like ours.</h2>
-          <p>You may never live in another country or serve in full-time ministry. You may be a young person wondering what the Lord wants of your life, a parent carrying a burden for your family, a believer whose plans have unexpectedly changed, or someone entering a season you never anticipated.</p>
-          <p>Our prayer is not that you will finish these pages impressed with what we have done. It is that you will be encouraged to trust what the Lord can do in a life yielded to Him and discover the joy of walking with Him, right where He has placed you.</p>
-          <p class="highlight">The deeper question has never been, “Will God ask me to live a life like theirs?” It is, “Will I trust Him with the life He has given me?”</p>
-        </div>
+  <!-- 6. Our hope for you (success) -->
+  <section id="hope" class="invite">
+    <div class="wrap reveal">
+      <div class="inner">
+        <p class="label kicker">Our Prayer for You</p>
+        <h2 style="margin-bottom:28px">We are two ordinary people.</h2>
+        <p>We did not write this so you would be impressed with us. We wrote it so you would see what the Lord can do with a life that is given to Him.</p>
+        <p>Our prayer is that you will close this book trusting Him a little more, and that you will find the joy of walking with Him right where He has put you.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="story" class="dark">
-      <div class="wrap reveal">
-        <div class="excerpt">
-          <div class="eyebrow">A Story from Season One</div>
-          <h2>Three eggs.</h2>
-          <p class="intro">During language school in Texas, our food was nearly gone and the next support check was still two weeks away. Paula prayed for three eggs for the following morning. We learned something about God’s care, and about how much we still needed to learn to trust Him.</p>
-          <blockquote><p>“The next morning, Paula eagerly looked outside the door of our little travel trailer. There, sitting on our patio chair, was an egg carton. For a moment, she could hardly believe what she was seeing. She picked it up, opened it, and called for me to come. Inside were three eggs. Exactly three. Not more, not less. The Lord had answered her prayer with such tenderness and precision that there was no way to explain it away. With tears of rejoicing, we scrambled them and squeezed a little ketchup over them from a single leftover fast-food packet.”</p></blockquote>
-          <cite class="label">Excerpt from Chapter 2, “The Calling Forward”</cite>
-          <p class="after">The story did not end with those three eggs. Before the day was over, the Lord provided far more food than our little trailer could hold. But the deeper gift was the lesson He was teaching us about dependence on Him.</p>
-          <div class="center"><a class="btn" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Read the Whole Story</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="authors">
-      <div class="wrap reveal">
-        <p class="label kicker">Meet the Authors</p>
-        <h2>Mark &amp; Paula Batory</h2>
-        <div class="authors-top">
+  <!-- 7. Who we are -->
+  <section id="authors">
+    <div class="wrap reveal">
+      <p class="label kicker">Meet the Authors</p>
+      <h2>Mark &amp; Paula Batory</h2>
+      <div class="authors-top">
         <div class="authors-body">
-          <p>We met as teenagers who shared a desire to serve the Lord. We married in 1977 and began missionary service the following year. Over the decades, God led us through service in Mexico, church planting, ministry among Spanish-speaking people, missions leadership, and care for fellow servants of Christ.</p>
-          <p>Our lives have never been free from difficulty, but they have been rich in the kindness of God. We have shared the road as husband and wife, parents, coworkers, and, most importantly, two people still learning what it means to follow Jesus Christ.</p>
-          <p>Much of this book is told through Paula’s eyes, drawing on the letters and records she faithfully preserved. Mark’s reflections are woven through the account. Though our perspectives differ, the story is one we have lived together.</p>
+          <p>Mark and I met as teenagers who both wanted to serve the Lord. We married in 1977 and began missionary service the next year. Over the years He led us through Mexico, church planting, ministry among Spanish-speaking people, missions leadership, and caring for other missionaries.</p>
+          <p>Our lives have not been free from hard times, but they have been full of God’s kindness. We are still two people learning what it means to follow Jesus Christ.</p>
         </div>
         <figure class="authors-photo"><img src="/assets/authors.jpg" width="660" height="740" alt="Mark and Paula Batory" loading="lazy"></figure>
-        </div>
-        <div class="bio">
-          <div class="item">
-            <h3>Paula</h3>
-            <p>Wife, mother, missionary, and storyteller. For many years Paula wrote the letters and ministry reports that would one day help us remember the Lord’s faithfulness through every season.</p>
-          </div>
-          <div class="item">
-            <h3>Mark</h3>
-            <p>Missionary, church planter, and missions leader. Mark’s reflections trace the calling, decisions, relationships, and releases through which the Lord has continued to teach him to trust.</p>
-          </div>
-        </div>
       </div>
-    </section>
-  </div>
-
-  <!-- ═════════════ MOBILE ═════════════ -->
-  <div class="m-only">
-
-    <section id="m-book" class="m-sec">
-      <div class="wrap">
-        <h2 style="margin-bottom:22px">We never set out to write a book.</h2>
-        <p>One evening, Mark wondered how many of the Lord’s mercies we had forgotten. Not long afterward, Paula found boxes of letters and ministry reports she had saved throughout our years of service.</p>
-        <p>Those pages brought back the people, places, joys, and sorrows of a life spent following Christ. They became the beginning of <em>Seasons of Surrender</em>.</p>
-        <details class="more">
-          <summary>Read more</summary>
-          <p><em>Seasons of Surrender</em> is a personal account of marriage, family, missionary service, illness, redirection, leadership, and letting go. Some moments are joyful. Others are difficult to revisit. In all of them, we have been learning the same lesson: the Lord can be trusted, even when we cannot see what He is doing.</p>
-        </details>
-      </div>
-    </section>
-
-    <section id="m-seasons" class="m-sec" style="padding-top:0">
-      <div class="wrap">
-        <h2>Trust. Trial. Refinement. Release.</h2>
-        <div class="accordion">
-          <details class="season">
-            <summary>
-              <span>
-                <span class="tag">01 · Trust</span>
-                <h3>Surrendering the Strength of Our Youth</h3>
-                <span class="one">We left the familiar behind to serve the Lord, and began learning to trust Him for the ordinary needs of each day.</span>
-              </span>
-              <span class="plus" aria-hidden="true">+</span>
-            </summary>
-            <p class="full-p">We left Michigan as newly married missionaries, traveled to Texas for language school, and eventually made our home among the mountains and villages of Mexico. We began with willing hearts, but willingness had to grow into daily dependence. The Lord taught us through unfamiliar roads, empty cupboards, precious friendships, and prayers as simple as asking for breakfast.</p>
-          </details>
-          <details class="season">
-            <summary>
-              <span>
-                <span class="tag">02 · Trial</span>
-                <h3>Surrendering Our Way in the Wilderness</h3>
-                <span class="one">When illness interrupted the work we loved, we faced the difficulty of trusting the Lord without knowing what came next.</span>
-              </span>
-              <span class="plus" aria-hidden="true">+</span>
-            </summary>
-            <p class="full-p">We had made plans for the work we loved. Then illness and circumstances beyond our control interrupted those plans. We struggled with questions we could not answer and waited for doors we hoped would open again. Slowly, we learned that trusting the Lord meant loving Him more than the place, the work, or the future we had imagined.</p>
-          </details>
-          <details class="season">
-            <summary>
-              <span>
-                <span class="tag">03 · Refinement</span>
-                <h3>Surrendering to an Unchosen Path</h3>
-                <span class="one">When the Lord closed the door to the ministry we had expected, He opened doors we had never anticipated, refining our hearts as He redirected our steps.</span>
-              </span>
-              <span class="plus" aria-hidden="true">+</span>
-            </summary>
-            <p class="full-p">When we could not return to the ministry we had expected, the Lord led us along a path we never could have imagined. New doors opened for the Gospel among people and places we had not planned to reach. Yet through those unexpected redirections, we began to understand that God was doing more than changing our circumstances. He was refining our hearts, deepening our trust, and teaching us to surrender not only our plans but our expectations of how He would use us. What first appeared to be a closed door became another chapter in His faithful leading.</p>
-          </details>
-          <details class="season">
-            <summary>
-              <span>
-                <span class="tag">04 · Release</span>
-                <h3>Surrendering What We Cannot Keep</h3>
-                <span class="one">As the years passed, we learned to entrust the people, responsibilities, and seasons we could not hold forever to the Lord.</span>
-              </span>
-              <span class="plus" aria-hidden="true">+</span>
-            </summary>
-            <p class="full-p">In later years, surrender began to look less like leaving and more like releasing. We faced loss, changing strength, concerns for those we love, and the responsibility of entrusting work to others. We are still learning that the God who led us when we were young is just as faithful in the seasons when He asks us to let go.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section id="m-story" class="dark m-sec">
-      <div class="wrap">
-        <div class="excerpt">
-          <div class="eyebrow">From Season One</div>
-          <h2>Three eggs.</h2>
-          <p class="intro">While we were attending language school in Texas, our food had run out. Paula asked the Lord to provide three eggs for breakfast the next morning.</p>
-          <div class="short">
-            <blockquote><p>“There, sitting on our patio chair, was an egg carton. For a moment, she could hardly believe what she was seeing. She picked it up, opened it, and called for me to come. Inside were three eggs. Exactly three. Not more, not less.”</p></blockquote>
-          </div>
-          <details class="full" style="margin-top:24px">
-            <summary>Read the full story</summary>
-            <div class="full-text">
-              <blockquote><p>“The next morning, Paula eagerly looked outside the door of our little travel trailer. There, sitting on our patio chair, was an egg carton. For a moment, she could hardly believe what she was seeing. She picked it up, opened it, and called for me to come. Inside were three eggs. Exactly three. Not more, not less. The Lord had answered her prayer with such tenderness and precision that there was no way to explain it away. With tears of rejoicing, we scrambled them and squeezed a little ketchup over them from a single leftover fast-food packet.”</p></blockquote>
-              <p class="after" style="margin-bottom:0">The story did not end with those three eggs. Before the day was over, the Lord provided far more food than our little trailer could hold. But the deeper gift was the lesson He was teaching us about dependence on Him.</p>
-            </div>
-          </details>
-          <cite class="label" style="margin-top:20px">From Chapter 2 · The Calling Forward</cite>
-          <div class="center" style="margin-top:32px"><a class="btn" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener" style="width:100%">Read the Whole Story</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="m-authors" class="m-sec">
-      <div class="wrap">
-        <h2 style="margin-bottom:22px">Mark &amp; Paula Batory</h2>
-        <figure class="m-authors-photo"><img src="/assets/authors.jpg" width="660" height="740" alt="Mark and Paula Batory" loading="lazy"></figure>
-        <p>We met as teenagers who shared a desire to serve the Lord. We married in 1977 and began missionary service soon afterward. Through ministry in Mexico, family life, illness, unexpected changes, and later years of service, we have been learning to trust Him together.</p>
-        <p>Much of the book is told through Paula’s memories and preserved letters, with Mark’s reflections woven throughout.</p>
-      </div>
-    </section>
-
-    <section class="dark m-sec">
-      <div class="wrap">
-        <div class="quote">
-          <div class="bar"></div>
-          <blockquote style="font-size:28px">“We do not get to choose every chapter, but we do get to decide whether we will trust the Author.”</blockquote>
-          <cite class="label">From the epilogue of <em>Seasons of Surrender</em></cite>
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <!-- ═════════════ ABOUT THE BOOK + FAQ (shared) ═════════════ -->
   <section id="facts" class="facts" aria-labelledby="facts-h">
@@ -707,6 +622,14 @@
           <p>Mark and Paula Batory met as teenagers who shared a desire to serve the Lord. They married in 1977 and began missionary service the following year. Their service included Mexico, church planting, ministry among Spanish-speaking people, missions leadership, and care for fellow servants of Christ. Paula is a wife, mother, missionary, and storyteller; Mark is a missionary, church planter, and missions leader.</p>
         </details>
         <details class="qa">
+          <summary><h3>Where can I buy it?</h3><span class="plus" aria-hidden="true">+</span></summary>
+          <p>On Amazon: the <a href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">paperback</a> is $14.99 and the <a href="https://www.amazon.com/dp/B0HS9W7QSD" target="_blank" rel="noopener">Kindle edition</a> is $5.50.</p>
+        </details>
+        <details class="qa">
+          <summary><h3>Can our church or group order copies?</h3><span class="plus" aria-hidden="true">+</span></summary>
+          <p>Yes. Churches, mission boards, schools and Bible colleges can order 10 or more copies at $10 each. Email <a href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies">sven@svenhq.com</a>. Covers, photos and descriptions for announcements are in the <a href="/media-kit">media kit</a>.</p>
+        </details>
+        <details class="qa">
           <summary><h3>Who publishes the book?</h3><span class="plus" aria-hidden="true">+</span></summary>
           <p>Seasons of Surrender is published by Quellsicht (<a href="https://www.quellsicht.com/">quellsicht.com</a>).</p>
         </details>
@@ -718,11 +641,9 @@
   <section id="signup" class="signup">
     <div class="wrap">
       <div class="box">
-        <p class="label kicker d-only">Stay in Touch</p>
-        <h2 class="d-only">We would love to share the book with you.</h2>
-        <h2 class="m-only">Stay in touch.</h2>
-        <p class="sub d-only"><em>Seasons of Surrender</em> is available December 1, 2026. Leave your name and email for occasional updates from Mark and Paula about the book.</p>
-        <p class="sub m-only"><em>Seasons of Surrender</em> is available December 1, 2026. Leave your name and email for occasional updates.</p>
+        <p class="label kicker">Stay in Touch</p>
+        <h2>Stay in touch.</h2>
+        <p class="sub">Leave your name and email, and we will send you an occasional note about the book.</p>
 
         <div id="form-container">
           <form id="signup-form" novalidate>
@@ -743,7 +664,7 @@
               <p class="err" id="email-error" role="alert">Please enter a valid email address.</p>
             </div>
             <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
-            <button class="btn" type="submit">Please Keep Me Updated</button>
+            <button class="btn" type="submit">Keep Me Updated</button>
           </form>
           <p class="fine">We will use your information only for updates about the book.</p>
         </div>
@@ -757,12 +678,12 @@
   </section>
 
   <!-- Desktop closing -->
-  <section id="final" class="dark photo d-only">
+  <section id="final" class="dark photo">
     <div class="wrap reveal">
       <div class="quote">
         <p class="label kicker" style="margin:0">A Final Thought</p>
         <h2>The story was never ours to write alone.</h2>
-        <p style="margin:0;max-width:640px;font-size:19px;line-height:1.7;color:#D5E2E9">The Lord has been faithful through every season behind us. We trust Him with whatever pages remain. Our hope is that as you read our story, you will be encouraged to leave the pen in His hand as well.</p>
+        <p style="margin:0;max-width:640px;font-size:19px;line-height:1.7;color:#D5E2E9">The Lord has been faithful in every season behind us, and we trust Him with the pages still to come. We hope our story helps you leave the pen in His hand, too.</p>
         <div class="bar"></div>
         <blockquote>“May we never take the pen from His hand but simply yield the page and let Him keep writing.”</blockquote>
         <cite class="label">From the epilogue</cite>
