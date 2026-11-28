@@ -362,6 +362,19 @@
     html{scroll-behavior:auto}
     .js .reveal{opacity:1;transform:none;transition:none}
   }
+  /* ── Footer (shared) ── */
+  footer .foot{display:flex;flex-wrap:wrap;gap:40px 72px;justify-content:space-between;align-items:flex-start;padding-top:64px;padding-bottom:40px}
+  footer .foot-brand .brand{font-size:30px}
+  footer .foot-brand p{margin:10px 0 0;font-size:16px;color:var(--mist)}
+  footer .foot-nav{display:flex;flex-wrap:wrap;gap:32px 64px}
+  footer .foot-h{margin:0 0 14px;font-family:var(--label);font-weight:600;font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--mist)}
+  footer .foot-nav ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+  footer .foot-nav a{color:var(--white);font-size:17px;border-bottom:1px solid transparent;transition:border-color .2s}
+  footer .foot-nav a:hover,footer .foot-nav a:focus-visible{border-bottom-color:var(--steel)}
+  footer .foot-legal{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding-top:24px;padding-bottom:40px;border-top:1px solid rgba(255,255,255,.12)}
+  footer .foot-legal small{font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+  footer .foot-legal small.tm{letter-spacing:.04em;text-transform:none}
+  footer .foot-legal a{color:inherit;border-bottom:1px solid transparent} footer .foot-legal a:hover{color:var(--white);border-bottom-color:var(--steel)}
 </style>
 <script type="application/ld+json">
 {
@@ -792,9 +805,42 @@
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="brand">Quellsicht</div>
-    <small>© 2026 Mark &amp; Paula Batory · <a class="pub" href="https://www.quellsicht.com/">Published by Quellsicht</a> · <a class="pub" href="/media-kit">Media Kit</a><br><span style="font-size:12px;letter-spacing:.08em;text-transform:none">Amazon’s trademark is used under license from Amazon.com, Inc. or its affiliates.</span></small>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <a class="brand" href="/">Seasons of Surrender</a>
+      <p>A memoir by Mark &amp; Paula Batory</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <div>
+        <p class="foot-h">The Book</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/authors">Meet the Authors</a></li>
+          <li><a href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order on Amazon</a></li>
+          <li><a href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies">Order 10 or More</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">For Readers</p>
+        <ul>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/review">Leave a Review</a></li>
+          <li><a href="/#write">Write to Mark &amp; Paula</a></li>
+          <li><a href="/#signup">Stay in Touch</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Churches &amp; Press</p>
+        <ul>
+          <li><a href="/resources#churches">For Churches</a></li>
+          <li><a href="/media-kit">Media Kit</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <small>© 2026 Mark &amp; Paula Batory · <a href="https://www.quellsicht.com/">Published by Quellsicht</a></small>
+    <small class="tm">Amazon’s trademark is used under license from Amazon.com, Inc. or its affiliates.</small>
   </div>
 </footer>
 
