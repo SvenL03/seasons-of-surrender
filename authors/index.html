@@ -93,7 +93,8 @@
   .eyebrow::before{content:"";width:48px;height:1px;background:var(--steel)}
   .headline{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(46px,6vw,86px);line-height:1.04;color:var(--white)}
   .lede{margin:0;max-width:580px;font-size:19px;line-height:1.7;color:#E3ECF1}
-  .cover-col{flex:0 1 300px;min-width:240px;display:flex;justify-content:center}
+  .cover-col{flex:0 1 440px;min-width:240px;display:flex;justify-content:center}
+  .portrait{display:block;width:100%;max-width:440px;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))}
   .cover{position:relative;display:block;width:100%;max-width:280px;box-shadow:0 34px 60px -18px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.06)}
   .cover img{display:block;width:100%;height:auto}
   .cover::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.35) 0,rgba(255,255,255,.12) 2.5%,rgba(0,0,0,.14) 4.5%,rgba(0,0,0,0) 8%),linear-gradient(115deg,rgba(255,255,255,.14),rgba(255,255,255,0) 40%)}
@@ -167,7 +168,8 @@
     .page-copy{gap:20px}
     .headline{font-size:50px;line-height:1.02}
     .lede{font-size:18px}
-    .cover-col{display:none}
+    .cover-col{flex-basis:100%;min-width:0}
+    .portrait{max-width:300px;margin:0 auto}
     section{padding:64px 0}
     h2{font-size:40px}
     .two{gap:20px}
@@ -195,8 +197,8 @@
   "url": "https://www.seasonsofsurrender.org/authors",
   "name": "Meet the Authors: Mark & Paula Batory",
   "mainEntity": [
-    { "@type": "Person", "name": "Mark Batory", "jobTitle": "Missionary, church planter, and missions leader", "image": "https://www.seasonsofsurrender.org/assets/authors.jpg" },
-    { "@type": "Person", "name": "Paula Batory", "jobTitle": "Missionary and author", "image": "https://www.seasonsofsurrender.org/assets/authors.jpg" }
+    { "@type": "Person", "name": "Mark Batory", "jobTitle": "Missionary, church planter, and missions leader", "image": "https://www.seasonsofsurrender.org/assets/mark-and-paula-batory-portrait.webp" },
+    { "@type": "Person", "name": "Paula Batory", "jobTitle": "Missionary and author", "image": "https://www.seasonsofsurrender.org/assets/mark-and-paula-batory-portrait.webp" }
   ],
   "about": { "@type": "Book", "name": "Seasons of Surrender", "isbn": "9798997374914", "url": "https://www.seasonsofsurrender.org/" }
 }
@@ -224,7 +226,7 @@
         <p class="lede">Our lives have not been free from hard times, but they have been full of God’s kindness. We are still two people learning what it means to follow Jesus Christ.</p>
       </div>
       <div class="cover-col">
-        <span class="cover"><img src="/assets/authors.jpg" width="660" height="740" alt="Mark and Paula Batory, authors of Seasons of Surrender"></span>
+        <img class="portrait" src="/assets/mark-and-paula-batory-portrait.webp" width="900" height="900" alt="Painted portrait of Mark and Paula Batory, authors of Seasons of Surrender">
       </div>
     </div>
   </div>
@@ -240,12 +242,12 @@
       <div class="r">
         <div class="bio">
           <div class="item">
-            <h3>Paula</h3>
-            <p>Wife, mother, missionary, and storyteller. For many years Paula wrote the letters and ministry reports that would one day help us remember the Lord’s faithfulness through every season.</p>
-          </div>
-          <div class="item">
             <h3>Mark</h3>
             <p>Missionary, church planter, and missions leader. Mark’s reflections trace the calling, decisions, relationships, and releases through which the Lord has continued to teach him to trust.</p>
+          </div>
+          <div class="item">
+            <h3>Paula</h3>
+            <p>Wife, mother, missionary, and storyteller. For many years Paula wrote the letters and ministry reports that would one day help us remember the Lord’s faithfulness through every season.</p>
           </div>
         </div>
         <!-- STILL NEEDED from Mark and Paula: where you serve today, how readers can pray for you, speaking contact. -->
