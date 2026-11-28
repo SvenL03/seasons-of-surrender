@@ -184,6 +184,9 @@
   @keyframes sIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   .s-num{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sc);transition:color .8s} .s-num span{color:var(--mist);font-size:16px}
   .s-panel .tag{margin-top:6px;font-family:var(--label);font-weight:600;font-size:14px;letter-spacing:.26em;text-transform:uppercase;color:var(--mist)}
+  .s-when{margin:8px 0 0 !important;font-family:var(--serif);font-style:italic;font-size:21px !important;line-height:1.45 !important;color:var(--sc) !important;transition:color .8s}
+  .s-center-sea{margin-bottom:6px;font-family:var(--serif);font-style:italic;font-size:20px;color:#D5E2E9}
+  .s-tabs .t-sub{opacity:.7}
   .s-panel h3{margin:10px 0 14px;font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.2vw,40px);line-height:1.1;color:var(--white)}
   .s-panel p{margin:0;max-width:560px;font-size:19px;line-height:1.7;color:#E3ECF1}
   .s-nav{display:flex;gap:12px;margin-top:28px}
@@ -558,36 +561,40 @@
     <div class="wrap reveal">
       <div class="head">
         <h2>Four seasons. <em>One faithful God.</em></h2>
-        <p>The book follows our life through four seasons. Each one asked something different of us.</p>
+        <p>The book follows our life through four seasons, from spring to winter. Each one asked something different of us.</p>
       </div>
       <div class="s-layout">
         <div class="s-wheel">
-          <svg class="wheel-svg" viewBox="0 0 400 400" aria-hidden="true"><g class="wheel-rot"><path class="q q0" d="M203.9 88.1 L205.2 50.1 A150 150 0 0 1 349.9 194.8 L311.9 196.1 A112 112 0 0 0 203.9 88.1Z"/><path class="q q1" d="M311.9 203.9 L349.9 205.2 A150 150 0 0 1 205.2 349.9 L203.9 311.9 A112 112 0 0 0 311.9 203.9Z"/><path class="q q2" d="M196.1 311.9 L194.8 349.9 A150 150 0 0 1 50.1 205.2 L88.1 203.9 A112 112 0 0 0 196.1 311.9Z"/><path class="q q3" d="M88.1 196.1 L50.1 194.8 A150 150 0 0 1 194.8 50.1 L196.1 88.1 A112 112 0 0 0 88.1 196.1Z"/><text class="ql" x="292.6" y="107.4" text-anchor="middle" dominant-baseline="central" transform="rotate(45 292.6 107.4)">TRUST</text><text class="ql" x="292.6" y="292.6" text-anchor="middle" dominant-baseline="central" transform="rotate(135 292.6 292.6)">TRIAL</text><text class="ql" x="107.4" y="292.6" text-anchor="middle" dominant-baseline="central" transform="rotate(225 107.4 292.6)">REFINEMENT</text><text class="ql" x="107.4" y="107.4" text-anchor="middle" dominant-baseline="central" transform="rotate(315 107.4 107.4)">RELEASE</text><circle cx="200" cy="200" r="104" class="inner"/></g><path class="pointer" d="M200 28 l-10 -16 h20z"/></svg>
-          <div class="s-center" aria-hidden="true"><span class="s-center-num">01</span><span class="s-center-name">Trust</span></div>
+          <svg class="wheel-svg" viewBox="0 0 400 400" aria-hidden="true"><g class="wheel-rot"><path class="q q0" d="M203.9 88.1 L205.2 50.1 A150 150 0 0 1 349.9 194.8 L311.9 196.1 A112 112 0 0 0 203.9 88.1Z"/><path class="q q1" d="M311.9 203.9 L349.9 205.2 A150 150 0 0 1 205.2 349.9 L203.9 311.9 A112 112 0 0 0 311.9 203.9Z"/><path class="q q2" d="M196.1 311.9 L194.8 349.9 A150 150 0 0 1 50.1 205.2 L88.1 203.9 A112 112 0 0 0 196.1 311.9Z"/><path class="q q3" d="M88.1 196.1 L50.1 194.8 A150 150 0 0 1 194.8 50.1 L196.1 88.1 A112 112 0 0 0 88.1 196.1Z"/><text class="ql" x="292.6" y="107.4" text-anchor="middle" dominant-baseline="central" transform="rotate(45 292.6 107.4)">SPRING</text><text class="ql" x="292.6" y="292.6" text-anchor="middle" dominant-baseline="central" transform="rotate(135 292.6 292.6)">SUMMER</text><text class="ql" x="107.4" y="292.6" text-anchor="middle" dominant-baseline="central" transform="rotate(225 107.4 292.6)">FALL</text><text class="ql" x="107.4" y="107.4" text-anchor="middle" dominant-baseline="central" transform="rotate(315 107.4 107.4)">WINTER</text><circle cx="200" cy="200" r="104" class="inner"/></g><path class="pointer" d="M200 28 l-10 -16 h20z"/></svg>
+          <div class="s-center" aria-hidden="true"><span class="s-center-sea">Spring</span><span class="s-center-num">01</span><span class="s-center-name">Trust</span></div>
         </div>
         <div class="s-body">
-          <div class="s-tabs" role="tablist" aria-label="The four seasons"><button type="button" role="tab" id="st-0" aria-controls="sp-0" aria-selected="true" tabindex="0" data-i="0"><span class="dot" aria-hidden="true"></span>Trust</button><button type="button" role="tab" id="st-1" aria-controls="sp-1" aria-selected="false" tabindex="-1" data-i="1"><span class="dot" aria-hidden="true"></span>Trial</button><button type="button" role="tab" id="st-2" aria-controls="sp-2" aria-selected="false" tabindex="-1" data-i="2"><span class="dot" aria-hidden="true"></span>Refinement</button><button type="button" role="tab" id="st-3" aria-controls="sp-3" aria-selected="false" tabindex="-1" data-i="3"><span class="dot" aria-hidden="true"></span>Release</button></div>
+          <div class="s-tabs" role="tablist" aria-label="The four seasons"><button type="button" role="tab" id="st-0" aria-controls="sp-0" aria-selected="true" tabindex="0" data-i="0"><span class="dot" aria-hidden="true"></span>Spring<span class="t-sub"> · Trust</span></button><button type="button" role="tab" id="st-1" aria-controls="sp-1" aria-selected="false" tabindex="-1" data-i="1"><span class="dot" aria-hidden="true"></span>Summer<span class="t-sub"> · Trial</span></button><button type="button" role="tab" id="st-2" aria-controls="sp-2" aria-selected="false" tabindex="-1" data-i="2"><span class="dot" aria-hidden="true"></span>Fall<span class="t-sub"> · Refinement</span></button><button type="button" role="tab" id="st-3" aria-controls="sp-3" aria-selected="false" tabindex="-1" data-i="3"><span class="dot" aria-hidden="true"></span>Winter<span class="t-sub"> · Release</span></button></div>
           <div class="s-panel" role="tabpanel" id="sp-0" aria-labelledby="st-0">
             <div class="s-num">01 <span>/ 04</span></div>
-            <div class="tag">Trust</div>
+            <div class="tag">Spring · Trust</div>
+            <p class="s-when">Before the mission field, when you are not yet sure where God is calling you.</p>
             <h3>Surrendering the Strength of Our Youth</h3>
             <p>We left Michigan as newlyweds, went to language school in Texas, and made our home in the mountains of Mexico. We learned to trust the Lord for the simplest things, even breakfast.</p>
           </div>
           <div class="s-panel" role="tabpanel" id="sp-1" aria-labelledby="st-1" hidden>
             <div class="s-num">02 <span>/ 04</span></div>
-            <div class="tag">Trial</div>
+            <div class="tag">Summer · Trial</div>
+            <p class="s-when">On the mission field, in the middle of the work and its trials.</p>
             <h3>Surrendering Our Way in the Wilderness</h3>
             <p>Illness and things beyond our control took us away from the work we loved. We learned to love the Lord more than the place, the work, or the future we had pictured.</p>
           </div>
           <div class="s-panel" role="tabpanel" id="sp-2" aria-labelledby="st-2" hidden>
             <div class="s-num">03 <span>/ 04</span></div>
-            <div class="tag">Refinement</div>
+            <div class="tag">Fall · Refinement</div>
+            <p class="s-when">When the path ahead is uncertain and you cannot go back.</p>
             <h3>Surrendering to an Unchosen Path</h3>
             <p>When we could not go back, the Lord opened doors we never expected. He was changing more than our plans. He was changing our hearts.</p>
           </div>
           <div class="s-panel" role="tabpanel" id="sp-3" aria-labelledby="st-3" hidden>
             <div class="s-num">04 <span>/ 04</span></div>
-            <div class="tag">Release</div>
+            <div class="tag">Winter · Release</div>
+            <p class="s-when">In retirement, or after your main work is done.</p>
             <h3>Surrendering What We Cannot Keep</h3>
             <p>In later years, surrender looked less like leaving and more like letting go: of our strength, of people we love, and of work we handed on to others.</p>
           </div>
@@ -914,8 +921,8 @@
     var sec=document.getElementById('seasons'); if(!sec)return;
     var rot=sec.querySelector('.wheel-rot'), tabs=[].slice.call(sec.querySelectorAll('[role="tab"]')),
         panels=[].slice.call(sec.querySelectorAll('.s-panel')), num=sec.querySelector('.s-center-num'),
-        name=sec.querySelector('.s-center-name'), canvas=sec.querySelector('.s-fx'), ctx=canvas.getContext('2d');
-    var names=['Trust','Trial','Refinement','Release'], cur=0, turns=0;
+        name=sec.querySelector('.s-center-name'), sea=sec.querySelector('.s-center-sea'), canvas=sec.querySelector('.s-fx'), ctx=canvas.getContext('2d');
+    var names=['Trust','Trial','Refinement','Release'], seas=['Spring','Summer','Fall','Winter'], cur=0, turns=0;
     var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var parts=[], running=false, W=0, H=0, dpr=Math.min(window.devicePixelRatio||1,2);
     function size(){W=sec.clientWidth;H=sec.clientHeight;canvas.width=W*dpr;canvas.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
@@ -937,7 +944,7 @@
       var diff=((i-cur)%4+4)%4; if(diff===3)diff=-1; turns+=diff; cur=i;
       rot.style.transform='rotate('+(-45-turns*90)+'deg)';
       sec.setAttribute('data-season',i);
-      num.textContent='0'+(i+1); name.textContent=names[i];
+      num.textContent='0'+(i+1); name.textContent=names[i]; sea.textContent=seas[i];
       tabs.forEach(function(t,j){t.setAttribute('aria-selected',j===i);t.tabIndex=j===i?0:-1});
       panels.forEach(function(p,j){p.hidden=j!==i;p.classList.remove('enter');if(j===i){void p.offsetWidth;p.classList.add('enter')}});
       if(focus)tabs[i].focus();
