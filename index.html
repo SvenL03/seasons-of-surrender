@@ -156,8 +156,7 @@
   .q-sec{--c1:#8DB87A;--c2:#E0B04F;--c3:#D2693A;--c4:#A9D0E0;--sc:var(--c1);--D:max(62vw,420px);--H:min(84vh,760px);position:relative;height:100vh;min-height:620px;overflow:hidden;padding:0;background:#0F1E27;color:var(--white)}
   .q-sec[data-season="1"]{--sc:var(--c2)} .q-sec[data-season="2"]{--sc:var(--c3)} .q-sec[data-season="3"]{--sc:var(--c4)}
   .q-sec::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(45% 55% at 78% 8%,rgba(255,206,110,.28),rgba(255,180,80,.08) 45%,transparent 72%);opacity:0;transition:opacity 1s}
-  .q-sec[data-season="1"]::before{opacity:1;animation:sunPulse 8s ease-in-out infinite}
-  @keyframes sunPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.1)}}
+  .q-sec[data-season="1"]::before{opacity:1}
   .q-disc{position:absolute;left:50%;top:calc(100% + var(--D) - 3vh);width:0;height:0;transform:rotate(0deg);transition:transform 1.4s cubic-bezier(.65,0,.25,1)}
   .q-bg{position:absolute;left:calc(-1 * (var(--D) + var(--H) + 40vh));top:calc(-1 * (var(--D) + var(--H) + 40vh));width:calc(2 * (var(--D) + var(--H) + 40vh));height:calc(2 * (var(--D) + var(--H) + 40vh));border-radius:50%;
     background:radial-gradient(circle,rgba(15,30,39,0) 0,rgba(15,30,39,0) 30%,rgba(15,30,39,.55) 100%),conic-gradient(from -45deg,#1F3B2B 0 90deg,#3B3016 90deg 180deg,#3E2214 180deg 270deg,#1C2E3A 270deg 360deg)}
@@ -170,6 +169,7 @@
   .q-text{margin:0;max-width:620px;font-size:19px;line-height:1.7;color:#E3ECF1}
   .q-icon{width:clamp(130px,22vh,210px);margin-top:8px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.4))}
   .q-icon svg{display:block;width:100%;height:auto}
+  .q-sprout{width:clamp(90px,14vh,130px)}
   .q-sec:not([data-season="0"]) #sq-0 .q-icon, .q-sec:not([data-season="1"]) #sq-1 .q-icon, .q-sec:not([data-season="2"]) #sq-2 .q-icon, .q-sec:not([data-season="3"]) #sq-3 .q-icon{opacity:.6}
   .q-top{position:relative;z-index:3;padding-top:56px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px}
   .q-top h2{margin:0;color:var(--white);font-size:clamp(28px,3.4vw,44px)} .q-top h2 em{color:var(--sc);transition:color .8s}
@@ -177,7 +177,6 @@
   .q-btn{position:absolute;z-index:3;top:50%;transform:translateY(-50%);display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 22px;background:rgba(11,21,27,.55);color:var(--white);border:1px solid rgba(255,255,255,.3);font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s}
   .q-prev{left:24px} .q-next{right:24px;background:var(--sc);color:var(--night);border-color:transparent;transition:background .8s,color .2s}
   .q-btn:hover,.q-btn:focus-visible{background:var(--white);color:var(--night)}
-  .s-fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
   @media (max-width:760px){
     .q-sec{min-height:600px}
     .q-top{padding-top:32px}
@@ -188,7 +187,7 @@
     .q-inner{padding-bottom:84px;gap:10px}
     .q-icon{width:120px}
   }
-  @media (prefers-reduced-motion:reduce){.q-disc{transition:none}.q-sec::before{animation:none}}
+  @media (prefers-reduced-motion:reduce){.q-disc{transition:none}}
   .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:48px 40px}
   .item{border-top:2px solid var(--ink);padding-top:22px;display:flex;flex-direction:column;gap:12px}
   .item .num{font-family:var(--serif);font-style:italic;font-weight:500;font-size:44px;line-height:1;color:var(--steel-md)}
@@ -552,7 +551,6 @@
   <!-- 3. The four seasons: one full-screen quarter of a big wheel; Next/Back turns the wheel around a center below the screen.
        All four texts stay in the page for search engines and screen readers. -->
   <section id="seasons" class="q-sec" data-season="0" aria-roledescription="carousel" aria-label="The four seasons">
-    <canvas class="s-fx" aria-hidden="true"></canvas>
     <div class="q-disc">
       <div class="q-bg" aria-hidden="true"></div>
         <article class="q-item" id="sq-0" data-i="0" style="--a:0deg">
@@ -561,7 +559,7 @@
             <p class="q-when">Before the mission field, when you are not yet sure where God is calling you.</p>
             <h3>Surrendering the Strength of Our Youth</h3>
             <p class="q-text">We left Michigan as newlyweds, went to language school in Texas, and made our home in the mountains of Mexico. We learned to trust the Lord for the simplest things, even breakfast.</p>
-            <div class="q-icon" aria-hidden="true"><svg viewBox="0 0 120 120"><g fill="#F4B9CB"><ellipse cx="60" cy="34" rx="16" ry="24" transform="rotate(0 60 60)"/><ellipse cx="60" cy="34" rx="16" ry="24" transform="rotate(72 60 60)"/><ellipse cx="60" cy="34" rx="16" ry="24" transform="rotate(144 60 60)"/><ellipse cx="60" cy="34" rx="16" ry="24" transform="rotate(216 60 60)"/><ellipse cx="60" cy="34" rx="16" ry="24" transform="rotate(288 60 60)"/></g><circle cx="60" cy="60" r="11" fill="#F6D26B"/></svg></div>
+            <div class="q-icon q-sprout" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M60 108V62" stroke="#6FA35A" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M60 70C58 52 44 42 26 44c2 18 16 28 34 26z" fill="#8DB87A"/><path d="M60 62c2-20 18-32 38-30-2 21-18 32-38 30z" fill="#7BAE63"/><path d="M60 70C50 60 40 54 32 50M60 62c10-10 22-18 32-24" stroke="#4E7F3C" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="60" cy="110" rx="26" ry="5" fill="#3A2A1C" opacity=".7"/></svg></div>
           </div>
         </article>
         <article class="q-item" id="sq-1" data-i="1" style="--a:90deg" aria-hidden="true">
@@ -909,54 +907,13 @@
     });
   })();
 
-  /* ── Four seasons: turn the big wheel and let the season fall (petals, rain, leaves, snow) ── */
+  /* ── Four seasons: turn the big wheel ── */
   (function(){
     var sec=document.getElementById('seasons'); if(!sec)return;
     var disc=sec.querySelector('.q-disc'), items=[].slice.call(sec.querySelectorAll('.q-item')),
-        curEl=sec.querySelector('.q-cur'), canvas=sec.querySelector('.s-fx'), ctx=canvas.getContext('2d');
+        curEl=sec.querySelector('.q-cur');
     var seas=['Spring','Summer','Fall','Winter'], cur=0, turns=0;
     var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var parts=[], running=false, W=0, H=0, dpr=Math.min(window.devicePixelRatio||1,2);
-    function size(){W=sec.clientWidth;H=sec.clientHeight;canvas.width=W*dpr;canvas.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
-    function rnd(a,b){return a+Math.random()*(b-a)}
-    // al = opacity. New particles fade in fast; on a season change the old ones fade out instead of piling up.
-    var kinds=[
-      {n:40,make:function(){return{x:rnd(0,W),y:rnd(-H*.35,H*.15),vx:rnd(.3,1.2),vy:rnd(1.2,2.2),r:rnd(10,18),a:rnd(0,6),va:rnd(-.05,.05),sw:rnd(0,6),c:['#F6C9D6','#FBE3EA','#F2A7BE'][Math.random()*3|0]}},
-       draw:function(p){ctx.save();ctx.translate(p.x+Math.sin(p.sw+p.y/60)*14,p.y);ctx.rotate(p.a);ctx.fillStyle=p.c;ctx.beginPath();ctx.ellipse(0,0,p.r,p.r*.55,0,0,7);ctx.fill();ctx.restore()}},
-      // summer: warm sunlit motes that drift up and pulse, no rain
-      {n:8,life:true,make:function(){return{x:rnd(0,W),y:rnd(H*.2,H*1.05),vx:rnd(-.12,.12),vy:rnd(-.35,-.12),r:rnd(24,60),a:0,va:0,sw:rnd(0,6),t:0,max:rnd(420,700)}},
-       draw:function(p){var tw=.8+.2*Math.sin(p.sw+p.t/45),r=p.r;
-         var g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,r);g.addColorStop(0,'rgba(255,232,170,'+(.35*tw)+')');g.addColorStop(.4,'rgba(255,196,90,'+(.16*tw)+')');g.addColorStop(1,'rgba(255,170,60,0)');
-         ctx.fillStyle=g;ctx.beginPath();ctx.arc(p.x,p.y,r,0,7);ctx.fill()}},
-      {n:34,make:function(){return{x:rnd(0,W),y:rnd(-H*.4,H*.1),vx:rnd(-.8,1.4),vy:rnd(1.4,2.4),r:rnd(20,36),a:rnd(0,6),va:rnd(-.04,.04),sw:rnd(0,6),c:['#D2693A','#E0B04F','#A4452A','#D98B3A','#B8502A'][Math.random()*5|0]}},
-       draw:function(p){var r=p.r;ctx.save();ctx.translate(p.x+Math.sin(p.sw+p.y/70)*28,p.y);ctx.rotate(p.a+Math.sin(p.y/90)*.6);ctx.fillStyle=p.c;ctx.beginPath();
-         ctx.moveTo(0,-r);ctx.bezierCurveTo(r*.9,-r*.6,r*.8,r*.4,0,r);ctx.bezierCurveTo(-r*.8,r*.4,-r*.9,-r*.6,0,-r);ctx.fill();
-         ctx.strokeStyle='rgba(60,20,5,.45)';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(0,-r);ctx.lineTo(0,r*1.2);
-         for(var k=-1;k<=1;k+=2){ctx.moveTo(0,-r*.2);ctx.lineTo(k*r*.45,-r*.55);ctx.moveTo(0,r*.25);ctx.lineTo(k*r*.5,-r*.05)}ctx.stroke();ctx.restore()}},
-      {n:90,make:function(){return{x:rnd(0,W),y:rnd(-H*.35,H*.2),vx:rnd(-.3,.3),vy:rnd(.9,1.7),r:rnd(3,7),a:0,va:0,sw:rnd(0,6),c:'rgba(255,255,255,.92)'}},
-       draw:function(p){ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x+Math.sin(p.sw+p.y/50)*10,p.y,p.r,0,7);ctx.fill()}}
-    ];
-    function burst(k){
-      if(reduce)return;size();
-      parts.forEach(function(q){if(q.k!==k)q.dying=true});
-      var K=kinds[k];for(var i=0;i<K.n;i++){var q=K.make();q.k=k;q.al=0;q.t=q.t||0;q.delay=(Math.random()*25)|0;parts.push(q)}
-      if(!running){running=true;requestAnimationFrame(tick)}
-    }
-    function tick(){
-      ctx.clearRect(0,0,W,H);
-      for(var i=parts.length-1;i>=0;i--){
-        var p=parts[i];
-        if(p.delay>0){p.delay--;continue}
-        p.x+=p.vx;p.y+=p.vy;p.a+=p.va;p.t++;
-        if(p.dying){p.al-=.05;if(p.al<=0){parts.splice(i,1);continue}}
-        else{p.al=Math.min(1,p.al+.08);
-          if(kinds[p.k].life){var left=p.max-p.t;if(left<60)p.al=Math.min(p.al,left/60);if(left<=0||p.y<-60){parts.splice(i,1);continue}}
-          else if(p.y>H+60){parts.splice(i,1);continue}}
-        ctx.globalAlpha=Math.max(0,p.al);kinds[p.k].draw(p);
-      }
-      ctx.globalAlpha=1;
-      if(parts.length){requestAnimationFrame(tick)}else{running=false;ctx.clearRect(0,0,W,H)}
-    }
     function go(dir){
       turns+=dir; cur=((turns%4)+4)%4;
       disc.style.transform='rotate('+(-turns*90)+'deg)';
@@ -964,7 +921,6 @@
       curEl.textContent=seas[cur];
       sec.querySelector('.q-count').lastChild.textContent=' · '+(cur+1)+' of 4';
       items.forEach(function(el,j){if(j===cur){el.removeAttribute('aria-hidden');el.inert=false}else{el.setAttribute('aria-hidden','true');el.inert=true}});
-      burst(cur);
     }
     items.forEach(function(el,j){if(j)el.inert=true});
     sec.querySelector('.q-next').addEventListener('click',function(){stop();go(1)});
@@ -973,13 +929,11 @@
     var timer=null, stopped=reduce;
     function stop(){stopped=true;clearInterval(timer);timer=null}
     if('IntersectionObserver' in window){
-      var first=true;
       new IntersectionObserver(function(es){es.forEach(function(e){
-        if(e.isIntersecting){if(first){first=false;if(!parts.length)burst(cur)} if(!stopped&&!timer)timer=setInterval(function(){go(1)},9000)}
+        if(e.isIntersecting){if(!stopped&&!timer)timer=setInterval(function(){go(1)},9000)}
         else{clearInterval(timer);timer=null}
       })},{threshold:.6}).observe(sec);
     }
-    window.addEventListener('resize',function(){if(running)size()});
   })();
 
   /* ── 3D book (desktop): drag, keys, view buttons, gentle intro spin ── */
