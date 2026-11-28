@@ -146,6 +146,12 @@
   .quick{padding:72px 0}
   .grid3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
   .item .qh{margin:0;font-family:var(--serif);font-weight:600;font-size:29px;line-height:1.12;color:#0F1E27}
+  .seasons-list{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:6px;font-size:17px;line-height:1.55;color:var(--muted)}
+  .seasons-list li::marker{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--steel-dk)}
+  .after-read{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:4px}
+  .after-read .btn{background:var(--ink);color:var(--white);min-height:48px;padding:10px 24px;font-size:15px}
+  .after-read .btn:hover,.after-read .btn:focus-visible{background:var(--steel-dk)}
+  .text-link{font-size:16px;color:var(--steel-dk);border-bottom:1px solid currentColor}
   .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:48px 40px}
   .item{border-top:2px solid var(--ink);padding-top:22px;display:flex;flex-direction:column;gap:12px}
   .item .num{font-family:var(--serif);font-style:italic;font-weight:500;font-size:44px;line-height:1;color:var(--steel-md)}
@@ -481,14 +487,20 @@
         </div>
         <div class="item">
           <h2 class="qh">Who is it for?</h2>
-          <p>Anyone whose life has not gone the way they planned: young people asking what the Lord wants them to do, believers in the middle of a trial, and anyone facing the hard surrender of letting go.</p>
+          <p>Anyone whose life has not gone the way they planned, in any season:</p>
+          <ol class="seasons-list">
+            <li>Young people asking what the Lord wants them to do with their lives.</li>
+            <li>Believers in the middle of a trial.</li>
+            <li>Faithful servants facing the hard surrender of letting go.</li>
+          </ol>
         </div>
-        <div class="item">
-          <h2 class="qh">Where can I buy it?</h2>
-          <p>On Amazon, in paperback and on Kindle.</p>
-          <div class="cta-row">
-            <a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a>
-            <a class="bulk-link" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies">Ordering 10 or more? Get the bulk discount →</a>
+        <div class="item" id="reviews">
+          <h2 class="qh">Already read it?</h2>
+          <p>We would love to hear from you. A short review helps another reader find the book.</p>
+          <div class="after-read">
+            <a class="btn" href="https://www.amazon.com/review/create-review?asin=B0HSK3S2JS" target="_blank" rel="noopener">Leave a Review</a>
+            <!-- FEEDBACK: whose inbox gets reader notes? Using Sven's for now. -->
+            <a class="text-link" href="mailto:sven@svenhq.com?subject=A%20note%20for%20Mark%20and%20Paula">Write to Mark and Paula →</a>
           </div>
         </div>
       </div>
