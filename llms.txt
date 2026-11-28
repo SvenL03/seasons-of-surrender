@@ -15,7 +15,8 @@
 
 ## Pages
 
-- [Home](https://www.seasonsofsurrender.org/): book overview, the four seasons, an excerpt ("Three eggs", Chapter 2), the authors, where to order (paperback and Kindle on Amazon), and an updates signup
+- [Home](https://www.seasonsofsurrender.org/): book overview, the four seasons, an excerpt ("Three eggs", Chapter 2), where to order (paperback and Kindle on Amazon), and an updates signup
 - [Thank you for reading](https://www.seasonsofsurrender.org/review): a note to readers with a link to leave a review on Amazon
 - [Media kit](https://www.seasonsofsurrender.org/media-kit): cover and author photo downloads, one-line hook, short and long descriptions, main messages, author bios, buying links, ordering 10 or more copies
-- [Resources](https://www.seasonsofsurrender.org/resources): about the authors, prayer letters, ordering for churches and mission groups, and keeping a record of your own story
+- [Meet the Authors](https://www.seasonsofsurrender.org/authors): Mark and Paula Batory, married 1977, missionaries since 1978; short bios and photo
+- [Resources](https://www.seasonsofsurrender.org/resources): prayer letters, ordering for churches and mission groups, and keeping a record of your own story

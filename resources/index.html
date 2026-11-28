@@ -158,7 +158,8 @@
     body{font-size:17px}
     .wrap{padding:0 24px}
     nav.top{padding:20px 0}
-    nav.top ul li.hide-sm{display:none}
+    nav.top ul{gap:2px 18px;font-size:13px;letter-spacing:.12em}
+    nav.top .btn{padding:0 14px;font-size:13px}
     .brand{font-size:28px}
     .hero::before{display:none}
     .hero::after{background:linear-gradient(180deg,var(--night),var(--deep))}
@@ -193,11 +194,9 @@
     <nav class="top" aria-label="Main">
       <a class="brand" href="/">Seasons of Surrender</a>
       <ul>
-        <li class="hide-sm"><a class="navlink" href="/#book">The Book</a></li>
-        <li class="hide-sm"><a class="navlink" href="/#seasons">The Four Seasons</a></li>
-        <li class="hide-sm"><a class="navlink" href="/#story">A Story from the Book</a></li>
-        <li class="hide-sm"><a class="navlink" href="/#authors">Meet the Authors</a></li>
-        <li><a class="btn" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order the Book</a></li>
+        <li><a class="navlink" href="/authors">Meet the Authors</a></li>
+        <li><a class="navlink" href="/resources">Resources</a></li>
+        <li><a class="btn" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order Now</a></li>
       </ul>
     </nav>
 
@@ -224,7 +223,7 @@
 </header>
 
 <main>
-  <!-- 1 ── About Mark and Paula (text from the live home page's Meet the Authors section) -->
+  <!-- 1 ── About Mark and Paula: moved to /authors -->
   <section id="about" class="res">
     <div class="wrap two reveal">
       <div class="l">
@@ -232,20 +231,7 @@
         <h2>About Mark and Paula</h2>
       </div>
       <div class="r">
-        <p>We met as teenagers who shared a desire to serve the Lord. We married in 1977 and began missionary service the following year. Over the decades, God led us through service in Mexico, church planting, ministry among Spanish-speaking people, missions leadership, and care for fellow servants of Christ.</p>
-        <p>Our lives have never been free from difficulty, but they have been rich in the kindness of God. We have shared the road as husband and wife, parents, coworkers, and, most importantly, two people still learning what it means to follow Jesus Christ.</p>
-        <div class="bio">
-          <div class="item">
-            <h3>Paula</h3>
-            <p>Wife, mother, missionary, and storyteller. For many years Paula wrote the letters and ministry reports that would one day help us remember the Lord’s faithfulness through every season.</p>
-          </div>
-          <div class="item">
-            <h3>Mark</h3>
-            <p>Missionary, church planter, and missions leader. Mark’s reflections trace the calling, decisions, relationships, and releases through which the Lord has continued to teach him to trust.</p>
-          </div>
-        </div>
-        <img src="/assets/authors.jpg" width="660" height="740" alt="Mark and Paula Batory, authors of Seasons of Surrender" loading="lazy" style="display:block;width:100%;max-width:300px;height:auto;box-shadow:0 30px 60px -24px rgba(0,0,0,.45)">
-        <!-- STILL NEEDED from Mark and Paula: Anything you would like readers to know beyond the book, such as where you serve today or how readers can pray for you. -->
+        <p>Mark and Paula Batory married in 1977 and began missionary service the next year. Read more about them on the <a href="/authors" style="color:var(--steel-dk);border-bottom:1px solid currentColor">Meet the Authors</a> page.</p>
       </div>
     </div>
   </section>
