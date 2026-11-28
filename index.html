@@ -300,7 +300,11 @@
   .field textarea{width:100%;padding:12px 4px;background:transparent;border:0;border-bottom:1px solid var(--mist);color:var(--white);font-family:var(--text);font-size:19px;line-height:1.5;resize:vertical;border-radius:0}
   .field textarea::placeholder{color:#8DA9B8}
   .field textarea:focus{outline:none;border-bottom-color:var(--white);box-shadow:0 1px 0 var(--white)}
-  .write{background:var(--night)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 80px;align-items:start}
+  .contact-grid .box{max-width:none;margin:0}
+  .contact-grid .box + .box{border-left:1px solid rgba(255,255,255,.14);padding-left:80px;margin-left:-40px}
+  .contact h2{font-size:clamp(32px,3.4vw,44px)}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr}.contact-grid .box + .box{border-left:0;padding-left:0;margin-left:0;border-top:1px solid rgba(255,255,255,.14);padding-top:56px}}
   .thanks-box{display:none;text-align:center;padding:24px 0}
   .thanks-box h3{margin:0 0 14px;font-family:var(--serif);font-weight:500;font-size:48px;color:var(--white)}
   .thanks-box p{margin:0;font-size:19px;color:#E3ECF1}
@@ -707,10 +711,10 @@
   </section>
 
   <!-- ═════════════ SIGNUP (shared) ═════════════ -->
-  <!-- Reader notes: sent privately to Mark and Paula via /api/note (no email address on the page) -->
-  <section id="write" class="signup write">
-    <div class="wrap">
-      <div class="box">
+  <!-- Write to us (private note to Mark and Paula via /api/note) and Stay in touch (signup), side by side -->
+  <section class="signup contact">
+    <div class="wrap contact-grid">
+      <div class="box" id="write">
         <p class="label kicker">Write to Us</p>
         <h2>We would love to hear from you.</h2>
         <p class="sub">If the book meant something to you, or you have a question, write to Mark and me here. Your note comes straight to us.</p>
@@ -726,7 +730,7 @@
             </div>
             <div class="field">
               <label for="noteMessage">Your Note</label>
-              <textarea id="noteMessage" name="message" rows="5" placeholder="Write your note here" required></textarea>
+              <textarea id="noteMessage" name="message" rows="3" placeholder="Write your note here" required></textarea>
             </div>
             <p class="err" id="note-error" role="alert"></p>
             <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" id="noteGotcha" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
@@ -739,12 +743,7 @@
           <p>Your note is on its way to Mark and Paula.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="signup" class="signup">
-    <div class="wrap">
-      <div class="box">
+      <div class="box" id="signup">
         <p class="label kicker">Stay in Touch</p>
         <h2>Hear from Mark and Paula.</h2>
         <p class="sub">Leave your name and email to hear about new resources and future books from Mark and Paula. We write only now and then.</p>
