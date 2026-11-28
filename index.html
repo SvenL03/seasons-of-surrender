@@ -98,11 +98,9 @@
   .amz-badge{display:inline-flex;align-items:center;padding:10px 0;margin-right:12px}
   .amz-badge img{display:block;width:240px;height:auto}
   .amz-badge:hover img,.amz-badge:focus-visible img{opacity:.85}
-  .btn-bulk{display:inline-flex;flex-direction:column;justify-content:center;gap:2px;min-height:52px;padding:10px 22px;background:#FFFFFF;color:#0F1111;border:2px solid var(--steel);font-family:var(--label);line-height:1.2;transition:background .2s}
-  .btn-bulk:hover,.btn-bulk:focus-visible{background:#EEF4F7}
-  .btn-bulk .bk-top{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
-  .btn-bulk .bk-main{font-size:17px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-  .btn-bulk .bk-by{font-size:13px;letter-spacing:.06em;opacity:.75}
+  .cta-row:has(.bulk-link){flex-direction:column;align-items:flex-start;gap:4px}
+  .bulk-link{font-family:var(--text);font-size:16px;color:inherit;opacity:.85;border-bottom:1px solid currentColor;padding-bottom:1px}
+  .bulk-link:hover,.bulk-link:focus-visible{opacity:1}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin-top:8px}
   .launch{font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;color:var(--mist)}
   .hero-copy .sub{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;line-height:1.3;color:var(--mist)}
@@ -275,7 +273,6 @@
     .titleline h1{font-family:var(--serif);font-style:italic;font-weight:600;font-size:32px;line-height:1.15}
     .hero-copy .sub{font-size:20px}
     .hero-copy{gap:16px}
-    .hero-copy .cta-row .btn,.hero-copy .cta-row .btn-bulk{width:100%;align-items:center;text-align:center}
     .hero::after{background:linear-gradient(180deg,var(--night),var(--deep))}
     .signup{padding:64px 0}
     .facts{padding:64px 0}
@@ -414,9 +411,8 @@
         <p class="lede">Mark and I have spent nearly fifty years learning to trust the Lord, through Mexico, illness, changed plans, and letting go. This book is our story. We wrote it for anyone whose life has not gone the way they planned.</p>
         <div class="cta-row">
           <a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon-white.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a>
-          <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) (IngramSpark has no public logo kit; ask them before adding their logo) --><a class="btn-bulk" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies"><span class="bk-top">Ordering 10 or more?</span><span class="bk-main">Get the group discount</span><span class="bk-by">Printed by IngramSpark</span></a>
+          <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) (IngramSpark has no public logo kit; ask them before adding their logo) --><a class="bulk-link" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies">Ordering 10 or more? Get the bulk discount →</a>
         </div>
-        <div class="launch">Available December 1, 2026</div>
       </div>
 
       <div class="book-col d-only">
@@ -554,7 +550,7 @@
       </div>
       <div class="cta-row" style="margin-top:44px">
         <a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a>
-        <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) (IngramSpark has no public logo kit; ask them before adding their logo) --><a class="btn-bulk" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies"><span class="bk-top">Ordering 10 or more?</span><span class="bk-main">Get the group discount</span><span class="bk-by">Printed by IngramSpark</span></a>
+        <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) (IngramSpark has no public logo kit; ask them before adding their logo) --><a class="bulk-link" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies">Ordering 10 or more? Get the bulk discount →</a>
       </div>
     </div>
   </section>
