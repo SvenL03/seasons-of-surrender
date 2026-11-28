@@ -264,6 +264,7 @@
   /* about the book + faq */
   .facts{background:#E6ECEF}
   .small-h2{font-size:clamp(34px,4vw,48px);margin-bottom:22px}
+  .faq-full{max-width:860px}
   .factlist{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--rule)}
   .factlist li{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-top:1px solid var(--rule);font-size:18px;color:var(--body)}
   .factlist b{flex:0 0 110px;font-family:var(--label);font-weight:600;font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--steel-dk)}
@@ -674,22 +675,9 @@
   </section>
 
   <!-- ═════════════ ABOUT THE BOOK + FAQ (shared) ═════════════ -->
-  <section id="facts" class="facts" aria-labelledby="facts-h">
-    <div class="wrap two">
-      <div class="l">
-        <h2 id="facts-h" class="small-h2">About the Book</h2>
-        <ul class="factlist">
-          <li><b>Title:</b> Seasons of Surrender</li>
-          <li><b>Authors:</b> Mark &amp; Paula Batory</li>
-          <li><b>Publisher:</b> Quellsicht</li>
-          <li><b>Formats:</b> Paperback and Kindle</li>
-          <li><b>Pages:</b> 356</li>
-          <li><b>ISBN:</b> 979-8-9973749-1-4 (paperback)</li>
-          <li><b>Release:</b> December 1, 2026</li>
-          <li><b>Order:</b> <a href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Amazon</a></li>
-        </ul>
-      </div>
-      <div class="r faq">
+  <section id="facts" class="facts" aria-label="Questions">
+    <div class="wrap">
+      <div class="faq faq-full">
         <h2 class="small-h2">Questions</h2>
         <details class="qa">
           <summary><h3>What is Seasons of Surrender?</h3><span class="plus" aria-hidden="true">+</span></summary>
