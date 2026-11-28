@@ -375,7 +375,10 @@
   footer .foot-nav ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
   footer .foot-nav a{color:var(--white);font-size:17px;border-bottom:1px solid transparent;transition:border-color .2s}
   footer .foot-nav a:hover,footer .foot-nav a:focus-visible{border-bottom-color:var(--steel)}
-  footer .foot-legal{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding-top:24px;padding-bottom:40px;border-top:1px solid rgba(255,255,255,.12)}
+  footer .foot-pub{display:inline-flex;align-items:center;gap:14px;color:var(--mist);font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;opacity:.9;transition:opacity .2s}
+  footer .foot-pub:hover,footer .foot-pub:focus-visible{opacity:1}
+  footer .foot-pub img{display:block;height:44px;width:auto}
+  footer .foot-legal{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding-top:24px;padding-bottom:40px;border-top:1px solid rgba(255,255,255,.12)}
   footer .foot-legal small{font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
   footer .foot-legal small.tm{letter-spacing:.04em;text-transform:none}
   footer .foot-legal a{color:inherit;border-bottom:1px solid transparent} footer .foot-legal a:hover{color:var(--white);border-bottom-color:var(--steel)}
@@ -743,8 +746,8 @@
     <div class="wrap">
       <div class="box">
         <p class="label kicker">Stay in Touch</p>
-        <h2>Stay in touch.</h2>
-        <p class="sub">Leave your name and email, and we will send you an occasional note about the book.</p>
+        <h2>Hear from Mark and Paula.</h2>
+        <p class="sub">Leave your name and email to hear about new resources and future books from Mark and Paula. We write only now and then.</p>
 
         <div id="form-container">
           <form id="signup-form" novalidate>
@@ -767,12 +770,12 @@
             <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
             <button class="btn" type="submit">Keep Me Updated</button>
           </form>
-          <p class="fine">We will use your information only for updates about the book.</p>
+          <p class="fine">We will use your information only for updates from Mark and Paula.</p>
         </div>
 
         <div id="thanks" role="status">
           <h3>Thank you.</h3>
-          <p>Your email has been submitted. We’ll send occasional updates about the book.</p>
+          <p>You’re on the list. We’ll write now and then with new resources and news.</p>
         </div>
       </div>
     </div>
@@ -829,7 +832,8 @@
     </nav>
   </div>
   <div class="wrap foot-legal">
-    <small>© 2026 Mark &amp; Paula Batory · <a href="https://www.quellsicht.com/">Published by Quellsicht</a></small>
+    <a class="foot-pub" href="https://www.quellsicht.com/"><span>Published by</span><img src="/assets/quellsicht-logo-white.png" width="360" height="220" alt="Quellsicht"></a>
+    <small>© 2026 Mark &amp; Paula Batory</small>
     <small class="tm">Amazon’s trademark is used under license from Amazon.com, Inc. or its affiliates.</small>
   </div>
 </footer>

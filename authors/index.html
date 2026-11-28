@@ -198,10 +198,42 @@
   footer .foot-nav ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
   footer .foot-nav a{color:var(--white);font-size:17px;border-bottom:1px solid transparent;transition:border-color .2s}
   footer .foot-nav a:hover,footer .foot-nav a:focus-visible{border-bottom-color:var(--steel)}
-  footer .foot-legal{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding-top:24px;padding-bottom:40px;border-top:1px solid rgba(255,255,255,.12)}
+  footer .foot-pub{display:inline-flex;align-items:center;gap:14px;color:var(--mist);font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;opacity:.9;transition:opacity .2s}
+  footer .foot-pub:hover,footer .foot-pub:focus-visible{opacity:1}
+  footer .foot-pub img{display:block;height:44px;width:auto}
+  footer .foot-legal{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding-top:24px;padding-bottom:40px;border-top:1px solid rgba(255,255,255,.12)}
   footer .foot-legal small{font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
   footer .foot-legal small.tm{letter-spacing:.04em;text-transform:none}
   footer .foot-legal a{color:inherit;border-bottom:1px solid transparent} footer .foot-legal a:hover{color:var(--white);border-bottom-color:var(--steel)}
+  /* ── Signup (same as home) ── */
+  .signup{background:var(--slate);color:var(--white)}
+  .signup .box{max-width:560px;margin:0 auto}
+  .signup h2{color:var(--white);text-align:center;margin:0 0 20px}
+  .signup .kicker{color:var(--mist);text-align:center}
+  .signup .sub{text-align:center;margin:0 0 40px;font-size:18px;color:#E3ECF1}
+  .field{margin-bottom:22px}
+  .name-row{display:flex;flex-wrap:wrap;gap:0 24px}
+  .name-row .field{flex:1 1 200px;min-width:0}
+  .field label{display:block;margin-bottom:6px;font-family:var(--label);font-weight:600;font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--mist)}
+  .field input{width:100%;min-height:56px;padding:0 4px;background:transparent;border:0;border-bottom:1px solid var(--mist);color:var(--white);font-family:var(--text);font-size:19px;border-radius:0}
+  .field input::placeholder{color:#8DA9B8}
+  .field input:focus{outline:none;border-bottom-color:var(--white);box-shadow:0 1px 0 var(--white)}
+  .err{display:none;margin:6px 0 0;font-size:15px;color:#FFB4A8}
+  .err.show{display:block}
+  .signup .btn{width:100%;margin-top:10px}
+  .signup .btn[disabled]{opacity:.7;cursor:default}
+  .fine{margin:22px 0 0;text-align:center;font-size:15px;color:var(--mist)}
+  .field textarea{width:100%;padding:12px 4px;background:transparent;border:0;border-bottom:1px solid var(--mist);color:var(--white);font-family:var(--text);font-size:19px;line-height:1.5;resize:vertical;border-radius:0}
+  .field textarea::placeholder{color:#8DA9B8}
+  .field textarea:focus{outline:none;border-bottom-color:var(--white);box-shadow:0 1px 0 var(--white)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  #thanks{display:none;text-align:center;padding:24px 0}
+  #thanks h3{margin:0 0 14px;font-family:var(--serif);font-weight:500;font-size:48px;color:var(--white)}
+  #thanks p{margin:0;font-size:19px;color:#E3ECF1}
+  @media (max-width:760px){
+    .signup{padding:64px 0}
+    .signup h2{font-size:40px}
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -319,6 +351,45 @@
       </div>
     </div>
   </section>
+
+  <section id="signup" class="signup">
+    <div class="wrap">
+      <div class="box">
+        <p class="label kicker">Stay in Touch</p>
+        <h2>Hear from Mark and Paula.</h2>
+        <p class="sub">Leave your name and email to hear about new resources and future books from Mark and Paula. We write only now and then.</p>
+
+        <div id="form-container">
+          <form id="signup-form" novalidate>
+            <div class="name-row">
+              <div class="field">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First name" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last name" required autocomplete="family-name">
+              </div>
+            </div>
+            <p class="err" id="name-error" role="alert" style="margin:-16px 0 22px">Please enter your first and last name.</p>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              <p class="err" id="email-error" role="alert">Please enter a valid email address.</p>
+            </div>
+            <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn" type="submit">Keep Me Updated</button>
+          </form>
+          <p class="fine">We will use your information only for updates from Mark and Paula.</p>
+        </div>
+
+        <div id="thanks" role="status">
+          <h3>Thank you.</h3>
+          <p>You’re on the list. We’ll write now and then with new resources and news.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -356,7 +427,8 @@
     </nav>
   </div>
   <div class="wrap foot-legal">
-    <small>© 2026 Mark &amp; Paula Batory · <a href="https://www.quellsicht.com/">Published by Quellsicht</a></small>
+    <a class="foot-pub" href="https://www.quellsicht.com/"><span>Published by</span><img src="/assets/quellsicht-logo-white.png" width="360" height="220" alt="Quellsicht"></a>
+    <small>© 2026 Mark &amp; Paula Batory</small>
     <small class="tm">Amazon’s trademark is used under license from Amazon.com, Inc. or its affiliates.</small>
   </div>
 </footer>
@@ -371,6 +443,51 @@
     },{threshold:0.12});
     els.forEach(function(el){io.observe(el)});
   })();
+</script>
+<script>
+  /* ── Signup form → /api/subscribe → Google Sheet ── */
+  (function(){
+    var form=document.getElementById('signup-form');
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var firstName=document.getElementById('firstName').value.trim();
+      var lastName=document.getElementById('lastName').value.trim();
+      var email=document.getElementById('email').value.trim();
+      var nameErr=document.getElementById('name-error');
+      var emailErr=document.getElementById('email-error');
+      var valid=true;
+      if(!firstName||!lastName){nameErr.classList.add('show');valid=false}else{nameErr.classList.remove('show')}
+      if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        emailErr.textContent='Please enter a valid email address.';
+        emailErr.classList.add('show');valid=false
+      }else{emailErr.classList.remove('show')}
+      if(!valid)return;
+      var btn=form.querySelector('button[type="submit"]');
+      var original=btn.textContent;
+      btn.disabled=true;btn.textContent='Sending...';
+      try{
+        var res=await fetch('/api/subscribe',{
+          method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify({firstName:firstName,lastName:lastName,email:email,_gotcha:document.getElementById('gotcha').value})
+        });
+        if(res.ok){
+          document.getElementById('form-container').style.display='none';
+          document.getElementById('thanks').style.display='block';
+        }else{
+          var data=await res.json().catch(function(){return {}});
+          emailErr.textContent=data.error||'Something went wrong. Please try again.';
+          emailErr.classList.add('show');
+          btn.disabled=false;btn.textContent=original;
+        }
+      }catch(err){
+        emailErr.textContent='Network error. Please try again.';
+        emailErr.classList.add('show');
+        btn.disabled=false;btn.textContent=original;
+      }
+    });
+  })();
+
 </script>
 </body>
 </html>

@@ -188,7 +188,10 @@
   footer .foot-nav ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
   footer .foot-nav a{color:var(--white);font-size:17px;border-bottom:1px solid transparent;transition:border-color .2s}
   footer .foot-nav a:hover,footer .foot-nav a:focus-visible{border-bottom-color:var(--steel)}
-  footer .foot-legal{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding-top:24px;padding-bottom:40px;border-top:1px solid rgba(255,255,255,.12)}
+  footer .foot-pub{display:inline-flex;align-items:center;gap:14px;color:var(--mist);font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;opacity:.9;transition:opacity .2s}
+  footer .foot-pub:hover,footer .foot-pub:focus-visible{opacity:1}
+  footer .foot-pub img{display:block;height:44px;width:auto}
+  footer .foot-legal{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding-top:24px;padding-bottom:40px;border-top:1px solid rgba(255,255,255,.12)}
   footer .foot-legal small{font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
   footer .foot-legal small.tm{letter-spacing:.04em;text-transform:none}
   footer .foot-legal a{color:inherit;border-bottom:1px solid transparent} footer .foot-legal a:hover{color:var(--white);border-bottom-color:var(--steel)}
@@ -297,7 +300,8 @@
     </nav>
   </div>
   <div class="wrap foot-legal">
-    <small>© 2026 Mark &amp; Paula Batory · <a href="https://www.quellsicht.com/">Published by Quellsicht</a></small>
+    <a class="foot-pub" href="https://www.quellsicht.com/"><span>Published by</span><img src="/assets/quellsicht-logo-white.png" width="360" height="220" alt="Quellsicht"></a>
+    <small>© 2026 Mark &amp; Paula Batory</small>
     <small class="tm">Amazon’s trademark is used under license from Amazon.com, Inc. or its affiliates.</small>
   </div>
 </footer>
