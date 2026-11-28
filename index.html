@@ -87,11 +87,11 @@
   nav.top ul{display:flex;flex-wrap:wrap;gap:8px 30px;align-items:center;margin:0;padding:0;list-style:none;font-family:var(--label);font-weight:500;font-size:16px;letter-spacing:.18em;text-transform:uppercase}
   nav.top a.navlink{display:inline-flex;min-height:44px;align-items:center}
   nav.top .btn{min-height:44px;padding:0 24px;font-size:16px}
-  .hero-body{display:flex;flex-wrap:wrap;gap:56px 72px;align-items:center;justify-content:space-between;padding:80px 0 110px}
+  .hero-body{display:flex;flex-wrap:wrap;gap:56px 72px;align-items:center;justify-content:space-between;padding:48px 0 96px}
   .hero-copy{flex:1 1 500px;min-width:0;display:flex;flex-direction:column;gap:24px}
   .eyebrow{display:flex;align-items:center;gap:16px;color:var(--mist);font-family:var(--label);font-weight:500;font-size:17px;letter-spacing:.32em;text-transform:uppercase}
   .eyebrow::before{content:"";width:48px;height:1px;background:var(--steel)}
-  .headline{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(46px,6vw,86px);line-height:1.04;color:var(--white)}
+  .headline{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(46px,5.4vw,76px);line-height:1.04;color:var(--white)}
   .titleline{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:25px;line-height:1.3;color:var(--mist)}
   .titleline h1{display:inline;margin:0;font:inherit;font-weight:600;color:var(--white)}
   .lede{margin:0;max-width:560px;font-size:19px;line-height:1.7;color:#E3ECF1}
@@ -140,6 +140,12 @@
   .two p,.prose p{margin:0}
   .head{max-width:780px;margin-bottom:60px}
   .head p{margin:24px 0 0;font-size:19px;color:var(--body)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .what{display:flex;gap:18px;align-items:center}
+  .m-cover{width:96px;height:auto;flex:0 0 auto;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+  .quick{padding:72px 0}
+  .grid3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .item .qh{margin:0;font-family:var(--serif);font-weight:600;font-size:29px;line-height:1.12;color:#0F1E27}
   .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:48px 40px}
   .item{border-top:2px solid var(--ink);padding-top:22px;display:flex;flex-direction:column;gap:12px}
   .item .num{font-family:var(--serif);font-style:italic;font-weight:500;font-size:44px;line-height:1;color:var(--steel-md)}
@@ -406,9 +412,11 @@
       <div class="hero-copy">
         <div class="eyebrow">A memoir by Mark &amp; Paula Batory</div>
         <p class="headline">We all say we trust God until He asks us to surrender.</p>
-        <div class="titleline"><h1>Seasons of Surrender</h1><span class="d-only"> · A Fifty-Year Journey of Trust, Trial, Refinement, and Release</span></div>
-        <p class="sub m-only">A Fifty-Year Journey of Trust, Trial, Refinement, and Release</p>
-        <p class="lede">Mark and I have spent nearly fifty years learning to trust the Lord, through Mexico, illness, changed plans, and letting go. This book is our story. We wrote it for anyone whose life has not gone the way they planned.</p>
+        <h1 class="sr-only">Seasons of Surrender: A Fifty-Year Journey of Trust, Trial, Refinement, and Release</h1>
+        <div class="what">
+          <img class="m-only m-cover" src="/assets/cover-front.jpg" width="600" height="900" alt="Cover of Seasons of Surrender by Mark and Paula Batory">
+          <p class="lede">This is our memoir: Mark’s and my nearly fifty years of marriage and missionary service, through Mexico, illness, changed plans, and letting go.</p>
+        </div>
         <div class="cta-row">
           <a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a>
           <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) (IngramSpark has no public logo kit; ask them before adding their logo) --><a class="bulk-link" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies">Ordering 10 or more? Get the bulk discount →</a>
@@ -444,6 +452,30 @@
   <!-- Home copy v2 (Nov 27, 2026): one version for desktop and mobile, in Paula's voice ("I", "Mark and I"),
        ordered StoryBrand-style: the reader's season, why we wrote it, what's inside, how to use it, a story,
        our hope for you, who we are. Needs Paula's OK before it goes live. -->
+
+  <!-- 0. Quick answers: why read it, who it's for, where to buy -->
+  <section id="quick" class="quick">
+    <div class="wrap reveal">
+      <div class="grid4 grid3">
+        <div class="item">
+          <h2 class="qh">Why read it?</h2>
+          <p>Because the Lord can be trusted, even when you cannot see what He is doing. Our story shows His faithfulness in every season, and we pray it helps you trust Him in yours.</p>
+        </div>
+        <div class="item">
+          <h2 class="qh">Who is it for?</h2>
+          <p>Anyone whose life has not gone the way they planned: young people asking what the Lord wants them to do, believers in the middle of a trial, and anyone facing the hard surrender of letting go.</p>
+        </div>
+        <div class="item">
+          <h2 class="qh">Where can I buy it?</h2>
+          <p>On Amazon, in paperback and on Kindle.</p>
+          <div class="cta-row">
+            <a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a>
+            <a class="bulk-link" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies">Ordering 10 or more? Get the bulk discount →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- 1. The reader's season (the problem) -->
   <section id="your-season" class="invite">
