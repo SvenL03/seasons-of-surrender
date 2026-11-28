@@ -95,10 +95,11 @@
   .titleline{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:25px;line-height:1.3;color:var(--mist)}
   .titleline h1{display:inline;margin:0;font:inherit;font-weight:600;color:var(--white)}
   .lede{margin:0;max-width:560px;font-size:19px;line-height:1.7;color:#E3ECF1}
-  .btn-amz{background:#FF9900;color:#0F1111;letter-spacing:.12em}
-  .btn-amz:hover,.btn-amz:focus-visible{background:#FFFFFF;color:#0F1111}
-  .btn-bulk{display:inline-flex;flex-direction:column;justify-content:center;gap:2px;min-height:52px;padding:10px 22px;background:#FFFFFF;color:#0F1111;border:2px solid #FF9900;font-family:var(--label);line-height:1.2;transition:background .2s}
-  .btn-bulk:hover,.btn-bulk:focus-visible{background:#FFF4E5}
+  .amz-badge{display:inline-flex;align-items:center;padding:10px 0;margin-right:12px}
+  .amz-badge img{display:block;width:240px;height:auto}
+  .amz-badge:hover img,.amz-badge:focus-visible img{opacity:.85}
+  .btn-bulk{display:inline-flex;flex-direction:column;justify-content:center;gap:2px;min-height:52px;padding:10px 22px;background:#FFFFFF;color:#0F1111;border:2px solid var(--steel);font-family:var(--label);line-height:1.2;transition:background .2s}
+  .btn-bulk:hover,.btn-bulk:focus-visible{background:#EEF4F7}
   .btn-bulk .bk-top{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
   .btn-bulk .bk-main{font-size:17px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
   .btn-bulk .bk-by{font-size:13px;letter-spacing:.06em;opacity:.75}
@@ -400,7 +401,7 @@
         <li class="hide-sm"><a class="navlink" href="#seasons">The Four Seasons</a></li>
         <li class="hide-sm"><a class="navlink" href="#story">A Story from the Book</a></li>
         <li class="hide-sm"><a class="navlink" href="#authors">Meet the Authors</a></li>
-        <li><a class="btn btn-amz" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order on Amazon</a></li>
+        <li><a class="btn" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order on Amazon</a></li>
       </ul>
     </nav>
 
@@ -412,8 +413,8 @@
         <p class="sub m-only">A Fifty-Year Journey of Trust, Trial, Refinement, and Release</p>
         <p class="lede">Mark and I have spent nearly fifty years learning to trust the Lord, through Mexico, illness, changed plans, and letting go. This book is our story. We wrote it for anyone whose life has not gone the way they planned.</p>
         <div class="cta-row">
-          <a class="btn btn-amz" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order on Amazon</a>
-          <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) and add the official IngramSpark logo file --><a class="btn-bulk" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies"><span class="bk-top">Ordering 10 or more?</span><span class="bk-main">Get the group discount</span><span class="bk-by">Printed by IngramSpark</span></a>
+          <a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon-white.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a>
+          <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) (IngramSpark has no public logo kit; ask them before adding their logo) --><a class="btn-bulk" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies"><span class="bk-top">Ordering 10 or more?</span><span class="bk-main">Get the group discount</span><span class="bk-by">Printed by IngramSpark</span></a>
         </div>
         <div class="launch">Available December 1, 2026</div>
       </div>
@@ -552,8 +553,8 @@
         </div>
       </div>
       <div class="cta-row" style="margin-top:44px">
-        <a class="btn btn-amz" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order on Amazon</a>
-        <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) and add the official IngramSpark logo file --><a class="btn-bulk" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies"><span class="bk-top">Ordering 10 or more?</span><span class="bk-main">Get the group discount</span><span class="bk-by">Printed by IngramSpark</span></a>
+        <a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a>
+        <!-- BULK: swap href for the IngramSpark order link (~Dec 4-5) (IngramSpark has no public logo kit; ask them before adding their logo) --><a class="btn-bulk" href="mailto:sven@svenhq.com?subject=Seasons%20of%20Surrender%3A%2010%20or%20more%20copies"><span class="bk-top">Ordering 10 or more?</span><span class="bk-main">Get the group discount</span><span class="bk-by">Printed by IngramSpark</span></a>
       </div>
     </div>
   </section>
@@ -568,7 +569,7 @@
         <blockquote><p>“The next morning, Paula eagerly looked outside the door of our little travel trailer. There, sitting on our patio chair, was an egg carton. For a moment, she could hardly believe what she was seeing. She picked it up, opened it, and called for me to come. Inside were three eggs. Exactly three. Not more, not less. The Lord had answered her prayer with such tenderness and precision that there was no way to explain it away. With tears of rejoicing, we scrambled them and squeezed a little ketchup over them from a single leftover fast-food packet.”</p></blockquote>
         <cite class="label">From Chapter 2, “The Calling Forward”</cite>
         <p class="after">That was not the end of it. Before the day was over, the Lord had given us more food than our little trailer could hold. But the bigger gift was what He was teaching us about depending on Him.</p>
-        <div class="center"><a class="btn btn-amz" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order on Amazon</a></div>
+        <div class="center"><a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon-white.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a></div>
       </div>
     </div>
   </section>
@@ -692,7 +693,7 @@
         <div class="bar"></div>
         <blockquote>“May we never take the pen from His hand but simply yield the page and let Him keep writing.”</blockquote>
         <cite class="label">From the epilogue</cite>
-        <a class="btn btn-amz" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener">Order on Amazon</a>
+        <a class="amz-badge" href="https://www.amazon.com/dp/B0HSK3S2JS" target="_blank" rel="noopener"><img src="/assets/buy/available-at-amazon-white.png" width="635" height="103" alt="Available at Amazon: order Seasons of Surrender"></a>
       </div>
     </div>
   </section>
@@ -701,7 +702,7 @@
 <footer>
   <div class="wrap">
     <div class="brand">Quellsicht</div>
-    <small>© 2026 Mark &amp; Paula Batory · <a class="pub" href="https://www.quellsicht.com/">Published by Quellsicht</a> · <a class="pub" href="/media-kit">Media Kit</a></small>
+    <small>© 2026 Mark &amp; Paula Batory · <a class="pub" href="https://www.quellsicht.com/">Published by Quellsicht</a> · <a class="pub" href="/media-kit">Media Kit</a><br><span style="font-size:12px;letter-spacing:.08em;text-transform:none">Amazon’s trademark is used under license from Amazon.com, Inc. or its affiliates.</span></small>
   </div>
 </footer>
 
