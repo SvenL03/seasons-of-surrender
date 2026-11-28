@@ -106,6 +106,31 @@
   .launch{font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;color:var(--mist)}
   .hero-copy .sub{margin:0;font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;line-height:1.3;color:var(--mist)}
 
+  /* ── Reader notes → /api/note → Notes sheet + email to the Batorys ── */
+  (function(){
+    var form=document.getElementById('note-form');
+    if(!form)return;
+    var err=document.getElementById('note-error');
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var name=document.getElementById('noteName').value.trim();
+      var email=document.getElementById('noteEmail').value.trim();
+      var message=document.getElementById('noteMessage').value.trim();
+      if(!name||!message||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        err.textContent='Please enter your name, a valid email address and a note.';err.classList.add('show');return;
+      }
+      err.classList.remove('show');
+      var btn=form.querySelector('button[type="submit"]'),original=btn.textContent;
+      btn.disabled=true;btn.textContent='Sending...';
+      try{
+        var res=await fetch('/api/note',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify({name:name,email:email,message:message,_gotcha:document.getElementById('noteGotcha').value})});
+        if(res.ok){document.getElementById('note-container').style.display='none';document.getElementById('note-thanks').style.display='block';}
+        else{var d=await res.json().catch(function(){return {}});err.textContent=d.error||'Something went wrong. Please try again.';err.classList.add('show');btn.disabled=false;btn.textContent=original;}
+      }catch(_){err.textContent='Network error. Please try again.';err.classList.add('show');btn.disabled=false;btn.textContent=original;}
+    });
+  })();
+
   /* ── 3D book ── */
   .book-col{flex:0 1 420px;min-width:300px;display:flex;flex-direction:column;align-items:center;gap:20px}
   .stage{--w:300px;--h:450px;--d:44.5px;position:relative;width:100%;max-width:420px;height:560px;perspective:1500px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline-offset:6px}
@@ -254,6 +279,13 @@
   .signup .btn{width:100%;margin-top:10px}
   .signup .btn[disabled]{opacity:.7;cursor:default}
   .fine{margin:22px 0 0;text-align:center;font-size:15px;color:var(--mist)}
+  .field textarea{width:100%;padding:12px 4px;background:transparent;border:0;border-bottom:1px solid var(--mist);color:var(--white);font-family:var(--text);font-size:19px;line-height:1.5;resize:vertical;border-radius:0}
+  .field textarea::placeholder{color:#8DA9B8}
+  .field textarea:focus{outline:none;border-bottom-color:var(--white);box-shadow:0 1px 0 var(--white)}
+  .write{background:var(--night)}
+  .thanks-box{display:none;text-align:center;padding:24px 0}
+  .thanks-box h3{margin:0 0 14px;font-family:var(--serif);font-weight:500;font-size:48px;color:var(--white)}
+  .thanks-box p{margin:0;font-size:19px;color:#E3ECF1}
   .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   #thanks{display:none;text-align:center;padding:24px 0}
   #thanks h3{margin:0 0 14px;font-family:var(--serif);font-weight:500;font-size:48px;color:var(--white)}
@@ -490,7 +522,7 @@
           <p>Anyone whose life has not gone the way they planned, in any season:</p>
           <ol class="seasons-list">
             <li>Young people asking what the Lord wants them to do with their lives.</li>
-            <li>Believers in the middle of a trial.</li>
+            <li>Believers in the middle of their work or a trial.</li>
             <li>Faithful servants facing the hard surrender of letting go.</li>
           </ol>
         </div>
@@ -499,9 +531,45 @@
           <p>We would love to hear from you. A short review helps another reader find the book.</p>
           <div class="after-read">
             <a class="btn" href="https://www.amazon.com/review/create-review?asin=B0HSK3S2JS" target="_blank" rel="noopener">Leave a Review</a>
-            <!-- FEEDBACK: whose inbox gets reader notes? Using Sven's for now. -->
-            <a class="text-link" href="mailto:sven@svenhq.com?subject=A%20note%20for%20Mark%20and%20Paula">Write to Mark and Paula →</a>
+            <a class="text-link" href="#write">Write to Mark and Paula →</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. What's inside -->
+  <section id="seasons">
+    <div class="wrap reveal">
+      <div class="head">
+        <p class="label kicker">The Four Seasons</p>
+        <h2>Four seasons. <em>One faithful God.</em></h2>
+        <p>The book follows our life through four seasons. Each one asked something different of us.</p>
+      </div>
+      <div class="grid4">
+        <div class="item">
+          <div class="num">01</div>
+          <div class="tag">Trust</div>
+          <h3>Surrendering the Strength of Our Youth</h3>
+          <p>We left Michigan as newlyweds, went to language school in Texas, and made our home in the mountains of Mexico. We learned to trust the Lord for the simplest things, even breakfast.</p>
+        </div>
+        <div class="item">
+          <div class="num">02</div>
+          <div class="tag">Trial</div>
+          <h3>Surrendering Our Way in the Wilderness</h3>
+          <p>Illness and things beyond our control took us away from the work we loved. We learned to love the Lord more than the place, the work, or the future we had pictured.</p>
+        </div>
+        <div class="item">
+          <div class="num">03</div>
+          <div class="tag">Refinement</div>
+          <h3>Surrendering to an Unchosen Path</h3>
+          <p>When we could not go back, the Lord opened doors we never expected. He was changing more than our plans. He was changing our hearts.</p>
+        </div>
+        <div class="item">
+          <div class="num">04</div>
+          <div class="tag">Release</div>
+          <h3>Surrendering What We Cannot Keep</h3>
+          <p>In later years, surrender looked less like leaving and more like letting go: of our strength, of people we love, and of work we handed on to others.</p>
         </div>
       </div>
     </div>
@@ -544,45 +612,8 @@
     </div>
   </section>
 
-  <!-- 3. What's inside -->
-  <section id="seasons">
-    <div class="wrap reveal">
-      <div class="head">
-        <p class="label kicker">The Four Seasons</p>
-        <h2>Four seasons. <em>One faithful God.</em></h2>
-        <p>The book follows our life through four seasons. Each one asked something different of us.</p>
-      </div>
-      <div class="grid4">
-        <div class="item">
-          <div class="num">01</div>
-          <div class="tag">Trust</div>
-          <h3>Surrendering the Strength of Our Youth</h3>
-          <p>We left Michigan as newlyweds, went to language school in Texas, and made our home in the mountains of Mexico. We learned to trust the Lord for the simplest things, even breakfast.</p>
-        </div>
-        <div class="item">
-          <div class="num">02</div>
-          <div class="tag">Trial</div>
-          <h3>Surrendering Our Way in the Wilderness</h3>
-          <p>Illness and things beyond our control took us away from the work we loved. We learned to love the Lord more than the place, the work, or the future we had pictured.</p>
-        </div>
-        <div class="item">
-          <div class="num">03</div>
-          <div class="tag">Refinement</div>
-          <h3>Surrendering to an Unchosen Path</h3>
-          <p>When we could not go back, the Lord opened doors we never expected. He was changing more than our plans. He was changing our hearts.</p>
-        </div>
-        <div class="item">
-          <div class="num">04</div>
-          <div class="tag">Release</div>
-          <h3>Surrendering What We Cannot Keep</h3>
-          <p>In later years, surrender looked less like leaving and more like letting go: of our strength, of people we love, and of work we handed on to others.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- 4. How to use it (the plan) -->
-  <section id="how" style="padding-top:0">
+  <section id="how">
     <div class="wrap reveal">
       <div class="head">
         <p class="label kicker">How to Read It</p>
@@ -702,6 +733,41 @@
   </section>
 
   <!-- ═════════════ SIGNUP (shared) ═════════════ -->
+  <!-- Reader notes: sent privately to Mark and Paula via /api/note (no email address on the page) -->
+  <section id="write" class="signup write">
+    <div class="wrap">
+      <div class="box">
+        <p class="label kicker">Write to Us</p>
+        <h2>We would love to hear from you.</h2>
+        <p class="sub">If the book meant something to you, or you have a question, write to Mark and me here. Your note comes straight to us.</p>
+        <div id="note-container">
+          <form id="note-form" novalidate>
+            <div class="field">
+              <label for="noteName">Your Name</label>
+              <input type="text" id="noteName" name="name" placeholder="Your name" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="noteEmail">Your Email</label>
+              <input type="email" id="noteEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="noteMessage">Your Note</label>
+              <textarea id="noteMessage" name="message" rows="5" placeholder="Write your note here" required></textarea>
+            </div>
+            <p class="err" id="note-error" role="alert"></p>
+            <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" id="noteGotcha" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn" type="submit">Send Your Note</button>
+          </form>
+          <p class="fine">We read every note. Your email is used only to write you back.</p>
+        </div>
+        <div id="note-thanks" role="status" class="thanks-box">
+          <h3>Thank you.</h3>
+          <p>Your note is on its way to Mark and Paula.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="signup" class="signup">
     <div class="wrap">
       <div class="box">
